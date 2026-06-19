@@ -1,0 +1,1457 @@
+First Edition
+
+The Godot Shaders Bible.
+Everything you need to know about shaders to enhance your game’s visuals.
+
+Fabrizio Espíndola
+#Godot
+
+#Shaders
+
+#GameDev
+
+The Godot Shaders Bible, version 0.0.2a.
+Published by Jettelly Inc. ® All rights reserved. jettelly.com
+77 Bloor St. West, Suite #663, Toronto ON M5S 1M2, Canada.
+
+Credits.
+Author.
+Fabrizio Espíndola
+Design.
+Pablo Yeber
+
+Content.
+Preface.
+
+5
+
+About the Author. . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+5
+
+Errata. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+5
+
+Piracy. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+6
+
+Chapter 1: Introduction to Mesh Composition.
+
+7
+
+1.1
+
+Properties. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+8
+
+1.2
+
+Mesh Data. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+
+1.3
+
+Introduction to Spaces. . . . . . . . . . . . . . . . . . . . . 21
+
+1.4
+
+Configuring a Unique Object. . . . . . . . . . . . . . . . . 25
+
+1.5
+
+Rendering Stages and Pipeline. . . . . . . . . . . . . . . 33
+
+1.6
+
+Working with World Space Coordinates. . . . . . . . . 39
+
+Preface.
+
+About the Author.
+Fabrizio Espindola is a renowned Technical Artist and developer from Santiago, Chile, with
+extensive experience in Computer Graphics and a deep passion for creating shaders in
+environments like Unity and, more recently, Godot.
+He is the Author of ”The Unity Shaders Bible and” the books ”Visualizing Equations VOL.
+1 & 2,” essential resources for developers and Technical Artists who want to master the
+art of procedural shapes. His practical and detailed approach has helped over 15,000
+professionals worldwide enhance their skills and understanding in developing special
+effects for video games.
+With more than 17,000 followers on LinkedIn, Fabrizio is an influential figure in the game
+development community. He regularly shares knowledge, tutorials, assets, and updates
+of the latest trends in real-time graphics. His ability to simplify complex concepts and his
+commitment to education have made him a reference for many developers.
+Since 2022, Fabrizio has been working at Rovio, the creators of Angry Birds, as a Senior
+Technical Artist. Previously, he collaborated with renowned companies like DeNA and
+Osmo, where he gained extensive experience in creating and optimizing assets for various
+applications. His passion for teaching has led him to write books, tutorials, and manuals,
+sharing his knowledge with the independent developer community.
+For more information about his work and projects, visit www.jettelly.com.
+
+Errata.
+While writing this book, we have taken precautions to ensure the accuracy of its content.
+Nevertheless, you must remember that we are human beings, and it is highly possible that
+some points may not be well-explained or there may be errors in spelling or grammar.
+If you come across a conceptual error, a code mistake, or any other issue, we appreciate
+you sending a message to contact@jettelly.com with the subject line “VE2 Errata.” By
+
+The Godot Shaders Bible.
+
+5
+
+Preface.
+doing so, you will be helping other readers reduce their frustration and improving each
+subsequent version of this book in future updates.
+Furthermore, if you have any suggestions regarding sections that could be of interest to
+future readers, please do not hesitate to send us an email. We would be delighted to
+include that information in upcoming editions.
+
+Piracy.
+Before copying, reproducing, or distributing this material without our consent, it is important to remember that Jettelly Inc. is an independent and self-funded studio. Any illegal
+practices could negatively impact the integrity of our work.
+This book is protected by copyright, and we will take the protection of our licenses very
+seriously. If you come across this on a platform other than jettelly.com or discover an
+illegal copy, we sincerely appreciate it if you contact us via email at contact@jettelly.com
+(and attach the link if possible), so that we can seek a solution. We greatly appreciate your
+cooperation and support. All rights reserved.
+
+The Godot Shaders Bible.
+
+6
+
+Introduction to Mesh Composition.
+
+Chapter 1
+
+Introduction to Mesh
+Composition.
+
+The Godot Shaders Bible.
+
+7
+
+Introduction to Mesh Composition.
+
+1.1 Properties.
+Before you dive into shaders and visual effects, it’s important to understand what a mesh
+is in Godot. According to the official Godot documentation:
+
+Mesh is a type of Resource that contains geometry vertex arrays-based,
+divided in surfaces. Each surface contains a completely separate array and a
+material used to draw it. Design wise, a mesh with multiple surfaces is
+preferred to a single surface, because objects created in 3D editing software
+commonly contain multiple materials.
+
+This definition is consistent with those found in other 3D tools, such as Autodesk Maya
+or Blender, as they share fundamental principles in defining and manipulating 3D geometry. In the context of shader and visual effects development, meshes serve as the
+foundation upon which materials, textures, and other resources are applied—bringing
+life and personality to the models displayed on screen.
+Analyzing the previous description, we can identify two key components that deserve
+closer attention: vertex matrices and materials, with the latter being essential for rendering a mesh. In computer graphics, both numerical data—such as geometry, coordinates,
+and attributes—and visual resources that enable objects to be displayed on screen must
+be considered. Understanding this duality between data (geometry, coordinates, attributes) and visual representation (materials, textures, shaders) is fundamental to your
+role as a technical artist.
+
+The Godot Shaders Bible.
+
+8
+
+Introduction to Mesh Composition.
+When we talk about vertex arrays, we refer to the ordered collection of points that define
+an object’s shape. A mesh does more than just store these points—it also integrates
+various properties that, together, form the polygonal faces (triangles) that shape the
+model. These properties include:
+
+Chevron-Circle-Right Vertices.
+
+Chevron-Circle-Right Bitangents (or Binormals).
+
+Chevron-Circle-Right Normals.
+
+Chevron-Circle-Right Tangents.
+
+Chevron-Circle-Right UV Coordinates.
+
+Chevron-Circle-Right Vertex Color.
+
+To understand the importance of these properties, imagine holding a sheet of paper. If
+someone asked you to draw on the “front” side, how would you determine which side that
+is if both look identical? This is where normals come into play—they indicate the direction
+a surface is facing, helping define which side will be visible when viewing the object. In 3D
+applications like Maya or Blender, the software typically renders only the faces whose
+normals point toward the observer (camera), ignoring or not rendering those that are
+flipped. This optimization technique improves performance by reducing the number of
+unnecessary calculations during rendering.
+Tangents and bitangents are also important, though they play a slightly lesser role than
+normals in basic visual effects. Continuing with the sheet of paper analogy, if the sheet
+has four vertices and four normals, you can also define four tangents and four bitangents
+associated with them.
+Together, normals, tangents, and bitangents form a local coordinate system for the
+model’s surface, which is essential for applying normal maps and achieving advanced
+lighting effects. This foundational concept will be crucial when designing, optimizing, and
+refining your shaders and visual effects, as it helps you understand how geometry and
+graphical resources interact in the creation of 3D environments and characters.
+
+The Godot Shaders Bible.
+
+9
+
+Introduction to Mesh Composition.
+•••
+
+(1.1.a Conceptualizing Mesh properties on a notebook page)
+The tangent is typically aligned with the U-axis of the UV coordinates, while the bitangent
+is oriented along the V-axis. Together, they define a local reference system at each vertex,
+known as tangent space, which is essential for computing advanced effects such as normal
+mapping, reflection simulation, and other complex visual effects. This space allows you to
+interpret additional texture details relative to the surface of the mesh, giving you greater
+control over the final visual outcome.
+Later in this book, we will dedicate an entire section to creating visual effects using tangent
+space, UV coordinates, and vertex color. For now, it’s important to highlight that for a
+mesh’s properties to be visible in the engine, it must be linked to a rendering process and
+one or more materials.
+In Godot, the API responsible for processing a mesh’s geometry and displaying it in the
+scene is the RenderingServer. Without this API, the mesh would exist solely as a data
+resource in memory, with no visual representation or interaction with the camera or lights.
+Its representation in the engine takes shape through a node called VisualInstance3D,
+which serves as the entry point for manipulating 3D objects. One of its most commonly
+
+The Godot Shaders Bible.
+
+10
+
+Introduction to Mesh Composition.
+used child nodes is MeshInstance3D, which internally manages the visual interactions
+between the mesh and its material. This allows you to work more intuitively, without
+having to deal directly with the technical details of the rendering process.
+From the MeshInstance3D node, you can access both the mesh and its material directly
+from the Inspector. In Godot, a material is a resource that defines how an object’s surface
+is rendered, determining its interaction with light, shadows, textures, and other visual
+effects. At its core, a material contains a shader—a program that runs on the GPU. Godot
+uses a simplified variant of GLSL (OpenGL Shading Language) to define these shaders,
+making them easier to edit and understand.
+Through the shader, you can access the mesh’s properties. For instance, the predefined
+variable VERTEX allows you to manipulate vertex positions, enabling direct modifications
+to the mesh within the shader. Similarly, variables such as NORMAL, TANGENT, and
+BITANGENT provide control over normals, tangents, and bitangents, respectively.
+Understanding how these variables work requires visualizing the numerical values stored
+in the Vertex Data. By doing so, you can better grasp how different properties interact to
+produce the final visual output on screen.
+
+1.2 Mesh Data.
+In this section, you’ll carry out a hands-on exercise to understand how vertex lists, and
+their properties are grouped, and then read by the GPU through a shader to visually
+render geometry on-screen. To do this, you’ll create a Quad in .obj format using a simple
+text editor (such as Notepad).
+First, create a new Godot project and name it Jettelly Godot Course. Make sure to select
+Forward+ as the Renderer. Later, we will explore the architecture of a Rendering Pipeline
+and the differences between various rendering techniques. For now, assume that you’ll
+be using this project throughout the entire learning process on a desktop computer. This
+approach ensures a consistent reference setup as you progress.
+
+The Godot Shaders Bible.
+
+11
+
+Introduction to Mesh Composition.
+•••
+
+(1.2.a Creating a new project in Godot 4.3)
+Once your project is open, start by organizing your resources. Navigate to the FileSystem
+panel and create your first folder, naming it assets. From this point on, all generated files
+will be stored in subfolders within assets, providing a cleaner workspace structure and
+making version control easier. For instance, if you are using Git, you can link this folder
+and commit changes exclusively to its contents, preventing accidental modifications to
+the project’s main configuration.
+Inside assets, create a new subfolder called chapter_01, and then, within it, create another
+folder named custom_mesh. This is where you’ll store the files needed for the upcoming
+exercises
+
+The Godot Shaders Bible.
+
+12
+
+Introduction to Mesh Composition.
+•••
+
+(1.2.b Initial project structure)
+As mentioned, you’ll create the Quad for this exercise using a text editor. The process
+is straightforward: navigate to the custom_mesh folder in your operating system and
+create a new text file. On Windows, you can do this by right-clicking the destination folder
+and selecting New > Text Document, as shown below:
+
+•••
+
+(1.2.c Creating a text document in Windows)
+Name this document custom_quad, and change its extension from .txt to .obj. This .obj
+format is a standard for representing 3D geometry. However, after making this change
+and returning to Godot, you might notice a warning icon (an “X”) next to the file. This
+indicates that the file is ”corrupt” or incomplete—which is expected, as we haven’t yet
+
+The Godot Shaders Bible.
+
+13
+
+Introduction to Mesh Composition.
+added the necessary data to define the Quad’s geometry. In the next steps, you’ll define
+all the required information so that Godot can correctly interpret and render the object.
+When exporting 3D models in .obj format, an additional file with the .mtl (Material
+Template Library) extension is also generated. This file contains information about the
+object’s lighting properties. For now, we won’t focus on this file, as our main priority is the
+geometry itself. We’ll let Godot assign its default lighting values. Later in this book, you’ll
+learn how to work with materials and explore how this library affects the final appearance
+of your geometry.
+A basic .obj file structure typically includes:
+
+Chevron-Circle-Right Definitions of vertex positions in local-space.
+Chevron-Circle-Right Definitions of UV coordinates in uv-space.
+Chevron-Circle-Right Definitions of normals in local-space.
+Chevron-Circle-Right Smoothing angle parameters.
+Chevron-Circle-Right Model face groups.
+Chevron-Circle-Right Model face definitions.
+To properly visualize the Quad in Godot, you’ll need to define this information. This
+ensures that the GPU can project the geometry onto the screen. Before you begin, create
+a 3D scene by choosing a Node3D as the parent node. Then, add a MeshInstance3D
+node as its child. This node will allow you to assign the custom mesh you just created and
+render it within the scene.
+
+The Godot Shaders Bible.
+
+14
+
+Introduction to Mesh Composition.
+•••
+
+(1.2.d Selecting a 3D scene)
+According to the official documentation:
+
+MeshInstance3D is a node that takes a Mesh resource and adds it to the
+current scene by creating an instance of it. This is the class most often used
+to render 3D geometry and can be used to instance a single Mesh in many
+places.
+
+If you select the MeshInstance3D in the Scene window and navigate to the Inspector,
+you’ll notice that its first property is Mesh, which allows you to assign a mesh resource
+directly. Attempting to do this now with your custom_quad.obj will not work, because
+you have not yet defined the object’s data, and it remains marked as corrupt. To fix this,
+open the .obj file in your preferred text editor and add the necessary properties.
+Since Godot uses meters by default, you’ll use a unit system where a range of -0.5 to 0.5
+represents a 1 x 1 meter Quad. This approach makes it easier for you to visualize and
+adjust the geometry as needed.
+
+The Godot Shaders Bible.
+
+15
+
+Introduction to Mesh Composition.
+•••
+
+(1.2.e Defining the vertices for a Quad)
+In the Figure 1.2.e, four vertices have been defined, one at each corner of the Quad,
+following a clockwise order for convenience. However, when defining the faces later, we
+will use the reverse order to align with Godot’s conventions, where the +𝑧 axis faces the
+camera. In .obj files, vertices are defined using the letter v.
+
+•••
+
+(1.2.f The Quad’s vertices defined in a clockwise direction)
+The VERTEX variable in the shader will give you access to these values at runtime, allowing
+you to eventually modify their positions or manipulate the geometry in more complex
+ways. While this example only involves four vertices, a realistic model could contain
+
+The Godot Shaders Bible.
+
+16
+
+Introduction to Mesh Composition.
+thousands or even millions of them, organized into different surfaces and matrices. For
+instance, imagine you have a 3D warrior divided into two separate pieces—body and
+sword—the model would likely have one matrix for the entire body and another for the
+sword.
+Next, let’s define the UV coordinates, represented as vt in .obj files. These coordinates,
+ranging from 0.0 to 1.0, allow you to map textures onto a surface. In Section 1.3, we will
+explore this type of space in greater detail. For now, assign a UV coordinate to each vertex
+of the Quad using the following values:
+
+Chevron-Circle-Right Vertex #1 (bottom-left): [0.0, 0.0].
+Chevron-Circle-Right Vertex #2 (top-left): [0.0, 1.0].
+Chevron-Circle-Right Vertex #3 (top-right): [1.0, 1.0].
+Chevron-Circle-Right Vertex #4 (bottom-right): [1.0, 0.0].
+•••
+
+(1.2.g Defining UV Coordinates on a Quad)
+
+The Godot Shaders Bible.
+
+17
+
+Introduction to Mesh Composition.
+These coordinates are essential for projecting textures onto the object’s surface. In the
+shader, the built-in variable UV lets you access and manipulate these values, making it
+particularly useful for creating visual effects, shifting textures across the surface, or even
+implementing more complex mapping techniques.
+
+•••
+
+(1.2.h Visualizing the UV coordinates)
+The next step is to define the normals, represented in .obj files by vn. Normals are vectors
+that indicate the orientation of the surface and are essential for calculating lighting. In
+this case, we will define the normals so that they face toward the viewer. This means their
+
+𝑥𝑦 components will be 0.0, while the 𝑧 component will be 1.0, pointing forward.
+
+The Godot Shaders Bible.
+
+18
+
+Introduction to Mesh Composition.
+•••
+
+(1.2.i Defining the Normals on a Quad)
+It is worth noting that the 𝑧 component could just as easily be -1.0. However, a positive
+value has been chosen to align with Godot’s spatial axes and its default directional lighting.
+
+•••
+
+(1.2.j Visualizing Normalized Normals on a Quad)
+
+The Godot Shaders Bible.
+
+19
+
+Introduction to Mesh Composition.
+The NORMAL variable in the shader will give you access to this information, and by manipulating it, you can change how light interacts with the surface. This opens the door to
+a wide range of effects—from subtle changes in the appearance of lighting to creating
+complex visual distortions.
+Up to this point, we’ve defined vertices, UV coordinates, and normals—the basic elements
+the GPU needs to understand your geometry’s shape and orientation. However, we still
+need to specify how these vertices are grouped to form polygonal faces. In an .obj file,
+faces are defined with the letter f, followed by the vertex index, UV coordinate index, and
+normal index, in that order, separated by slashes (/).
+
+•••
+
+(1.2.k Defining the Mesh faces f))
+For example, a reference like [4/4/4] indicates that the face uses vertex number 4, UV
+coordinate number 4, and normal number 4. The s parameter sets normal smoothing;
+when it is off, no smoothing is applied.
+
+The Godot Shaders Bible.
+
+20
+
+Introduction to Mesh Composition.
+Once you define the faces, save the changes and return to Godot. By right-clicking on
+custom_Quad.obj in the FileSystem and selecting Reimport, the object will update. You
+can now assign the resulting Mesh to the MeshInstance3D node without any issues.
+
+•••
+
+(1.2.l The custom_Quad.obj has been assigned as a mesh in the node)
+With this, you have completed the basic definition of a Quad using an .obj file, setting up
+vertices, UV coordinates, normals, and the faces that form the geometry. In later chapters,
+you’ll explore how to manipulate this data further, how it integrates with materials and
+different coordinate spaces, and how you can leverage it to create visually appealing
+effects in your 2D and 3D scenes.
+
+1.3 Introduction to Spaces.
+Which came first: time or space?
+When working with shaders, one of the most challenging concepts for graphics developers is managing spaces. These define how fundamental rendering elements—such as
+position, direction, and movement—are represented and transformed within a virtual
+
+The Godot Shaders Bible.
+
+21
+
+Introduction to Mesh Composition.
+world. Each space serves a specific purpose, and understanding their differences is crucial
+for developing advanced visual effects and complex mechanics.
+Some of the most common spaces in computer graphics include:
+
+Chevron-Circle-Right uv-space (or texture-space).
+
+Chevron-Circle-Right view-space.
+
+Chevron-Circle-Right object-space (or local-space).
+
+Chevron-Circle-Right clip-space.
+
+Chevron-Circle-Right world-space.
+
+Chevron-Circle-Right screen-space.
+
+Chevron-Circle-Right tangent-space.
+Before defining each of these spaces, let’s go through a practical exercise to help you
+understand their nature using a real-world analogy. Imagine your position in the world.
+Right now, you are on planet Earth, meaning your location is relative to it. If you remain
+completely still, your position relative to Earth does not change. Even though the planet
+moves through the Milky Way, your position remains the same in relation to Earth.
+However, if we wanted to calculate our position relative to the galaxy, the situation would
+change. In this case, considering Earth’s movement through space, our position within
+the Milky Way would vary over time. This introduces changes in position values, where
+the XYZ components would be in constant update, reflecting our movement on a larger
+scale.
+This concept of relative reference is key to understanding how different spaces work in
+computer graphics. Depending on the reference system used, the same position can be
+expressed differently, directly affecting how we interpret and manipulate data within a
+shader.
+This same principle applies to the different spaces mentioned earlier. For example, object
+space describes the position of a mesh’s vertices relative to the object itself, meaning its
+pivot point or center of mass. If you move the object within the world, its vertices shift accordingly. However, their relative position to the object’s center remains unchanged—just
+like when we previously defined vertices in a .obj file, where each position was expressed
+in relation to the object itself rather than its surroundings.
+
+The Godot Shaders Bible.
+
+22
+
+Introduction to Mesh Composition.
+Existential question: The atoms in our body move with us, which might lead us to think
+they exist in object-space. But relative to what? Is there an absolute center in our body?
+How do atoms ”know” where they should be at all times? These questions reflect the
+relative nature of spaces in computer graphics: the position of a point only has meaning
+within a specific frame of reference.
+Continuing with our analogies, world-space describes positions relative to the world itself.
+In a software like Godot, this space is defined within the viewport, which represents the
+game world. It doesn’t matter whether you’re working in a 2D or 3D environment—the
+grid visible in the editor view corresponds to this global space.
+On the other hand, UV space refers to the coordinates used to map textures onto a
+surface. However, before fully understanding this concept, we first need to define what a
+texture is. From a graphical perspective, a texture is a collection of pixels arranged in a
+two-dimensional structure, forming an image that can be applied to an object.
+From a mathematical perspective, a texture is defined as:
+
+𝑇 (𝑢, 𝑣) → 𝑅𝑛
+
+(1.3.a)
+Where 𝑇 represents the texture function, 𝑢𝑣 are its coordinates, and 𝑅𝑛 defines the
+output space, meaning the number of color components. For example, if 𝑛 = 3, the
+texture could be a .jpg image, which contains three color channels RGB. In contrast, if
+
+𝑛 = 4, we could be referring to a .png image, which includes a fourth channel RGBA for
+transparency.
+From a programmatic perspective, a texture is simply a data structure organized as a list
+of values. Each element in this list represents a pixel, containing both color information
+and a specific position within the image.
+
+The Godot Shaders Bible.
+
+23
+
+Introduction to Mesh Composition.
+To better visualize this, let’s consider a 4 × 4 pixel texture:
+
+•••
+
+(1.3.b Texture data visualization)
+If we examine the reference above, we can see that on the left, there is a dictionary-style
+representation of a list called image_data_4x4. In this structure, each entry stores both
+the pixel’s position and its color value in RGB format. On the right, we find the visual
+representation of this data: a texture composed of 16 texels (or pixels in Photoshop),
+each assigned to a specific color.
+It’s important to note that, while we can conceptually represent a texture as a dictionary,
+this approach is neither memory-efficient nor performance-friendly. However, it serves
+as a useful model for understanding the nature of a texture and its relationship with
+UV coordinates. In practical applications, textures in computer graphics are typically
+stored as one-dimensional arrays of numerical values, optimized for GPU processing.
+Each texel within the texture is accessed using its UV coordinates, enabling operations
+such as sampling, interpolation, and filtering.
+
+The Godot Shaders Bible.
+
+24
+
+Introduction to Mesh Composition.
+UV coordinates are defined in a normalized space, where the origin is located at
+
+(0.0𝑢 , 0.0𝑣 ) and the opposite corner at (1.0𝑢 , 1.0𝑣 ). This coordinate system allows
+mapping the information stored in a texture, similar to the representation shown in
+Reference 1.3.b.
+Since UV space is relative to each vertex of the object, moving the model in world space
+does not affect its UV coordinates. This ensures that the texture remains correctly
+projected onto the surface. Additionally, UV coordinates are defined using floating-point
+values, providing high precision in texture mapping. This characteristic is crucial for
+achieving high texel density, allowing you to add sharp details to characters and objects
+without losing resolution.
+
+1.4 Configuring a Unique Object.
+During this chapter, you will complete a hands-on exercise in Godot to better understand how world space functions and its relationship with the internal variables
+NODE_POSITION_WORLD and MODEL_MATRIX.
+To streamline the implementation process, follow these steps to set up your project:
+1
+
+Inside your project folder, navigate to chapter_1 and create a new folder named
+spaces.
+
+2
+
+Inside spaces, add another folder named world_space.
+
+3
+
+Finally, within world_space, organize the content by creating the following subfolders:
+
+a
+
+materials.
+
+b
+
+shaders.
+
+c
+
+mesh.
+
+d
+
+textures.
+
+The Godot Shaders Bible.
+
+25
+
+Introduction to Mesh Composition.
+If you have followed these steps correctly, your project structure should look like this:
+
+•••
+
+(1.4.a The shader folder has been included inside materials)
+To illustrate the usefulness of global coordinates, we will complete the following exercise:
+Using a shader, we will modify the scale and color of a 3D object’s texture based on its
+position in world-space. This will allow us to observe how the same object dynamically
+changes as it moves through the scene. As a result, if you duplicate the object and move
+it across the environment, each instance will display unique variations in its appearance
+without manually modifying its material.
+Assuming you have already downloaded the supporting resources for this book, we will
+use the tree_mesh.fbx model during this exercise. Import this model into the mesh
+folder that we created earlier. Additionally, make sure to include the checker_tex and
+
+The Godot Shaders Bible.
+
+26
+
+Introduction to Mesh Composition.
+tree_tex textures inside the textures folder. These assets will be essential for visualizing
+the effects applied through the shader.
+
+Note
+Remember that this book includes a downloadable package containing all the
+necessary files to follow the exercises step by step. You can download it directly
+from: https://jettelly.com/store/the-godot-shaders-bible
+
+It’s important to mention that, in addition to the model and textures, we will also need a
+material and a shader. In the shader, we will implement functions in both the vertex
+stage vertex() and the fragment stage fragment() to modify both the color and the
+scale of the object. To create these resources, right-click on the materials folder and
+select:
+
+Chevron-Circle-Right Create New > Resource > ShaderMaterial.
+For practical reasons, name this material world_space.
+Repeating part of the previous process, navigate to the shaders folder, right-click, and
+select:
+
+Chevron-Circle-Right Create New > Resource > Shader.
+For the shader, use the same name as the material (world_space). This will make it easier
+to identify the connection between the two. If everything has been set up correctly, your
+project structure should look like this:
+
+The Godot Shaders Bible.
+
+27
+
+Introduction to Mesh Composition.
+•••
+
+(1.4.b The downloadable files have been included in the project)
+Next, we will begin the implementation process. To do this, we need a single instance of
+the tree_mesh object.
+Follow these steps to create it:
+1
+
+Locate the file tree_mesh.fbx in the FileSystem panel.
+
+2
+
+Right-click on it and select New Inherited Scene.
+
+This action allows you to create a scene based on the original file, maintaining an inheritance relationship. This makes it easier to apply future modifications without altering the
+base model.
+By doing this, a new scene will open in the Scene window, containing the following
+elements:
+
+Chevron-Circle-Right A Node3D node named tree_mesh.
+Chevron-Circle-Right A MeshInstance3D node named geo_tree_013.
+
+The Godot Shaders Bible.
+
+28
+
+Introduction to Mesh Composition.
+To demonstrate the use of global coordinates, we need to create multiple instances of
+tree_mesh at different positions within the 3D scene.
+However, when viewing the object in the Scene window, you may notice it appears
+highlighted in yellow. This indicates that the node is locked due to inheritance, preventing
+direct editing.
+In fact, if you attempt to rename the node by pressing F2 (Rename), you will see the
+following message on the screen:
+
+•••
+
+(1.4.c The node is not editable)
+To use and customize the node according to your needs, follow these steps:
+1
+
+Select the node in the Scene window.
+
+2
+
+In the Inspector panel, locate the mesh property.
+
+3
+
+Click Make Unique to unlink the inherited resource and convert it into an independent instance.
+
+4
+
+Save the new resource in the mesh folder of your project.
+
+5
+
+To make it easier to identify, rename it tree.
+
+The Godot Shaders Bible.
+
+29
+
+Introduction to Mesh Composition.
+By doing this, you will have an independent object that you can modify freely without
+affecting the original resource.
+
+•••
+
+(1.4.d The object has been marked as unique)
+If you have followed all the steps correctly, you should now find a new independent file
+inside the mesh folder. This file can be used flexibly throughout the exercise without
+affecting the original resource.
+
+The Godot Shaders Bible.
+
+30
+
+Introduction to Mesh Composition.
+•••
+
+(1.4.e)
+In this step, you need to create a new scene that contains multiple instances of the tree
+object. Therefore, navigate to the Scene window and start a new scene by selecting:
+
+Chevron-Circle-Right Menu: Scene > New Scene.
+Alternatively, you can use the keyboard shortcut Ctrl + N. Since we are working with a 3D
+object, select ”3D Scene” as the scene type.
+
+Note
+According to the Godot 4.3 documentation, Node3D is the base node for 3D
+objects, providing essential transformation and visibility properties. All other 3D
+nodes inherit from it. In a 3D project, you should use Node3D as the parent node
+whenever you need to move, scale, rotate, show, or hide its child elements in an
+organized and efficient manner. For more information, visit the following link:
+https://docs.godotengine.org/en/stable/classes/class_node3d.html
+
+The Godot Shaders Bible.
+
+31
+
+Introduction to Mesh Composition.
+Next, add a MeshInstance3D as a child node by following these steps:
+1
+
+Select the previously created Node3D in the Scene window.
+
+2
+
+Right-click on it and choose Add Child Node.
+
+3
+
+In the node list, search for MeshInstance3D and add it to the scene.
+
+While we could use a MultiMeshInstance3D node along with a MultiMesh resource to
+optimize the creation of multiple instances, it is not necessary in this case. Since we will
+only use a few copies of the tree object to demonstrate the utility of global coordinates,
+a MeshInstance3D node is sufficient and appropriate. This is because it allows you to
+directly assign a Mesh resource.
+Now, simply select the tree object and assign it to the Mesh property of the MeshInstance3D node, as shown below:
+•••
+
+(1.4.f The tree object has been assigned into the Mesh property)
+
+The Godot Shaders Bible.
+
+32
+
+Introduction to Mesh Composition.
+With this last step, you have completed the initial setup needed to begin developing your
+shader. Now, follow these steps:
+1
+
+Assign the world_space shader to the material.
+
+2
+
+Apply the material to the tree object.
+
+If everything has been done correctly, the tree object should appear white in the
+scene. This indicates that the shader has been successfully applied and is now ready for
+programming.
+
+1.5 Rendering Stages and Pipeline.
+To begin this section, locate the world_space shader and open it by double-clicking on it.
+In Godot, shaders are structured into processing stages, and two of the most commonly
+used methods are:
+
+Chevron-Circle-Right vertex(): Responsible for manipulating vertices before rasterization.
+Chevron-Circle-Right fragment(): Handles processing each fragment (pixel) in the final stage of rendering.
+These methods control a series of GPU processes, including:
+
+Chevron-Circle-Right Vertex transformation.
+Chevron-Circle-Right Attribute processing.
+Chevron-Circle-Right Projection.
+Chevron-Circle-Right Clipping.
+Chevron-Circle-Right Screen mapping.
+Chevron-Circle-Right Color processing.
+Chevron-Circle-Right Transparency calculations.
+
+The Godot Shaders Bible.
+
+33
+
+Introduction to Mesh Composition.
+In fact, when you open a shader in Godot, its initial configuration typically follows this
+structure:
+•••
+1
+
+shader_type spatial;
+
+2
+3
+
+void vertex() {
+// Called for every vertex the material is visible on.
+
+4
+5
+
+}
+
+6
+7
+
+void fragment() {
+// Called for every pixel the material is visible on.
+
+8
+9
+
+}
+
+10
+11
+
+//void light() {
+
+12
+
+// Called for every pixel for every light affecting the material.
+
+13
+
+// Uncomment to replace the default light processing function ...
+
+14
+
+//}
+
+In the previous code, you may notice the presence of a third method called light(),
+which is commented out by default. This method executes once per light source that
+affects the object. However, in this section, we will focus only on the vertex() and
+fragment() methods, leaving the analysis of light() for a later discussion.
+To understand how the vertex() and fragment() methods work, it’s essential to grasp
+the nature of the Render Pipeline. An analogy I like to use to explain this concept is the
+pipes in Super Mario.
+In Section 1.2 of this book, we created a Quad using coordinates defined in a .obj file. As
+you may have noticed, all shapes—whether 2D, 3D, or even colors—initially exist only as
+data in memory. This leads us to a key question: How are these data transformed into
+visible, colorful objects on the screen? The answer lies in the Render Pipeline.
+We can think of this concept as a chain process, where a polygonal object travels through
+different stages until it is finally rendered on screen. It’s as if the object moves through a
+
+The Godot Shaders Bible.
+
+34
+
+Introduction to Mesh Composition.
+series of pipes, gradually transforming step by step until it reaches its final destination:
+your computer screen.
+
+•••
+
+(1.5.a Data being transformed into a three-dimensional Cube)
+Godot uses a unified Render Pipeline, unlike Unity, where each Render Pipeline (URP,
+HDRP, or Built-in RP) has its own characteristics and rendering modes. In Unity, the choice
+of Render Pipeline directly affects material properties, light sources, color processing, and
+overall graphic operations that determine the appearance and optimization of objects on
+screen.
+In Godot, the rendering system is based on OpenGL and includes different rendering
+modes. These modes were introduced at the beginning of the book when we set up our
+project. The available rendering modes are:
+
+Chevron-Circle-Right Forward+.
+Chevron-Circle-Right Forward Mobile.
+Chevron-Circle-Right Compatibility.
+Starting with Forward+, if we refer to the official Godot documentation, we find the
+following information:
+
+The Godot Shaders Bible.
+
+35
+
+Introduction to Mesh Composition.
+
+This is a Forward renderer that uses a clustered approach to lighting.
+Clustered lighting uses a compute shader to group lights into a 3D frustum
+aligned grid. Then, at render time, pixels can look up what lights affect the
+grid cell they are in and only run light calculations for lights that might affect
+that pixel. This approach can greatly speed up rendering performance on
+desktop hardware, but is substantially less efficient on mobile.
+
+The term clustered approach refers to an optimization method used in lighting calculations. Instead of computing lighting individually for each pixel or object in the scene, this
+method divides the 3D space into clusters (small spatial regions). During rendering, each
+pixel only queries the lights affecting its specific cluster, avoiding unnecessary calculations
+and improving performance—especially in scenes with complex dynamic lighting.
+Thanks to this optimization, Forward+ is primarily used in PC projects, where high
+graphical quality and multiple light sources are required. In contrast, other rendering
+modes in Godot are designed for different needs:
+
+Chevron-Circle-Right Forward Mobile: Optimized for mobile devices, prioritizing performance over graphical quality.
+
+Chevron-Circle-Right Compatibility: Also based on Forward Rendering, but intended for older GPUs that
+do not support Vulkan.
+
+Note
+Given the specifications and limitations of OpenGL, we will not cover all aspects of Godot’s rendering system in detail. If you would like to learn more
+about the different rendering modes and their features, you can visit the following link: https://docs.godotengine.org/en/stable/contributing/development/core_and_modules/internal_rendering_architecture.html
+
+The Godot Shaders Bible.
+
+36
+
+Introduction to Mesh Composition.
+Now, what is the relationship between these rendering modes and the vertex() /
+fragment() methods? To understand this better, let’s examine the following reference:
+
+•••
+
+(1.5.b Some of the most important processes of the Render Pipeline)
+The Input Assembler is the component responsible for receiving and organizing the data
+of objects (meshes) present in the scene. This process includes information such as:
+
+Chevron-Circle-Right Vertices.
+
+Chevron-Circle-Right Tangents.
+
+Chevron-Circle-Right Indices.
+
+Chevron-Circle-Right UV Coordinates.
+
+Chevron-Circle-Right Normals.
+
+Chevron-Circle-Right Other geometric attributes.
+
+All this information is stored as numerical values and organized in a structured manner so
+that the Render Pipeline can correctly interpret it. This structured data is then processed
+to ultimately generate the 3D objects displayed on screen.
+
+The Godot Shaders Bible.
+
+37
+
+Introduction to Mesh Composition.
+The choice of rendering mode determines which rendering technique will be used in the
+project (Forward+, Forward Mobile, or Compatibility). This selection has a direct impact on
+both performance and visual quality, as it defines how graphics are processed and which
+rendering API will be used (Vulkan, Direct3D, OpenGL ES, etc.). Depending on the selected
+mode, certain graphical effects and optimizations will be either available or restricted,
+influencing how shaders interact with the scene.
+The vertex processing stage, represented by the vertex() method, is one of the fundamental phases in a shader. During this stage, the data retrieved from the Input Assembler
+is transformed through different coordinate spaces, following this sequence:
+1
+
+Object Space: The local space of the model, where vertices are defined relative to
+their own pivot.
+
+2 World Space: Transforms vertices based on the object’s position within the scene.
+3
+
+View Space: Adjusts vertices according to the camera’s perspective, determining
+how they appear to the observer.
+
+4
+
+Clip Space: Projects vertices into a homogeneous coordinate system, preparing
+them for the next phase.
+
+5
+
+Normalized Device Coordinates: Performs division by W, normalizing coordinates
+to a range between -1.0 and 1.0 on each axis.
+
+6
+
+Screen Space: Assigns vertices to pixel coordinates on the screen, where the object
+is rasterized and rendered.
+
+This process ensures that the 3D scene is correctly projected onto a 2D surface (screen),
+converting polygonal models into visible images on screen.
+Once the vertices are transformed into screen space, the next step in the Render Pipeline
+is rasterization. During this stage, the geometric primitives—such as triangles, lines,
+or points—are converted into fragments (potential pixels) on the screen. This process
+determines which parts of the object will be visible and how they will be distributed in the
+final image.
+
+The Godot Shaders Bible.
+
+38
+
+Introduction to Mesh Composition.
+Additionally, during this stage, Depth Testing is applied—a key mechanism that determines the visibility of fragments based on their relative distance from the camera. This
+test compares the depth of each fragment with the values stored in the Z-buffer (or
+Depth Buffer), discarding those that are occluded by other objects. This ensures that only
+the closest visible surfaces are rendered, preventing overlapping artifacts and improving
+scene realism.
+After rasterization, each fragment enters the fragment stage fragment(), where its final
+color is computed before being displayed as a pixel on the screen. In this phase, key
+visual effects are determined, including lighting, textures, transparency, and reflections.
+Additionally, each fragment is processed independently in the GPU, enabling the efficient
+execution of complex calculations while maintaining high performance.
+Finally, the Blending and Post-Processing stages are applied, incorporating visual effects
+before rendering the image on screen. At this stage, elements such as transparency, color
+blending, bloom, anti-aliasing, and color correction are processed. These effects enhance
+visual quality and optimize the final appearance of the scene, ensuring a more polished
+and immersive rendering.
+Now that we understand the relationship between the different rendering modes and
+shader methods, we will proceed with the implementation of world_space.
+
+1.6 Working with World Space Coordinates.
+The directive shader_type spatial is a key attribute of our shader as it specifies that
+the shader will be applied to 3D objects. If we wanted to create shaders for UI elements
+or sprites, we would use a different directive—shader_type canvas_item. Instead, we
+would use shader_type particles for particles.
+Since our tree object currently appears white by default, we will start by adding a texture
+to our shader. To do this, add the following line of code:
+
+The Godot Shaders Bible.
+
+39
+
+Introduction to Mesh Composition.
+•••
+1
+
+shader_type spatial;
+
+2
+3
+
+uniform sampler2D _MainTex : source_color;
+
+4
+5
+
+void vertex()
+
+6
+
+{
+// Called for every vertex the material is visible on.
+
+7
+8
+
+}
+
+In the previous code, a new sampler2D variable named _MainTex was declared, which
+includes the hint source_color. This variable is defined globally, meaning it can be
+used in any method within the shader.
+A sampler2D refers to a two-dimensional texture, which can be used within the shader.
+The keyword uniform indicates that the texture will be assigned externally from the
+material. On the other hand, source_color specifies that the texture functions as an
+albedo map (base color), meaning it determines the main color of the material.
+
+Note
+source_color is just one of the many hints you can use in a shader. For
+example, you can use hint_normal to define a normal map. If you want
+to see the complete list of available hints, you can check the following
+link: https://docs.godotengine.org/en/latest/tutorials/shaders/shader_reference/
+shading_language.html
+
+In fact, if you save the changes and select the material from the FileSystem window, you
+will see a new property called ”Main Tex” in the Shader Parameters section. This property
+directly references the _MainTex variable we just declared in the shader, allowing you to
+assign a texture from within the Godot editor.
+
+The Godot Shaders Bible.
+
+40
+
+Introduction to Mesh Composition.
+•••
+
+(1.6.a A new texture property has been declared)
+However, if you assign the tree_tex texture to the property, you’ll notice that the tree
+object in the scene does not change color. This happens because we haven’t yet declared
+an RGB vector to process the texture color for each fragment.
+Since we need to compute the texture color for each pixel, we must go to the fragment
+stage of our shader and add the following lines of code:
+
+The Godot Shaders Bible.
+
+41
+
+Introduction to Mesh Composition.
+•••
+1
+
+void fragment()
+
+2
+
+{
+
+3
+
+vec3 albedo = texture(_MainTex, UV).rgb;
+
+4
+
+ALBEDO = albedo;
+
+5
+
+}
+
+From the previous code, there are some key aspects we need to consider for interpreting
+the operation we are performing:
+
+Chevron-Circle-Right The texture() function: This function returns an RGBA vector and takes two arguments: A sampler2D variable (the texture), and a 2D vector (the UV coordinates).
+Essentially, texture() samples the texture _MainTex using the UV coordinates,
+retrieving the corresponding color, which is then stored in the RGB vector albedo.
+
+Chevron-Circle-Right Assignment to ALBEDO: The retrieved texture color is assigned to the ALBEDO variable, a predefined Godot variable representing the base color of the fragment’s
+surface.
+
+Chevron-Circle-Right Texture Projection: Since UV coordinates are calculated based on vertex positions
+in object-space, the texture should be correctly projected onto the object within the
+scene.
+•••
+
+(1.6.b The tree object has color now)
+
+The Godot Shaders Bible.
+
+42
+
+Introduction to Mesh Composition.
+
+Note
+Remember that texels are the color points within a texture—the smallest color
+units that make up the image. In contrast, pixels are the color points displayed
+on your computer screen. Now, why don’t we see clearly defined points in the
+texture applied to the tree object? This happens because Godot automatically
+applies linear interpolation, smoothing the transition between texels instead of
+displaying sharp edges.
+
+Let’s do a simple exercise now: we’ll modify the texture color based on the tree’s global
+position. To achieve this, we’ll use the internal variable NODE_POSITION_WORLD, which
+refers to the object’s Transform Position in the scene. Since this variable is directly linked
+to the object’s position, we can assume that its return value is a three-dimensional vector,
+covering the usable area within the scene.
+This approach presents a potential issue: What happens if the global position of the tree
+object is (100𝑥 , 234𝑦 , 134𝑧 ) or any other value greater than 1.0? In a shader, colors
+are defined within a range of 0.0 to 1.0. If position values exceed this range, the result
+could be an entirely white object, as color values beyond 1.0 are interpreted as maximum
+intensity.
+To prevent this issue, we will create a function that limits the return values, ensuring the
+global position of the object is normalized within the appropriate range. However, we
+must make sure to declare this function before the vertex() method. Why? Because
+the GPU reads shaders sequentially, from top to bottom. If we need to use this function
+in both the vertex stage and the fragment stage, it must be declared at the beginning of
+the shader code so that both methods can access it.
+
+The Godot Shaders Bible.
+
+43
+
+Introduction to Mesh Composition.
+•••
+1
+
+uniform sampler2D _MainTex : source_color;
+
+2
+3
+
+vec3 hash33(vec3 p)
+
+4
+
+{
+
+5
+
+p = fract(p * 0.4567);
+
+6
+
+p += dot(p, p.yzx + 1.3456);
+
+7
+
+p.x *= p.x;
+
+8
+
+p.y *= p.y;
+
+9
+
+p.z *= p.z;
+return fract(p);
+
+10
+11
+
+}
+
+12
+13
+
+void vertex()
+
+What happens in the hash33() method? Let’s analyze its structure from a mathematical
+perspective. Given two three-dimensional vectors—one as input and one as output, if
+
+𝑝 = (4.23, 5.52, 3.74):
+For the first line of code,
+
+𝑓𝑟𝑎𝑐𝑡(𝑝 ∗ 0.4567) = (0.931841, 0.520984, 0.708058)
+
+(1.6.c)
+If we multiply the first component of the vector
+
+𝑝 by 0.4567, we get
+
+𝑝𝑥 ∗ 0.4567 = 1.931841. However, the fract() function is applied in the operation, which returns only the fractional part of a number, discarding the integer part. This
+means 𝑓𝑟𝑎𝑐𝑡(1.931841) = 0.931841. This applies to all components of the vector 𝑝.
+
+The Godot Shaders Bible.
+
+44
+
+Introduction to Mesh Composition.
+The fract() function is CG language is defined as follows:
+•••
+1
+
+float frac(float v)
+
+2
+
+{
+return v - floor(v);
+
+3
+4
+
+}
+
+Then,
+
+𝑝 ⋅ (𝑝𝑦𝑧𝑥 + 1.3456) = ∼ 4.42184278
+(1.6.d)
+This value is added to each component of the vector 𝑝. Therefore,
+
+𝑝 = (5.353684, 4.942827, 5.129901)
+
+(1.6.e)
+Squaring each component,
+
+𝑝𝑥 ∗ 𝑝𝑥 = 28.661930
+𝑝𝑦 ∗ 𝑝𝑦 = 24.431537
+𝑝𝑧 ∗ 𝑝𝑧 = 26.315882
+(1.6.f)
+
+The Godot Shaders Bible.
+
+45
+
+Introduction to Mesh Composition.
+Finally,
+
+𝑓𝑟𝑎𝑐𝑡(𝑝) = (0.661930, 0.431537, 0.315882)
+
+(1.6.g)
+It is worth noting that the previous method could have any name we choose. However, it
+has been named hash33 for the following reasons:
+
+Chevron-Circle-Right It returns a three-dimensional vector as output (3).
+Chevron-Circle-Right It generates pseudo-random values (hash).
+Chevron-Circle-Right It receives a three-dimensional vector as an argument (3).
+This type of method is commonly used to generate visual ”noise”. However, when combined with other functions, it can produce more interesting effects, such as the one we
+will implement next.
+•••
+1
+
+void fragment()
+
+2
+
+{
+
+3
+
+vec3 random_color_ws = hash33(NODE_POSITION_WORLD);
+
+4
+
+vec3 albedo = texture(_MainTex, UV).rgb;
+
+5
+
+ALBEDO = random_color_ws;
+
+6
+
+}
+
+As we can see, a new three-dimensional vector named random_color_ws has been
+declared and initialized with the output of the hash33() method, using the global position
+of the tree object as input. Subsequently, this RGB vector is assigned to the ALBEDO
+variable, setting the base color of the shader based on the object’s position in world space.
+If you save the changes and move the object across the scene, you will notice that its color
+changes dynamically depending on its position.
+
+The Godot Shaders Bible.
+
+46
+
+Introduction to Mesh Composition.
+•••
+
+(1.6.h The object’s color changes every time it changes its position in the world)
+If you save the changes and move the object across the scene, you will notice that its color
+changes dynamically based on its position. Due to the resolution of the object’s position,
+the color may flicker multiple times as you move it. This happens because position values
+change continuously, causing multiple variations in color.
+In some cases, this effect may be a problem. To fix this, we can limit the color change so
+that it only updates per unit of movement. Implementing this solution is simple: we extend
+the color calculation operation and include the floor() function, which, by definition:
+
+It returns largest integer not greater than a scalar or each vector component.
+
+The Godot Shaders Bible.
+
+47
+
+Introduction to Mesh Composition.
+Its definition in CG language for a three-dimensional vector is:
+•••
+1
+
+float3 floor(float3 v)
+
+2
+
+{
+
+3
+
+float3 rv;
+
+4
+
+int i;
+
+5
+6
+
+for (i=0; i<3; i++) {
+
+7
+
+rv[i] = v[i] - frac(v[i]);
+
+8
+
+}
+
+9
+
+return rv;
+
+10
+
+}
+
+The floor() function removes the decimal part of a value, returning only its integer
+component. In practice, this means the object’s position will be rounded down, ensuring
+that its color only changes when it crosses a full metric unit in the scene.
+For example, 𝑝 = (1.165, 0.0, 1.712)
+
+𝑓𝑙𝑜𝑜𝑟(𝑝) = (1, 0, 1)
+
+(1.6.i)
+•••
+1
+
+void fragment()
+
+2
+
+{
+
+3
+
+vec3 random_color_ws = hash33(floor(NODE_POSITION_WORLD));
+
+4
+
+vec3 albedo = texture(_MainTex, UV).rgb;
+
+5
+
+albedo += random_color_ws * 0.15;
+ALBEDO = albedo;
+
+6
+7
+
+}
+
+The Godot Shaders Bible.
+
+48
+
+Introduction to Mesh Composition.
+If you save the changes and move the tree object within the scene again, you’ll notice that
+its color only changes when it crosses from one metric unit to another on the grid. This
+prevents constant flickering and allows for better control over color variations based on
+the object’s global position.
+
+The Godot Shaders Bible.
+
+49
+
+

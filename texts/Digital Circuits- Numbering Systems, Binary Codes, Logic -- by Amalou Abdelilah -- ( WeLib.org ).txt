@@ -1,0 +1,14095 @@
+Digital
+Circuits
+Volume 1: Numbering Systems, Binary Codes,
+Logic Gates, Boolean Algebra
+
+by Amalou Abdelilah
+
+Engineer’s Tutor Series
+
+Preface
+
+The Engineer’s Tutor Series is designed for the engineering student who is
+experiencing difficulty with his coursework or the engineer or technician who
+wishes to master a subject on his own.
+Digital Circuits Volume 1: Numbering Systems, Binary Codes, Logic Gates,
+Boolean Algebra is a part of a 4 volume set which also includes:
+e Digital Circuits Volume 2: Truth Tables, Minterms,
+
+Maxterms
+
+and Karnaugh Maps
+
+e Digital Circuits Volume 3: Flip-Flops, Counters, Shift Registers,
+Decoders, Multiplexers
+¢ Digital Circuits Volume 4: Synchronous Design
+
+Volume | consists of an expanded discussion ofthe initial subjects covered ina
+digital circuits course. The depth of the discussion of these topics is much
+greater than that found in typical digital circuits textbooks. This expanded
+discussion will assist the student who is experiencing difficulty in mastering
+these topics.
+
+This book’s subject matter is presented in an easily understood format. Topics
+are first discussed in a general sense followed by one or more examples which
+illustrate that topic in practical terms. For example, in the section on 8421
+
+i
+
+Digital Circuits Tutor Series: Volume
+
+1
+
+hich
+BCD, after that topic is discussed in general, six examples are included
+illustrate conversion between BCD and decimal. A step-by-step explanation ts
+provided with each example so the reader fully understands the 8421/ BCD
+conversion process.
+
+With its detailed explanations and numerous examples and solved problems,
+this book is ideal for the student who is having difficulty with his digital
+circuits course work or the engineer or technician who wishes to understand
+digital circuits through independent study.
+
+About This Book
+This book is divided into four separate chapters. Each chapter includes
+numerous examples and solved problems. A short description of each chapter
+
+follows.
+1. Number Systems
+
+This chapter includes a comprehensive description of the different number
+systems used in digital design such as binary, hexadecimal, and octal, Conversion between these number systems is discussed in detail, A usetul conversion
+table is also included. Numerous examples and practice problems guide the
+reader through the conversion process. Binary, octal, and hexadecimal
+arithmetic are also described.
+2. Binary Codes
+
+Different binary coding systems such as 8421, 5421, 2421, and 84-2-1 binary
+coded decimal, excess-3, gray code, ASCII, EBCDIC and error detecting/ correcting codes are explained in this chapter. Numerous examples
+illustrate the BCD to decimal and decimal to BCD conversion process. Excess3, gray code, ASCII and EBCDIC to decimal conversion are also discussed
+and illustrated using examples.
+
+3. Logic Gates
+
+|
+
+AND, OR, NOT, NAND, NOR, XOR, and XNOR gate operation is
+described in chapter 3. Illustrations, truth tables and solved problems are
+included to clarify gate operation. The process of combining gates to express
+logic operations is also discussed. Integrated circuits including the 7404, 7408,
+7432, 7400, 7402, and 7486 are introduced. An experiment is included in
+chapter 3 which demonstrates NOT, AND, and NAND gate operation using
+
+7404, 7408, and 7400 ICs.
+4. Boolean Algebra
+
+Chapter 4 consists of a detailed discussion of Boolean algebra. The laws of
+identity, commutativity, associativity, distributivity, complementarity, indempotence and absorbtion are explained with proofs included. DeMorgan’s
+theorem is explained and proved. Several examples illustrate how AND
+operations can be converted to OR operations and vice versa.
+
+Contents
+
+CHAPTER 1
+NUMBER SYSTEMS
+TOSS UDO
+
+RSE ates te A
+
+CORY ANRIIag Rsiny Ae SearenPRL
+
+trEMG Hyeee
+
+ae
+
+NUE
+
+ere
+
+HT
+
+RN MERE pe.
+
+1
+
+ANDES LS TCE
+eyo Bi
+ain gies Sean me
+ees eer
+re Siaenren a eMC e Ee AT PgRT Ao MRC. URL, 5s ]
+ETTSahALO
+Wes eae
+ee ee
+ee were rr ee ame
+ated tron er, wey Cre gra, Seo
+2
+Binsee Iecima COnVEtsIOlt Ve sige oe A Se oe ah bccte d nei naan obama
+eee
+4
+PP ACICS CEODICINS. Gna ets Boke sista ciee oasis OM slaw otsayes! caeld dealin ve eau Resa ieeee a eee
+eee 9
+A
+rereaI MIET ICN Stra riclash Fenuse eee Gralla
+eh el isan ee a Reel eae
+en nae ete Cece ee
+UE
+VOT
+na Keke) «at be Civpoe MING Ww sinc es cio orotate Sate See eet Meee os tee ees
+
+[3
+17
+
+Pe ae
+CHIE ONIN Delon eee he ee eae ee rer ore ie
+te ree one em
+ene eae ieee 20
+RICE EE OIG ILIS yi are Bh chia 2 eros, ack cag oeittte Sed bye nersdesu anny Site © cg Oe arate ine OR Re Om 2S)
+ASV CISION ICL
+WWCOMLIN LITIIOCT SV STCINS” alatatardetonc ater eho ares eluperme tore aate etareEimer ete ce ates hernia
+AT WoL OCCA) he Aston atch ae cleners shrine we< eetbnet oe hice ow he e'sVise wietals argc mate owa atte alasis
+MSIL
+ATEN NO! MC RAG CCUM Muli ies ct os tat aee arent ome eslete Wale nate ateso pluanitely See ethoe es tren
+Bie rUC CCUIA ORIDITIATYo states b's ote ete oe a ols etsntale eS ete Ne en's neaone arene Eis oer see
+ea eth eo ee a hast iia aoa ates bras ict to's as wllets eee nial ree Siem tieorate ae et
+etn
+le cit
+Ee UCI al e ncn oe oe ate hl oo isle Bao So uw We wintole ne Nae aieee Rea es sf me OR
+era
+
+28
+28
+32
+34
+36
+37
+
+res na einer haeagtaldbles an euckis Sim ee Dias/ates Ae we ami
+
+38
+
+REIT CRTAE ONDCll) swe te
+
+eR
+
+TE
+
+EE
+
+Fe
+
+Digital Circuits Tutor Series: Volume 1
+
+ee
+Basic Arithmetic Operations |.0.50005 2. eae 60 Se oc Ei oe aieere ore eg
+Pees
+Seine
+RIM
+ne
+enyale ate
+Binary Addition ..:sisps!seul eile. Dee Pee Pes yess
+
+42
+42
+
+te ce nea
+
+44
+
+terete og Otero
+
+ee
+
+Ie
+
+WES
+
+eee ee He
+
+6.0... coo
+
+Octal Addition
+
+ato ota 45
+
+tetera
+
+Pitesti, ange han vee
+Hexadecimal Addition: co fx ate ccs
+toa be coe Fae nie ote ee rue ete aN gro oretnisit tes pete
+4m
+ce:
+oc
+os
+os
+tose
+Practice Problems”
+a
+eam
+Problems oso Cacce ec wo ae ehh Oko Bock Re negSnes BIO Reypeee TOR a a Ore ese
+
+CHAPTER
+
+2
+
+BINARY
+
+CODES
+
+Who ee et
+
+BGT
+
+Oe Aare
+
+eo ee
+
+rr
+
+ere
+
+ee
+
+ets.
+
+& Beer
+
+Godeso
+
+205
+
+las Sa
+
+RADA Coden:
+
+ct th 2
+
+BEN
+
+COCOUE. os voce. cook
+
+DAD
+
+COMES
+
+Se
+
+S4As9- I COde
+
+OL
+
+alc
+
+co
+
+Practice:-Problems.
+
+BeOS
+
+SMOG.
+
+Re
+
+Px
+
+...: cee.
+
+ae
+
+OEE
+
+EO
+
+a
+
+a
+
+ie
+Bee
+
+Going hes Nee le ch
+
+pil
+
+ne ace
+
+Nps
+
+larre aee da
+
+rane
+
+ramen iy WP
+
+eR ACN wD ilar, alin
+
+et ee
+
+ree
+
+eee
+
+55
+
+2h. Le
+
+eee
+
+58
+
+EE
+
+60
+
+SOLER
+
+63
+
+eee
+
+66
+
+ual Uhgheeded nie so han mead a
+
+es ae ee
+
+is
+
+ON gr
+
+Sk Tc
+
+a
+
+a
+
+55
+
+A
+
+eect
+
+OU
+
+oe
+
+ELLIE
+
+ee
+
+55
+
+oie ee
+
+eles coisas
+
+ies ik
+
+ine
+
+a
+
+rr
+ete
+OR
+
+een t esta oa on Woes tains de So
+
+HESRTRCIETOCE taRRUP
+[orUs(ean
+
+eee
+
+rer
+
+Scie
+FarBs, oyBerle8)BLCotAC tmgeires ithe ee gre aante OR Salesian
+
+tHe LOCC
+
+ee ca
+
+48
+
+a ae tree Wee aren aie ee
+
+he
+
+a
+
+Rea
+
+eee tee
+
+Introduction to BCD: Codes“
+
+46
+
+lee
+
+ee
+
+EME SSRN
+
+PTE
+
+nate e ee cneioegm « « hen
+<I hats, Selanne Nan MEINEM
+
+Alphanumernic*Codes:
+
+hr. Sek GONE
+
+SER
+
+ek So ites
+
+os LPS
+
+feel
+
+PEACHCE. PrODIEMS
+
+aceRetteee te. oo
+
+eA
+
+eee
+
+Peek
+
+Le
+
+|
+
+fs
+
+ene eee See
+
+78
+
+Bde
+
+ode Ba SS
+
+80
+
+eee
+
+81
+
+ee
+ee
+
+ee
+
+83
+
+brror, Detecting Correcting (odes nk. nan om chante Sten ea wk i hed wn 0, wa leleles ae ae oe ee 84
+Lebel) OS tele,
+U's Gs [oloR a Amana pspre ai AE aR ie RARE LO Or cae non ERD thSas Ade pyre af, our 84
+BIOL orrectine
+COder Pave. Latkes
+Sere eee
+oe yak ie eee et Cae
+86
+PEACHECIET ODE IS oe
+EOOLEIIS he oh een ern cso
+
+CHAPTER
+
+3
+
+LOGIC
+
+GATES
+
+webeset Se OE
+
+The AND OR-and NOT Gatesau..5.
+PG
+
+AN
+
+Te AO
+ADOINOT
+
+Dt
+RGAE
+Gates
+
+aici
+ican dace
+oe ooh
+
+A
+
+cc
+
+nh a gic feo kw oe ohh awn
+
+sy
+Ca
+
+ea
+
+Sg Se EY
+oi
+
+coe tc
+
+ee
+bec
+
+ee
+
+6 ctep sms £6 avn a. kateiirem ox ne
+cs ceow sin np wae ered ee 5 oe
+
+Me
+
+ne
+Eee
+
+ee
+
+= ene
+
+88
+90
+
+ae 8 ea
+
+oe
+
+es
+
+ee a
+
+ae
+
+CR
+
+te nee
+
+95
+
+eee
+
+97
+
+eo
+
+93
+ee
+
+93
+
+Contents
+
+and NOR Gates RR
+ae hes gi. ShlaS vide afsviceyeseed burton
+AMAT S Cite 105
+CHESS
+SENSEC IGS
+UB 5
+Se
+rr
+ar
+rr
+105
+ATES USOVS SESE 8 5 Eel.3.0 uo est dae gps Se a
+a
+rrr rr
+rc
+rr 107
+ea
+Ee
+a a leoe 5 so bisbe ba vai2 kes os hw baile s om cde nc 109
+
+The NAND
+
+eee Se
+a INP ACORN Sere vg. Gig ke yon hoo ok pK DAC fs oes home eow anak cone cdecneen
+Sa Re NON
+A to
+yO
+oe
+vied 0 ey a)are a wisov waknn do Seb coded cn cs
+SON TIMI COs OCIA rete ent eae 5 olnys orcalkCu civinn ayswsWisda'u Ob vba ov ben wade wkhouee
+TROIS
+SLASAENE ORS RSet
+Sea
+COR Sg)
+eg
+rr
+ret
+
+i Ue
+113
+L15
+117
+
+Peshirtbat ahah
+eaeNehPECUIIES tee en
+ELEN TGS SOLA TOT
+RE ce geeels © es
+
+hie iiay Gk vs bugis ssh dainwin dea vSeevcees dete cobs
+ee
+ne
+oe
+
+120
+122
+
+STREETled ColCUiLS be. wien
+ane
+EN wats, dice o's Voie wn vb nea'chad el cues
+LES Bo gars ce eee SI PAS hg Le) oe erase ce etc
+rrr
+a oo
+Gee eg
+DL 4 | BA TE ROMS Ef everery apt eae ean NESS henfy
+CNPC
+Rt oe MR nes es ciety on Rie ROR TS RRS: Ce wiewe Rw Sem Se Mh otad aleat ss
+ETSY - eae
+ee
+eae Aree ee Meine Ral RG wer OPRIOT rove AOR
+CERO EN USS EAI
+NEE Ce
+cea ee
+RSet alehich a, Sik RR Tan aI Maia awn inated nied itis wea
+Neto
+alan ads Deaened
+AR ee fra re rig me
+eth OU BAe lon Ac i nee oe MTR
+RR
+
+125
+126
+VE
+128
+128
+129
+129
+
+AY Oe
+Rin
+
+EPL
+
+BOERNE
+PG
+
+erode tcc
+
+PEIN De scene
+
+iss Cl ee ithe de Po
+ee AN. Sece aA
+
+SE OE PDS eam A
+
+ee te Sas Lore
+
+I
+
+ww
+
+os te
+
+meas Se
+
+eee
+
+nae a ee
+ee Uae
+
+Se 130
+cee
+
+130
+
+eta AceEu te wrene eae
+eC PIERRE LS AG ix hase gesSib ain’ Coes summnta oreSale a cients these eas UT
+ES Sa CR Oana
+SES,
+ear fein ara paar is oie RsSect Na Wg, Sy eo Se Cat YN
+aed seca
+ere eet SaetneRheimnatondy tA hergadt fet et oes Phin, AAP
+a
+Ee aieMes EES LS cote Boe
+ACTED oS)
+coco aS
+ee eha cance
+SS
+BOGE
+is Gh
+oc ns ome ok oie
+
+136
+136
+
+otist yePa nee wore ee A abbas Wa seg Riyniens aay ge ing Seaman aStenite irewetter ta- SR ert i5
+2SVersa
+ke epee see
+gc nce wate es ee seas cies ek one ak Sees diay oonoreecon at rie ie
+RE
+ee
+ORE EE hee SE eR hls cI TE eee
+AE ise Se ee
+ee CN
+ree
+a
+teen
+Ree
+ec toe
+ae UE ro oe
+ee eee ek Pangea ee ane he CRON SIN nas ee
+
+138
+138
+139
+139
+
+136
+
+CHAPTER 4
+BOOLEAN
+
+ALGEBRA
+RRO Ea clan's eae hein eee e's so eeeReema
+
+14]
+
+sh ck SS eee eee
+Rep
+Fk OTR
+ee
+Tee ee
+Pastnitates <<< oso a 22 w RR
+ee
+eo
+ec
+sr
+eee
+eer eee ee
+ee
+TORT els cn ee
+Soak matin
+a
+ok
+os
+bask
+Law of Commutativity 2... oes. os ss onige ea Pas ee vuln ciemin obe wane
+eters
+Law of Associativity De ceed adc os eas eSB renis, SHE metaLe huisieninSate ine Oars he
+EARL
+Kee
+sie
+pom
+Pew OE DDISETIDULIVALY ene occ snes oe copa da gee snes ceeds eee hao sala eee
+05 A o.<sc cages ds ce sien mami eee nee potas Sh aa ha suse
+Law of Complementarity...
+Ll TRMEIMPOUENCE. 2 ce. cao ec alwe ec ooo vrs Wisoe weds Vale GS Wisin Feces ait S5e esl mene
+
+141
+141
+142
+142
+143
+143
+144
+
+Bape CUC TAO
+
+hoes hes nec
+
+oe ee
+
+No oe CEE
+
+rE Ce
+
+Digital Circuits Tutor Series: Volume 1
+
+20 2200005 5.00 tee ooo Raat reeereeele eerie area ereie enna Ricare eTa 144
+Other Useful Relations’.
+145
+Law of Absorbtion 22200 foc b 0 Ll 5a.0 heer de ween ee teederen ee ene een ae ed ke crea
+145
+te
+eee Cee cree
+Other Relations of Absorbtion ....2-.........52.2.20.. 1S Beta Se
+ican et ss eterno ee eae gee 146
+oilers
+ete
+Meee
+need
+cl
+ee
+deere
+ee
+aan
+Practite Problems: Users aaa
+DeMorgan’s Theorem
+Practice Problems:
+
+iilict Sal iecc
+
+32.05 20a
+
+052) 4 rece oneient a suetate aieor aleorshoraelaatar eralaataiiey sieueuonenoeats ee
+etal e eae reer fren erin
+ee
+ee
+ee
+
+146
+
+148
+
+4
+Number Systems
+
+Introduction
+
+There
+
+are four fundamental
+
+number
+
+systems:
+
+binary, octal, decimal, and
+
+hexadecimal. A base or radix distinguishes each system from the others. The
+base indicates the number of symbols used by a number system.
+The decimal number system (also called the base 10 system) uses ten different
+symbols: 0, 1, 2, 3, 4, 5, 6, 7, 8 and 9. The octal number system, referred to as
+base 8, uses eight different symbols: 0, 1, 2, 3, 4, 5, 6, 7. The binary number
+system, base 2, uses only two symbols: 0 and 1. Finally, the hexadecimal
+number system, also called base 16, uses sixteen symbols: 0, 1, 2, 3, 4,5, 6, 7,8,
+9, A, B, C, D, E and F. (The values of A, B, C, D, E, and F represent
+respectively: 10, 11, 12, 13, 14 and 15.)
+
+Binary
+Numbers
+
+The binary number system uses two symbols to determine any quantity: 0 and
+1. A binary digit is also referred to as a bit. Both the binary and the decimal
+number systems consist of weighted numbers, which means that the position
+of each digit carries a particular weight. The weight of each digit is determined
+by its position and the base used. The following examples demonstrate the
+weight of each number in the decimal system:
+
+Binary Numbers JJ
+
+Digital Circuits Tutor Series: Volume 1
+
+Example
+Weighting demonstrated
+
+523710 = (5x10) + (2x10?) + (3x10') + (7x10°)
+=
+
+500010
+
+an
+
+20010 +
+
+3010
+
++
+
+T10
+
+= 523719 (Subscript indicates the base)
+
+The number 5237 has 7 ones, 3 tens, 2 hundreds and 5 thousands. As you can see
+each digit has its own weight. 5 has a weight of one thousand or 103, 2 has a
+weight of hundred or 102, 3 has a weight of ten or 10!, and 7 has a weight ofa
+unit or 10°.
+
+To compute the value of the number, multiply the weight of the position by the
+digit and add the results.
+
+Example
+
+Weighting demonstrated
+105710 = (1x10) + (0x102) + (5x10") + (7x10°)
+= 1000;
+=
+
++
+
+O10
+
++
+
+5010
+
+aP
+
+T10
+
+1057 10
+
+The number 1057 contains 7 ones, 5 tens, 0 hundreds and | thousand. 7 has a
+
+weight of units or 10°, 5 has a weight of ten or 10!, 0 has a weight of one hundred
+or 10?, and | has a weight of one thousand or 103.
+The binary number system uses the same principle of weighting with a different
+base. We will be using base 2 instead of base 10.
+Binary
+
+Counting
+
+Let’s learn the binary count before we introduce the fundamentals of the binary
+system. To do so we will start with the decimal number system and try to figure
+out the logic behind counting; then we will apply this logic to the binary system.
+In a decimal count, we begin with 0 and continue incrementing (1,2,3,4,5,6,7,8,
+
+and 9). When we reach 9, we increment the count by adding a digit in the next
+weight. Our count increments by /0 which can be evaluated as:
+
+0x10°= 0
+1x 10'=10
+4 Binary Counting
+
+Number Systems
+
+We continue incrementing (11,12,13,14...) until we reach 99. Here we will again
+add a digit in the next position to the left so we can increment to 100.
+
+In conclusion, we count in the decimal system by incrementing the 10 available
+symbols. After we reach the last symbol (9) we expand by incrementing the next
+weighted position (to the left). The process of counting in the decimal system is
+depicted in figure 1.1.
+
+4: hegenegiea(E)
+28
+31
+27
+32
+26
+33
+25
+24
+:
+23
+22
+21
+98
+99 —=>
+
+Ue. 514.0
+108
+44
+107
+112
+106
+113
+105
+104
+103
+:
+102
+101
+998
+100)
+999 —~>
+
+1009
+1008
+1007
+1006
+1005
+1004
+1003
+1002
+1001
+1000
+
+Figure 1.1. Decimal counting
+
+The process of counting in binary is identical to decimal counting. Instead of 10
+available symbols (as in decimal), in binary we have only two available symbols
+(0 and 1). After we increment in binary and reach the last available symbol (1),
+we expand by incrementing the next weighted position (to the left). In binary
+since we have only two available symbols (0 and 1), we increment the next
+weighted position every time we increment the count twice.
+;
+
+Binary
+
+1001,
+1000,
+111,
+110,
+101,
+100,
+
+Decimal
+
+=—>
+
+Binary
+
+Decimal
+
+1010.
+
+1010
+
+11101,
+
+810
+
+1011,
+1100,
+1101,
+1110,
+1111,
+
+1110
+1210
+1310
+1410
+1510
+
+11100,
+11011,
+11010,
+11001,
+11000,
+
+2810
+2710
+2610
+2510
+2410
+
+10000,
+10001,
+10010,
+
+1610
+1710
+1810
+
+10111,
+10110,
+
+2310
+2210
+
+10,
+1,
+0,
+
+Binary
+
+910 |
+
+11,
+
+oe
+
+10011,
+
+— >
+
+Decimal
+
+{
+
+1910
+
+10101,
+<=>
+
+10100,
+
+=>
+
+f
+
+291 ||
+
+2110
+2010
+
+Figure 1.2. Binary counting
+
+Binary Counting
+
+Digital Circuits Tutor Series: Volume 1
+
+Refer to figure 1.2 for a depiction of the binary counting process. Notice that
+the count begins with 0 followed by 12. After incrementing the binary count
+twice (0 and 1), we now increment the next digit to the left (102). We continue
+our binary count by incrementing the digit to the right (112). Since the last
+available symbol (1) appears in both positions of our binary number, to
+increment our count again we must add a digit to the right and increment it
+
+(1002).
+
+Binary/Decimal
+Conversion
+
+Now let’s examine the process of converting binary values to eee and vice
+versa by using the same principles shown earlier.
+
+Example
+
+Convert 1011, to its decimal equivalent.
+1011, = (1x25) + (0x2) + (1x2") + (1x2°)
+
+ay RQe SA
+=
+
+OY RANE
+
+Naas
+
+(Line 1)
+
+(Line 2)
+
+1140 (Use table 1.1 on page 9 to check
+the result)
+
+1011, can be evaluated in decimal as:
+
+1 unit
+1 two
+
+0 four
+1 eight
+
+Total = 11 units (in decimal)
+
+The quantity represented by the number is determined by multiplying each bit
+by its position weight and adding the different terms. Notice that we’ve
+converted a binary number to a decimal number. Let’s work out some other
+examples:
+
+Example
+
+Convert 10011, to its decimal equivalent.
+
+10011, = (1x24) + (0x22) + (0x22) + (1x21) + (1x29)
+
+16> 4, 0
+
++70
+
+og
+
+1910 (Use table 1.1 to check the result)
+@ Binary/Decimal Conversion
+
+(cont. on pg..5)
+
+Number Systems
+
+10011 consists of the following units:
+1 unit
+1 two
+
+0 four
+
+0 eight
+1 sixteen
+
+Total = 19 units (in decimal)
+To convert a fractional number we use the same process as we did for whole
+numbers. But with fractional numbers we must use negative powers. Negative
+powers apply only to the digits on the right side of the decimal point. Each time
+that we move one position to the right on the right side of the decimal point, we
+decrease the power by one. One the contrary, when moving toward the left
+direction on the left side of the decimal point, we increase the power of the base
+by one. Let’s illustrate this process with some examples:
+
+Example
+Evaluate 125.402).
+
+125.402 :9=(1x102)+(2x10")+(5x10°)+(4x107')+(0x1072)+(2x10"%)
+=ST100
+
+42020)
+
+eto
+
+tens
+
+eet
+
+OO
+
+OO2
+
+=124.40215
+
+with
+
+102 fae = 1/10
+10-2=.01 =1/100
+107 = 001 = 1/1000
+125.402;9 can be evaluated as:
+
+1 hundred
+2 ten
+
+5 one
+4 tenth (starting of the fraction)
+
+0 hundredth
+2 thousandth
+
+Total = 125.402;. units (in decimal)
+For the binary number system the same process is used with a power of 2
+(because the base is now 2) instead of 10.
+
+Binary/Decimal Conversion §
+
+Digital Circuits Tutor Series: Volume 1
+
+Example
+
+Convert 100.11, to its decimal equivalent.
+
+100.115 = (1x22) + (Ox2') + (0x29) + (1x27) + (1x272)
+URSY + 125
++
+4.
++ 0, ok
+ATS:
+
+no = 1/2
+25 = 1/4
+
+100.11 is equal to the sum of:
+1 four
+0 two
+0 one
+
+1 half (start of fraction)
+1 fourth
+
+Total = 4.75 units (in decimal)
+
+This example illustrates the conversion of a fractional binary number to a
+decimal number. Now let’s try to convert from the decimal number system to
+the binary number system. To accomplish this conversion, we will divide the
+decimal number by 2 (which is the base of the binary system) as many times as
+necessary until the quotient of the division becomes 0. At each division we will
+take the remainder. The first remainder represents the least significant bit
+(LSB) and the last remainder represents the most significant bit (MSB). (MSB
+denotes the leftmost bit of the number; LSB denotes the rightmost bit of the
+number.)
+
+Example
+
+Convert 910 to its binary equivalent.
+9/2 =
+4/2 =
+2/2 =
+
+remainder 1
+remainder0
+remainder0
+
+1/2 =
+
+remainder 1
+
+_
+
+(LSB)
+
+(Top)
+
+(MSB)
+
+(Bottom)
+
+.
+
+If we take the remainders from bottom to top we obtain:
+1001,
+
+§ Binary/Decimal Conversion
+
+=
+
+910
+
+(cont. on pg. 7)
+
+Number Systems
+
+Example
+
+Convert 43 to its binary equivalent.
+
+43/2
+
+~ remainder 1
+
+21/2
+
+remainder 1
+
+10/2
+
+remainder 0
+
+5/2
+
+remainder 1
+
+2/2
+
+remainder 0
+
+1/2
+
+remainder 1
+
+(LSB)
+
+(Top)
+
+(MSB)
+
+(Bottom)
+
+Taking the remainders from bottom to top we get:
+101011,
+
+= 4310
+
+To convert a decimal number with.a fraction to its binary equivalent, first
+convert the whole part of the decimal number (which will correspond to the
+whole part of the binary number); then convert the fractional part (which will
+correspond to the fractional part of the binary number). Once both parts are
+converted, insert a binary point to separate the two parts.
+The whole part should be on the left side of the binary point, and the fractional
+part on the right side (of the same point). The binary point corresponds to the
+decimal point in the decimal. Each number system has its own dividing point:
+octal, hexadecimal, etc.
+
+Example
+
+Convert 124.3750 to its binary equivalent. ~
+
+Convert the whole portion:
+124/2 = 62 remainder 0
+62/2 = 31
+31/2
+
+(LSB)
+
+(Top)
+
+(MSB)
+
+(Bottom)
+
+remainder 0
+
+= 15 remainder1
+
+15/2 =
+
+7 remainder1
+
+7/2 =
+
+3 remainder 1
+
+3/2 =
+
+1 remainder1
+
+1/2 =
+
+O remainder1
+
+From bottom to top we compute the whole part as:
+
+12419
+=1111100;
+
+Binary/Decimal Conversion
+
+Digital Circuits Tutor Series: Volume 1
+
+Convert the fractional portion:
+
+The fractional portion of the decimal number should be converted as
+follows:
+
+1
+
+Multiply the fractional portion of the decimal number (.375) by
+2;
+SS
+
+375 x 2 =0.75
+(sien
+
+whole portion
+Sashes
+
+=
+
+— fractional portion
+
+The whole portion of the result is the leftmost bit of the binary
+fraction. Therefore 0 is the leftmost bit of the binary fraction.
+Take the fractional portion of the result of step 1 ¢.75) and
+multiply it by 2.
+75 x 2 = 1.50
+
+The whole portion of the result is the second bit to the right of the
+binary fraction. The binary fraction becomes 01.
+Take the fractional portion of the result of step 2. (.50) and
+multiply it by 2.
+
+50 x 2 = 1.00
+
+The whole portion of the result is the third bit to the right of the
+binary fraction. The binary fraction is now 011.
+The fractional portion of the result of step 3 is 00. Therefore the
+conversion is finished, and the binary fraction is 011.
+.37510 = .0112
+
+The converted number is:
+
+124.37510 = 1111100.01 12.
+
+§ Binary/Decimal Conversion
+
+Number Systems
+
+Table 1.1. Comparison of decimal, binary, octal and
+hexadecimal number systems
+Decimal
+
+Binary
+
+Octal
+
+2
+3
+
+0
+1
+
+10
+1
+
+0
+1
+
+0
+1
+
+4
+
+5
+6
+7
+8
+9
+10
+11
+12
+
+100
+
+101
+110
+111
+1000
+1001
+1010
+1011
+1100
+
+4
+
+5
+6
+7
+10
+11
+12
+13
+14
+
+4
+
+5
+6
+7
+8
+9
+A
+B
+é
+
+13
+14
+1
+16
+17
+18
+19
+
+1101
+1110
+i a Oe
+10000
+10001
+10010
+10011
+
+15
+16
+sled
+20
+21
+22
+23
+
+D
+E
+F
+10
+11
+12
+13
+
+21
+22
+23
+24
+25
+26
+ef
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+
+10101
+10110
+10111
+11000
+11001
+11010
+11011
+11100
+11101
+11110
+sO atba
+100000
+100001
+100010
+100011
+100100
+100101
+100110
+100111
+101000
+101001
+101010
+101011
+101100
+101101
+101110
+101111
+110000
+
+25
+26
+27
+30
+31
+32
+33
+34
+35
+36
+37
+40
+41
+42
+43
+44
+45
+46
+47
+50
+51
+52
+53
+54
+55
+56
+oT
+60
+
+15
+16
+17
+18
+19
+1A
+1B
+1C
+1D
+1E
+1F
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+2A
+2B
+2C
+2D
+2E
+a
+30
+
+0
+1
+
+20
+
+Practice
+Problems
+
+2
+3
+
+10100
+
+24
+
+Hexadecimal
+
+D
+3
+
+14
+
+Problem 1.1
+Convert the following numbers from base 2 to base 10:
+a)
+
+10,
+
+b)
+
+1102
+
+c)
+
+11010,
+
+Practice Problems {J
+
+Digital Circuits Tutor Series: Volume 1
+
+Solution
+
+a)
+
+102 = (1x2") + (0x2°) = 2+0 = 210
+
+b)
+
+1102 = (1x2") + (1x2") + (0x2°) = 4+2+0 = 610
+
+c) 110102 = (1x24) + (1x2*) + (0x2?) + (1x2") + (0x2°)
+=
+
+16
+
++
+
+aa
+
+3
+
+Oe
+
+e+
+
+oat
+
+0
+
+= 2610
+
+Problem 1.2
+Convert the following numbers from base 10 to base 2:
+a)
+
+1210
+
+b)
+
+Solution
+a) 12/2 = 6
+6/2 = 3
+3/2 = 1
+1/2 = 0
+
+5810
+
+c)
+
+13810
+
+remainder0
+remainder0
+remainder|
+remainder|
+
+(LSB)
+
+(MSB)
+
+The converted binary number is 11002.
+b) 58/2
+29/2
+14/2
+7/2
+3/2
+Ly2
+
+= 29
+= 14
+= 7
+= 3
+= 1
+0
+
+remainder0
+remainder |
+remainder 0
+remainder |
+remainder |
+remainder |
+
+(LSB)
+
+(MSB)
+
+The converted binary number is 111010).
+
+c)
+
+138/2
+69/2
+34/2
+17/2
+8/2
+4/2
+2/2
+1/2
+
+= 69
+= 34
+= 17
+= 8
+= 4
+= 4
+= 1
+= O
+
+remainder0
+remainder|
+remainder0
+remainder 1
+remainder 0
+remainder 0
+remainder 0
+remainder 1
+
+(LSB)
+
+(MSB)
+
+The converted number is 100010103.
+
+Problem 4.3
+Convert the following numbers from base 2 to base 10:
+a)
+
+Practice Problems
+
+101.01,
+
+b)
+
+10.011,
+
+c)
+
+1.1101,
+
+Number Systems
+
+Solutions
+
+a)
+
+101.01,
+
+= (1x27) + (Ox2') + (1x29) + (0x2)
++
+
+4
+
+=
+Sey
+
+0
+
++
+
+l
+
+4.
+
++ (1x27)
+tS
+
+0
+
+5.2510
+
+The converted number is 5.2540.
+
+b)
+
+10.011,
+
+= (1x2') + (Ox2°) + (0x2)
+2
++
+2.37510
+
+0
+
++
+
+0
+
++ (1x27)
+
++ (1x27)
+
+te
+
+tee
+
+DS
+
+ADS
+
+The converted number is 2.3750.
+
+c)
+
+1.1101,
+
+= (1x2°) + (1x27)
+
++ (1x27) + (0x27) + (1x2)
+
+=
+
+|
+
+=
+
+=
+
+1.812510
+
++
+
+te)
+
+ee)
+
+WEES:
+
+0
+
++
+
+0625
+
+The converted number is 1.8125jo.
+
+Problem 1.4
+Convert the following numbers from base 10 to base 2:
+a)
+
+0.2510
+
+b)
+
+Solutions
+a) .25x2
+
+= 0.50
+
+5x2
+
+= 100
+
+0.301 10
+
+The converted number is 0.013.
+
+b) .301x2
+.602x2
+.204x2
+.408x2
+.816x2
+.632x2
+.264x2
+.528x2
+.056x2
+.112x2
+.224x2
+448x2
+.896x2
+.792x2
+
+etc
+
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+
+0.602
+1.204
+0.408
+0.816
+1.632
+1.264
+0.528
+1.056
+0.112
+0.224
+0.448
+0.896
+1.792
+1.584
+
+etc
+
+The converted number is 0.01001101000011
+
+...2.
+
+Practice Problems
+
+Digital Circuits Tutor Series: Volume 1
+
+Problem 1.5
+Convert the following numbers from base 10 to base 2:
+
+b) 43.812510
+a) 134.25;0
+Solution
+a) Conversion of the whole part:
+
+134/2
+67/2
+33/2
+16/2
+8/2
+4/2
+2/2
+1/2
+
+= 67
+= 33
+= 16
+= 8
+= 4
+= 2
+= 1
+= 0
+
+remainder0
+remainder |
+remainder 1
+remainder 0
+remainder 0
+remainder 0
+remainder 0
+remainder |
+
+(LSB)
+
+(MSB)
+
+The converted number is 10000110).
+Conversion of the fractional part:
+
+.25x2 = 0.50
+.50x2 = 1.00
+The converted number is .01>.
+The final converted number is 10000110.01).
+
+b) Conversion of the whole part:
+
+43/2
+21/2
+10/2
+5/2
+272
+De
+
+= 21
+= 10
+= 5
+= 2
+1
+i
+0
+
+remainder|
+remainder1
+remainder0
+remainder1
+remainder 0
+remainder |
+
+(LSB)
+
+(MSB)
+
+The converted number is 10101 12.
+
+Conversion of the fractional part:
+
+.8125x2 = 1.625
+.625x2 = 1.25
+.25x2 = 0.50
+.50x2 = 1.00
+The converted number is .1101).
+The final converted number is 101011.1101..
+
+Practice Problems
+
+Number Systems
+
+Octal
+Numbers
+
+The octal number system (base 8) uses eight symbols to express itself:
+0,1,2,3,4,5,6, and 7. Like the binary and decimal number systems, the octal
+number system is weighted; each digit has its own weight determined by its
+position.
+
+As illustrated in figure 1.3, octal counting is based on the same fundamental
+logic as decimal or binary counting.
+
+Octal
+
+Decimal
+
+Octal
+
+Decimal
+
+Octal
+
+—
+
+Decimal
+
+10
+
+8 |
+
+11
+
+SS)
+
+100°
+
+rj
+
+r
+
+12
+
+10
+
+ai
+
+63
+
+76
+
+62
+
+6
+
+6
+
+13
+
+11
+
+5
+
+5
+
+14
+
+12
+
+4
+
+4
+
+15
+
+13
+
+3
+
+3
+
+16
+
+14
+
+Bd.
+
+.
+
+2
+
+2
+
+16
+
+14
+
+23
+
+19
+
+t1
+
+1
+
+17
+
+ile
+
+22
+
+18
+
+0
+
+0
+
+ie
+
+16
+
+ay
+
+cel
+
+{
+
+17
+
+Figure 1.3. Octal counting
+Notice that octal counting revolves around a base of 8, and the weights of the
+
+positions are computed as powers of 8. In the following examples, we'll
+examine octal/ decimal and decimal/ octal conversions.
+
+Example
+
+Convert 4746, to its decimal equivalent.
+
+4746,
+
+= (4x8*) + (7x8?) + (4x8!) + (6x8°)
+D046. 3) 445° + 32) +
+1G
+25341
+
+(line1)
+(line2)
+
+with
+
+8°
+
+1
+
+8!
+
+8
+
+8? =.
+
+164
+
+8°
+
+512
+
+4746 can be evaluated (starting from right to left on line 1) as:
+6 ones (6x8°)
+
+4 eights (4x8")
+7 sixty fours (7x8?)
+4 five hundred twelves (4x8°)
+Total
+
+= 2534 units (in decimal)
+
+Octal Numbers
+
+Digital Circuits Tutor Series: Volume 1
+
+In this example let’s figure out the weight of each digit from right to left. The
+first digit, which is in the first place on the right, corresponds toa weight of | or
+8°. Going left, the weight for the next digit is 8 or 8'. The third place from the
+right has a weight of 64 or 8’. Finally, the fourth digit from the right has a
+weight of 512 which is also 8’.
+To calculate the value of the number we multiply each digit by its weight and
+add the results (see line 2).
+
+Example
+
+Convert 13702, to its decimal equivalent.
+
+13702,
+
+(1x84) + (3x8°) + (7x8’) + (0x8!) + (2x8°)
+4096
+=
+
++
+
+1536
+
++
+
+448
+
++
+
+0
+
++
+
+4
+
+608210
+
+We use the same procedure to convert the octal value 13702, to decimal as
+illustrated in the above example.
+
+To convert a fractional octal number to its decimal equivalent we use the same
+conversion method for the whole number portion, but for the fractional
+portion we use negative powers. Each time we move one digit to the right side
+of the octal point we decrease the weight by a power of one. On the contrary,
+when moving on the left of the octal point we increase the power of the weight
+by one.
+
+Example
+Convert 23.52. to its decimal equivalent.
+
+23.523
+
+(2x8") + (3x8°)_ + (5x8"") + (2x87?)
+1Oee
+ta
+ey = my) Goo.
++) 109125
+19.65625 1
+
+Ze
+015625
+
+The weight of each digit is determined by its position.
+
+{Z] Octal Numbers
+
+Number Systems
+
+From left to right of line 1 we can compute the weight of 23.52s as follows:
+The value 2 has a weight of 8 or 8. The value 3 has a weight of | or 8°. The value
+5 (the first digit on the right of the octal point) has a weight of 8"! or 0.125.
+
+Finally the value 2 has a weight of 8° or 0.015625.
+
+Example
+Convert 101.64 to its decimal equivalent.
+
+101.64,
+=
+
+(1x8?) + (Ox8') + (1x89) + (6x87)
+64
+oe
+REA)
+eet,
+65.8125;
+
+(4x87?)
+0625
+
+As in the preceding examples, each digit’s weight is determined by its position.
+From right to left, 101.643 can be evaluated as follows: 4 has a weight of 8 or
+
+.15625, 6 has a weight of 8 ' or .125, 1 has a weight of 8° or 1, 0 has a weight of 8'
+or 8, and finally 1 has a weight of 87 or 64.
+
+As evidenced in this example, we converted from octal to decimal by
+multiplying each digit by its weight and adding all the results. Let’s convert
+from the decimal number system to the octal number system. To accomplish
+this conversion, we will divide the decimal number by 8 (which is the base of
+the octal number system) as many times as necessary until the quotient of the
+division becomes 0.
+
+After each division we will take the remainder to form the converted number.
+The first remainder will represent the least significant digit (LSD), and the last
+remainder will represent the most significant digit (MSD).
+
+Example
+
+Convert 612 to its octal equivalent.
+612 / 8 = 76 remainder 4
+
+(LSD)
+
+(Top)
+
+76/8=
+9/8=
+1/8=
+
+(MSD)
+
+(Bottom)
+
+9 remainder 4
+1 remainder 1
+Oremainder1
+
+Taking the remainder from bottom to top we have:
+1144, = 61210
+
+Octal Numbers
+
+Digital Circuits Tutor Series: Volume 1
+
+Example
+
+Convert 5143 to its octal equivalent.
+5143 / 8 = 642 remainder 7
+642 /8=
+
+80 remainder 2
+
+80/8=
+
+10 remainder 0
+
+10/8=
+1/8=
+
+1 remainder 2
+Oremainder 1
+
+(LSD)
+
+(Top)
+
+(MSD)
+
+(Bottom)
+
+Taking the remainders from bottom to top we arrive at:
+120278 = 514310
+
+To convert a decimal number with a fraction to its octal equivalent, we will
+treat the whole part and the fractional part independently and put the octal
+point between the two parts.
+
+Example
+
+Convert 312.812510 to its octal equivalent.
+Convert the whole part:
+312 / 8 = 39 remainder 0
+39/8= 4 remainder 7
+4/8=
+
+Oremainder 4
+
+(LSD)
+
+(Top)
+
+(MSD)
+
+(Bottom)
+
+The whole portion is 470g.
+Convert the fractional part:
+8125 x8 =6.5
+5x8=4
+
+(6 is the first fractional digit)
+(4 is the second fractional digit)
+
+The fractional portion is .64s.
+The converted number is 470.64.
+
+Example
+
+Convert 47953.6562510 to its octal equivalent.
+Convert the whole part:
+(cont. on pg. 17)
+
+Hg Octal Numbers
+
+Number Systems
+
+47953 / 8 = 5994 remainder 1
+5994/8=
+
+749 remainder 2
+
+749/8=
+
+93 remainder 5
+
+93 / 8=
+
+11 remainder 5
+
+11/8=
+
+1 remainder 3
+
+1/8=
+
+0 remainder 1
+
+(MSD)
+
+(Bottom)
+
+The whole portion is 135521s.
+Convert the fractional part:
+.65625 x 8 = 5.25
+
+(5 is the first fractional digit)
+
+.25x8=2
+
+(2 is the second digit)
+
+The fractional portion is 52s.
+The converted number is 135521.52s.
+
+Practice
+Problems
+
+Problem 1.6
+Convert the following numbers from base 8 to base 10:
+a)
+
+67s
+
+b)
+
+172
+
+c)
+
+1071s:
+
+Solution:
+
+a)
+
+67s = (6x8')
++ (7x8°)
+= (4g
+7
+= 5510
+
+b)
+
+172s = (1x87) + (7x8) + (2x8°)
+=?
+
+64.3:
+
+=
+
+12210
+
+ted
+
+56
+
+beri?
+
+c) 1071s = (1x8*) + (Ox8’) + (7x8') + (1x8°)
+Se.
+Sl eeoe-8+ =56 +
+11
+56910
+Problem 41.7
+Convert the following numbers from base 10 to base 8:
+a)
+
+5810
+
+b)
+
+16910
+
+c)
+
+1908;0
+
+remainder2
+remainder7
+
+(LSD)
+(MSD)
+
+Solution:
+
+a)
+
+58/8 = 7
+7/8 = 0
+
+The converted octal number is 72s.
+
+Practice Problems
+
+Digital Circuits Tutor Series: Volume 1
+
+b)
+
+169/8 = 21 remainder|
+21/8 = \2@remam@der 5
+2/8 = O remainder 2
+
+(LSD)
+(MSD)
+
+The converted octal number is 251s.
+
+c)
+
+1908/8 = 238
+238/8 = 29
+29/8 I
+3
+3/8
+
+remainder4
+remainder 6
+remainder 5
+remainder 3
+
+(LSD)
+
+(MSD)
+
+The converted number is 3564s.
+
+Problem 1.8
+Convert the following numbers from base 8 to base 10:
+
+a)
+
+164.53
+
+b)
+
+22.76
+
+c)
+
+6.7028
+
+Solutions
+
+a)
+
+164.5,
+
+= (1x8’) + (6x8!) + (4x8°) +
+=
+
+64
+
++
+
+=
+
+116.6250
+
+48
+
+-+
+
+4
+
+(5x87)
+
+ae
+
+Baha)
+
+The converted number is 116.6254.
+
+b) ~ 22.76,
+
+= (x8'y
+= a6
+=
+
++ 2(2xR°) + (7x87)
++ )ees, =875°
+
++
++
+
+(6x87)
+09375
+
+18.9687510
+
+The converted number is 18.96875.
+
+Ch
+
+0702p.
+
+= (ORS Jr e(U kee
+
+ate ORG:
+
+te.
+
+ASKS}
+
+=
+
+6
+
++
+
++
+
+.00390625
+
+=
+
+6.8789062510
+
++
+
+PeoSy
+
+0
+
+The converted number is 6.87890625.
+
+Problem 1.9
+Convert the following numbers from base 10 to base 8:
+
+a)
+
+0.96876i0
+
+b)
+
+.95432410
+
+Solutions
+a)
+
+.96875x8
+
+= 7.75
+
+.75x8 = 6.00
+The converted number is 0.76s.
+
+I) Practice Problems
+
+Number Systems
+
+b)
+
+954324x8
+.634592x8
+
+7.634592
+
+= 5.076736
+.076736x8 = 0.613888
+.613888x8= 4.911104
+.911104x8 = 7.288832
+.288832x8 = 2.310656
+.310656x8
+2.485248
+485248x8
+3.881984
+.881984x8
+7.055872
+.055872x8 = 0.446976
+.446976x8 = 3.575808
+.575808x8 = 4.606464
+etc.
+
+ete:
+
+The converted number is 0.750472237034 ...s.
+
+Problem 1.10
+
+Convert the following numbers from base 10 to base 8:
+
+a)
+
+b)
+
+38.65429687510
+
+410.438720703;0
+
+Solution
+
+a) Convert the whole part:
+
+38/8 = 4
+ASS
+
+remainder 6
+remainder 4
+
+(LSD)
+(MSD)
+
+The converted number is 46s.
+
+Convert the fractional part:
+
+.654296875x8
+.234375x8
+.875x8
+
+5.234375
+1. 843
+7 .00
+
+The converted number is .5173.
+
+The final converted number is 46.5173.
+
+b)
+
+Convert the whole part:
+
+410/8 = 51
+51/8 =
+6/8 =
+
+remainder 2
+remainder 3
+
+remainder 6
+
+The converted number is 632s.
+
+Practice Problems {J
+
+Digital Circuits Tutor Series: Volume 1
+
+Convert the fractional part:
+
+.438720703x8
+
+= 3
+
+.509765624
+
+.509765624x8
+
+= 4
+
+.078125
+
+.078125x8
+
+= 0
+
+.625
+
+0.625x8
+
+= 5
+
+.00
+
+The converted number is .3405s.
+The final converted number is: 632.3405s
+
+Hexadecimal
+Numbers
+
+The hexadecimal
+
+or base 16 system uses sixteen symbols to represent a
+
+number. These symbols are 0,1,2,3,4,5,6,7,8,9,A, B,C,D,E and F, which correspond to the decimals 0,1,2,3,4,5,6,7, 8,9,10,11,12, 13,14 and 15 respectively.
+
+Like the decimal, binary, and octal systems, the hexadecimal number system is
+weighted. Each digit is assigned a specific weight. A digit’s value depends on its
+position and the base (which is 16 for the hexadecimal number system).
+Let’s familiarize ourselves with the hexadecimal number system by learning its
+counting principles. As shown in figure 1.4 the hexadecimal count is based on
+the same logic as any other weighted number system. The number expands to
+the left (or right for fractional portions) after the count extends beyond the 16
+available symbols.
+
+Hexa:
+decimal
+
+F
+
+fe
+D
+
+C
+B
+A
+
+9
+8
+7
+
+6
+5
+
+4
+3
+2
+1
+oO
+
+:
+Decimal
+
+15
+14
+13
+12
+11
+10
+
+16
+17
+18
+19
+20
+21
+co
+22
+23
+24
+25
+26
+27
+28
+29
+30
+ADHD
+OO
+N
+O-A-ANWH 31
+
+Figure 1.4. Hexadecimal counting
+
+2) Hexadecimal Numbers
+
+:
+Decimal
+
+Hexafi
+decimal
+
+100
+FF
+FE
+FD
+
+Decimal
+
+256
+255
+254
+255
+
+Number Systems
+
+To
+
+count
+
+in hexadecimal we start with 0, then 1,2,3,4,5,6,7,8,9 (which
+correspond to the decimals 0 through 9). After nine the count continues using
+
+only one digit. We still have six symbols to increment with before we start the
+enlargement process. These digits are: A,B,C,D,E, and F (which correspond to
+the decimals 10,11,12,13,14, and 15 respectively). Once we reach F, the
+rightmost digit has been incremented with all the symbols. We are ready to
+begin the enlargement process.
+
+The next digit to the left is incremented.
+
+The count becomes
+
+10 (which
+
+corresponds to the decimal 16). Increasing the count we have 11,12,13,14,15,16,17,18,
+19,1A,1B,1C,1D,1E,
+
+and 1F (which correspond to the decimal numbers
+
+17
+
+through 31 respectively).
+Again the rightmost digit has been incremented with all available symbols.
+The next digit to the left must be incremented. The count becomes 20 (which
+corresponds to the decimal 32). Continue with the same process until you have
+achieved a satisfactory feel for the hexadecimal count.
+
+As seen in the counting process, the hexadecimal number system uses the same
+principles applied in the decimal, binary, or octal number systems. The
+hexadecimal number system is of base 16, which means that the weight of each
+of the digits will be determined using different powers of 16. To reinforce these
+principles let’s look at some examples.
+
+Example
+Convert 3AF\¢ to its decimal equivalent.
+SAFis
+
+=
+
+(3x16?)
+(3x256)
+768
+94310
+
++
+
++
++
+
+(Ax16')
+(10x16)
+160
+
++
++
+++
+
+(Fx16°)
+(15x1)
+15
+
+(line1)
+(line2)
+(line 3)
+
+with
+
+16?
+= 256
+16'= 16
+16°= 1
+Remark:
+
+In line 2 the hexadecimal numbers F and A were converted to their
+
+decimal equivalents.
+The weight of 3AF from right to left is determined as follows: F has a weight of
+1 or 1, A has a weight of 16 or 16!, and 3 has a weight of256 or 1@. Notice that
+each move to the left by one digit will increase the power of 16 by one.
+Consequently the weight will also increase. The weights are, from right to left:
+1, 16, and 256, which is equivalent to 16, 16', and 16 respectively. If we
+multiply each digit by its weight and add the results, we arrive at 943, which is
+
+the decimal equivalent of 3AF ie.
+Hexadecimal Numbers
+
+Digital Circuits Tutor Series: Volume 1
+
+Example
+Convert 3FC.2A\5 to its decimal equivalent.
+i6 + (Fx16')
+= (3x16?)
+3FC.2A
+= (3x256) + (15x16)
+=1020.16406310
+
++
+
+(Cx16°)
+
++
+
+(2x16"')
+
++(Ax16’)
+
++
+
+(12x1)
+
++
+
+(2x.0625)
+
++(10x.00390625)
+
+The weights of the digits in 3FC.2Ai. from left to right are determined as
+follows: 3 has a weight of 16’ or 256, F has a weight of 16' or 16, Chas a weight
+of 16° or 1, 2 has a weight of 16 or .0625 and A has a weight of 16° or
+.00390625. If we multiply the weight by the corresponding digit and add the
+results, we arrive at 1020.164063jo.
+
+Example
+
+Convert B5E.6F to its decimal equivalent.
+BSE.6F i¢
+
+(Bx16”)
+
++
+
+(5x16')
+
++
+
+(Ex16°)
+
++
+
+(6x16)
+
++
+
+(11x256)
+
++
+
+(5x16)
+
++
+
+(14x1)
+
++
+
+(6x.0625)
+
++(15x.00390625)
+
+80
+
+a
+
++
+
+375
+
+20) Omer
+
+Fx16°’)
+
++
+
+.05859375
+
+=2910.4335941
+
+Example
+
+Convert A8C.D3\¢ to its decimal equivalent.
+A8C.D3i6
+
+=
+
+Ax16?
+
+=
+
+(10x256)
+
+=ear2o60%
+
++
+
+(8x16')
+
++
+
+(Cx16°)
+
++
+
+(Dx16"')
+
++
+
+(3x16°*)
+
++
++
+
+(8x16)
+
++
+
+(12x1)
+
++ (13x.0625)
+
++
+
+(3x.00390625)
+
+128
+
+ot
+
+12
+
++
+
++
+
+01171875
+
+8125
+
+=2700.8242191
+
+To convert from decimal to hexadecimal we will again apply the same
+principles used with the octal and binary systems. We will divide the decimal
+number by sixteen as many times as necessary until the quotient becomes 0.
+After each division we will combine the remainders to form the converted
+hexadecimal number. The first remainder will be the least significant digit
+(LSD), and the last remainder will be the most significant digit (MSD). If
+necessary, these remainders will first be converted to their hexadecimal
+equivalents.
+
+PR) Hexadecimal Numbers
+
+Number Systems
+
+Example
+
+Convert 27000 to its hexadecimal equivalent.
+2700 / 16 = 168
+
+(LSD)
+
+(Top)
+
+168/16=
+10/16=
+
+remainder 12 = C
+10 remainder 8
+
+O remainder10=A
+
+(MSD)
+
+(Bottom)
+
+Taking the remainder from bottom to the top we form the converted
+number:
+A8Ci¢6
+
+=
+
+270010
+
+Example
+
+Convert 291010 to its hexadecimal equivalent.
+2910/16 =181 remainder 14=E
+181/16=
+11 remainder 5
+11/16=
+O remainder 11=B
+
+(LSD)
+
+(Top)
+
+(MSB)
+
+(Bottom)
+
+Taking remainders from bottom to top, we arrive at the converted number:
+BSEis
+
+Example
+
+Convert 985500 to its hexadecimal equivalent.
+98550 / 16 = 6159
+
+remainder
+
+6
+
+6159/16 =
+
+384
+
+remainder 15 =F
+
+384/16=
+
+24 remainder
+
+O
+
+24/16=
+1/16=
+
+1 remainder
+O remainder
+
+8
+1
+
+(MSD)
+
+(Bottom)
+
+The converted number is 180F 646
+
+To convert a fractional number in the decimal system to its hexadecimal
+equivalent, we again apply the same method used for the octal and binary
+systems. We will treat the whole and the fractional parts independently.
+For the fractional part, we will multiply the decimal fraction by 16 as many
+times as are necessary until the result evaluates less than 1. The result of each
+
+multiplication will yield a fractional number. The whole portion of the result
+of the multiplication will be used to form the converted fractional part. The
+fractional portion of the result of the multiplication will be multiplied by 16
+again to determine the next fractional digit.
+
+Hexadecimal Numbers
+
+Digital Circuits Tutor Series: Volume 1
+
+Example
+Convert 1020.164063, to its hexadecimal equivalent.
+
+Convert the whole portion:
+1020/16 =63
+
+remainder 12 =C
+
+63/16=
+
+3 remainder 15 = F
+
+3/16=
+
+O remainder
+
+3
+
+The whole portion is 3FCi6.
+Convert the fractional part:
+.164063 x 16 = 2.625008
+
+(2 is the first digit)
+
+.625008 x 16 = 10.000128
+
+(10 or A is the second digit)
+
+.000128 x 16 = 0.002048
+
+(end of computation)
+
+The fractional part is .2Ai6.
+The converted number is 3FC.2A\¢6.
+
+Example
+
+Convert 2910.433594 to its hexadecimal equivalent.
+Convert the whole portion:
+2910 / 16
+
+181
+
+remainder 14
+
+181/16
+
+11
+
+remainder
+
+11/16
+
+O remainder 11
+
+5
+
+The whole portion is BSEte.
+Convert the fractional part:
+433594 x 16
+
+6.937504
+
+.937504 x 16 = 15.000064
+
+(15 or F is the second digit)
+
+.000064 x.16
+
+(end of computation)
+
+0.001024
+
+The fractional portion is 6Fi6.
+The converted number is BSE.6Fie.
+
+PZ] Hexadecimal Numbers
+
+(6 is the first digit)
+
+Number Systems
+
+Practice
+Problems
+
+Problem 1.14
+Convert the following numbers from base 16 to base 10:
+a) Dlie
+
+b) CA7i¢
+
+c) LA3Fi¢
+
+Solution
+
+a) Dlis
+
+b) CATis
+
+c)
+
+1A3Fis
+
+=
+
+(13x16')
+
+=
+
+208
+
+=
+
+209 10
+
+=
+me
+
+(12x16)
+|
+
+=
+
+323910
+
+=
+
+(1x16*)
+
++ ° (1x16°)
++
+
+|
+
++
+Po
+
+(10x16')
+160
+
++
+5
+
+(7x16°)
+7,
+
++
+
+(10x16?)
+
++
+
+(3x16')
+
++
+
+(15x16°)
+
+48
+
+e
+
+15
+
+ee
+ee
+=
+671910
+
+es! |
+
+Problem 41.12
+Convert the following numbers from base 10 to base 16:
+a) 7910
+
+b) 56710
+
+C) 979245910
+
+Solution
+a)
+
+79/16 = 4 remainder F (or 15)
+4/16 = 0 remainder4
+The converted hexadecimal number is 4Fg.
+
+b)
+
+567/16 = 35 remainder7
+35/16
+2 remainder 3
+2/16 = O remainder2
+The converted hexadecimal number is 237.
+
+c)
+
+9792459/16
+612028/16
+38251/16
+2390/16
+149/16
+9/16
+
+= 612028 remainder B (or 11)
+= 38251 remainder C (or 12)
+=
+2390 remainder B (or 11)
+=
+149 remainder6
+9 remainder 5
+0 remainder 9
+
+The converted hexadecimal number is 956BCBie.
+
+Problem 1.13
+Convert the following numbers from base 16 to base 10:
+a) 5.Fi¢
+
+b) 1D.A8i6
+
+c) E.C2Ai6
+
+Practice Problems 2g
+
+Digital Circuits Tutor Series: Volume 1
+
+Solution
+a)
+
+5.Fie¢
+
+(5x16°) + (15x16"')
+ie)
++
+9375
+5.937510
+
+The converted number is 5.93750.
+
+b)
+
+1D.A8i¢
+
+=(Ix16') + (13x16°) + (10x16") + (8x16)
+= 16
+eee GTS © ake eho
++>
+3s)
+29.6562510
+‘
+
+I
+
+The converted number is 29.65625
+jo.
+c)
+
+E.C2A6
+
+=
+
+(14x16°)
+14
+
++ (12x16")
++
+aS
+
++
++
+
+(2x16°)
+0078125
+
+The converted number is 14.76025jo.
+
+Problem 1.14
+Convert the following numbers from base 10 to base 16:
+a) .6562510
+
+b) .5498091
+
+Solution:
+a)
+
+.65625 x 16 = 10.5
+Se16=8
+The converted number is .A8j..
+
+b) .549809
+.796944
+.751104
+017664
+282624
+.521984
+351744
+.627904
+046464
+.743424
+
+x 16= 8.796944
+x 16 = 12.751104
+x 16 = 12.017664
+x 16= 0.282624
+x 16= 4.521984
+x 16= 8.351744
+x 16= 5.627904
+x 16 = 10.046464
+x 16= 0.743424
+x 16 = 11.894784
+
+etc
+
+etc.
+
+The converted number is 0.8CCO485A0OB ...16.
+
+2 Practice Problems
+
++ (10x16)
++ .002441406
+
+Number Systems
+
+Problem 1.45
+Convert the following numbers from base 10 to base 16:
+
+b) 217.6940002441o
+
+a) 349.976562510
+Solution:
+a)
+
+Convert the whole part:
+349/16 = 21
+21/16
+1
+1/16 = O
+
+remainder 13 (or D)
+remainder 5
+remainder |
+
+The converted whole portion is 15Dj¢.
+Convert the fractional part:
+
+.9765625x16
+
+= 15.625
+
+(15 or F)
+
+.625x16 = 10 .00
+
+(10 or A)
+
+The converted fractional portion is .FAj¢.
+
+The final converted number is 15D.FA\¢.
+b) Convert the whole part:
+
+217/16 = 13°
+13/16 = O
+
+remainder 9
+remainder
+13 (or D)
+
+The converted whole portion is D9j¢.
+Convert the fractional part:
+
+.694000244x16 = 11 .1040039
+.1040039x16 = 1 .6640624
+.6640624x16 = 10 .6249984
+.6249984x16 = 9 .9999744
+.9999744x16 = 15 .9999590
+.9999590x16 = 15 .9934464
+
+etc
+
+etc
+
+The converted fractional portion is .BI1A9FF...16.
+The final converted number is D9.BIA9FF...16.
+
+Practice Problems
+
+Digital Circuits Tutor Series: Volume 1
+
+Conversion
+Between
+Number Systems
+Binary
+
+to Octal
+
+The conversion of a binary number to its octal equivalent is an easy process.
+
+First count the number of binary bits. If the number of digits is not a multiple
+
+of 3, add as many zeros to the left of the binary number as necessary until the
+number of digits it contains is a multiple of3.(Note that adding zeros to the left
+does not affect the binary number’s value.) Starting from the left, convert
+every 3 bits into one octal digit. Note that 3 binary digits are the equivalent of
+one octal value (e.g. 1112 = 73; 1102 = 6; ... OO12 = Is.)
+
+Example
+
+Convert the binary number 1010111, to its octal equivalent.
+
+The binary 1010111, is composed of 7 bits. We will have to add two
+zeros to the left side so that the total number of bits is a multiple of 3.
+001010111,
+
+Now convert each group of three binary bits into one octal digit.
+binary bits:
+
+001
+
+0105
+
+114
+
+octal equivalent:
+
+1
+
+ie
+
+7
+
+The converted octal number is 1273.
+
+Example
+
+Convert the binary number 10101100101,
+
+to its octal equivalent.
+
+The binary 1010110010, is composed of 11 bits Let’s add one zero to its
+left side so that the number of bits is a multiple of 3.
+010
+
+101
+
+100
+
+101,
+
+Convert 3 binary bits into | octal digit.
+binary bits:
+
+010
+
+101
+
+100
+
+101
+
+octal equivalent:
+
+2
+
+5
+
+4
+
+5
+
+The converted number is 2545s.
+
+To convert a fractional binary number to its octal equivalent, add zeros to the
+rightmost bit until the total number of bits in the fractional part is a multiple of
+3. Then convert each group of 3 bits into one octal digit.
+
+2) Binary/Octal Conversion
+
+Number Systems
+
+Example
+
+Convert the binary number .1011011, to its octal equivalent.
+
+The number of digits is 7. Add two zeros to the right so that the total
+number of digits is a multiple of 3.
+.101101100,
+
+Now convert each group of 3 binary digits into one octal digit.
+binary digits:
+
+101
+
+<101>-
+
+"100
+
+octal equivalent:
+
+=O
+
+5
+
+4
+
+The converted octal number is .554s.
+
+Example
+
+Convert the binary number .11001, to its octal equivalent.
+The binary number .11001, has 5 digits. By adding one zero to its right
+side, we get:
+-110010,
+
+Convert each group of 3 binary bits to | octal digit.
+binary bits:
+
+.110
+
+010
+
+octal equivalent:
+
+ma.
+
+2
+
+The converted octal number is .62s.
+
+To convert a binary number with a whole and a fractional part to its octal
+equivalent, combine the two methods as shown below.
+
+Example
+
+Convert the binary number 10101.01101, to its octal equivalent.
+
+Convert the whole portion:
+10101
+
+010
+
+= 010101
+
+101
+
+= 25
+
+(The number of binary bits is now 6.)
+(Convert each group of 3 binary bits to their octal
+
+equivalent.)
+
+The converted whole part is 25s.
+(cont. on pg. 30)
+
+Binary/Octal Conversion
+
+Digital Circuits Tutor Series: Volume 1
+
+Convert the fractional portion:
+= .011010
+0112010 8= 2352
+01101
+
+(The number of binary bits is now 6.)
+(Convert each group of 3 binary bits to their octal
+equivalent.)
+
+The converted fractional part is .32s.
+
+The final converted number is 25.32,.
+Example
+
+Convert binary 1011100.10111, to its octal equivalent.
+Convert the whole portion:
+1011100
+
+= 001011100 (The number of binary bits is now 9.)
+
+001
+
+100 = 1 3 4 (Convert each group of 3 binary bits to their octal
+
+011
+
+equivalent.)
+
+The converted whole part is 134g.
+Convert the fractional portion:
+10111
+015
+
+= .101110
+1105=-.5-6
+
+(The number of binary bits is now 6.)
+(Convert each group of 3 binary bits to their octal
+equivalent.)
+
+The converted fractional part is .56g.
+The final converted number is 134.56.
+
+Example
+
+Convert 10.01, to its octal equivalent.
+
+Convert the whole portion:
+10 = 010
+
+(The number of binary bits is now 3.)
+
+010 = 2
+
+(Convert the 3 binary digits to their octal equivalent.)
+
+The converted whole number is 2s.
+
+Convert the fractional portion:
+.01
+
+= .010
+
+010
+
+=
+
+.2
+
+(The number of binary bits is now 3.)
+Convert the 3 binary bits to their octal equivalent.)
+
+The converted fraction part is .2..
+The final converted number is 2.2.
+
+&) Binary/Octal Conversion
+
+Number Systems
+
+Octal to Binary
+Conversions
+
+To convert from octal to binary the reverse procedure is followed. We convert
+each octal digit to a group of 3 binary bits.
+
+Example
+
+Convert the octal number 752; to its binary equivalent.
+octal number:
+
+A
+
+5
+
+2
+
+binary equivalent
+
+771,101
+
+010
+
+The final converted number is 1111010105.
+
+Example
+Convert the octal number 6103s to its binary equivalent.
+
+octal number:
+binary equivalent:
+
+6
+110
+
+1
+001
+
+0
+O00
+
+3
+O11
+
+The final converted number is 11000100001 1).
+
+To convert a fractional octal number to its binary equivalent use the same
+principle.
+
+Example
+Convert the octal number .074 to its binary equivalent.
+octal number:
+
+. 0
+
+binary equivalent:
+
+.000
+
+7
+111
+
+4
+100
+
+The final converted number is .0001111002 or .0OO1 111.
+
+Example
+Convert the octal number .417, to its binary equivalent.
+octal number:
+binary equivalent:
+
+4
+100
+
+1
+001
+
+vé
+111
+
+The final converted number is .10000111 12.
+
+To convert an octal number with a whole and a fractional part, combine the
+
+two methods and insert a binary point between them.
+
+Octal/Binary Conversion
+
+Digital Circuits Tutor Series: Volume 1
+
+Example
+Convert the octal number
+
+147.206, to its binary equivalent.
+
+Convert the whole portion:
+octal number:
+
+1
+
+4
+
+‘
+
+binary equivalent:
+
+001
+
+100
+
+111
+
+The converted whole portion is 001100111 or 1100111,,
+
+Convert the fractional portion:
+octal number:
+binary equivalent:
+
+.206
+.010
+
+O00
+
+110
+
+The converted fractional portion is .010 000
+
+1102 or .0100001 13.
+
+The final converted number is 1100111.0100001 1.
+
+Binary to
+Hexadecimal
+Conversions
+
+To convert from the binary system to the hexadecimal, begin by counting the
+number of digits in the binary number. If the number of digits is not a multiple
+of 4, add as many zeros as necessary to the left of the binary number until the
+number of digits comprising it is a multiple of four. (Note that adding zeros to
+the left of the number will not change its value.) Starting from the left, convert
+each group of 4 binary bits into one hexadecimal digit.
+
+Note that the maximum value a group of 4 binary bits can represent is 1111 =
+15 (or F); the minimum is 0000 = 0. The maximum and the minimum are within
+
+the range of the hexadecimal symbols (0 to F).
+
+Example
+
+Convert binary 10010, to its hexadecimal equivalent.
+The binary 10010 is composed of 5 digits. We have to add 3 zeros to its
+left side so its total number of bits is a multiple of 4.
+00010010,
+
+Convert each group of four binary bits into one hexadecimal digit. binary bits:
+
+hexadecimal equivalent:
+The converted hexadecimal number is 12j..
+
+kB) Binary/Hexadecimal Conversion
+
+0001
+
+0010
+
+1
+
+2
+
+Number Systems
+
+Example
+Convert the binary
+
+number
+
+10110010111101,
+
+to its hexadecimal
+
+equivalent.
+
+Binary 10110010111101 is composed of 14 bits. Add two zeros to its
+left so that the number of bits is a multiple of 4.
+0010110010111101
+
+Convert each group of four binary bits into one hexadecimal digit.
+binary digits:
+
+0010
+
+1100
+
+1011
+
+1101
+
+hexadecimal
+equivalent:
+
+2
+
+C
+
+B
+
+D
+
+The converted number is 2CBD\¢.
+
+To convert a fractional binary number to its hexadecimal equivalent, add
+zeros to the rightmost bit until the total number of digits on the fractional side
+is a multiple of 4. Then convert each group of 4 bits into one hexadecimal digit.
+
+Example
+
+Convert the binary number .11011, to its hexadecimal equivalent.
+The number of bits is 5. We need to add 3 zeros to the right. The result
+iS:
+
+.11011000
+Let’s convert each group of 4 binary bits into one hexadecimal digit.
+binary bits:
+
+.1101
+
+1000
+
+hexadecimal equivalent:
+
+aD
+
+26
+
+The converted hexadecimal number is .D8 4.
+
+To convert a binary number with a whole and a fractional part to its
+hexadecimal equivalent, combine the two methods shown in the examples
+below.
+
+Example
+
+Convert the binary number 10101.01101, to its hexadecimal equivalent.
+
+Binary/Hex Conversion
+
+Kj
+
+Digital Circuits Tutor Series: Volume 1
+
+Convert the whole portion:
+10101 = 00010101
+0001 0101 = 15
+
+The converted whole part is 15j6.
+
+Convert the fractional portion:
+01101 = .01101000
+.0110 1000 = 6 8
+
+The converted fractional part is .68;6.
+The final converted number is 15.6816.
+
+Example
+
+Convert the binary number
+equivalent.
+
+101110.1111101,
+
+to its hexadecimal
+
+Convert the whole portion:
+101110 = 00101110
+0010 1110
+=2E
+
+The converted whole part is 2E\¢.
+Convert the fractional portion:
+-1111101 = .11111010
+St
+1010." Age
+
+The converted fractional part is .FAi¢.
+The final converted number is 2E.FA\¢.
+
+Hexadecimal
+to Binary
+Conversions
+
+To convert a hexadecimal number to its binary equivalent, each individual
+hexadecimal number should be converted to a group of 4 binary bits.
+
+Example
+
+Convert the hexadecimal number AOF‘\¢ to its binary equivalent.
+
+hexadecimal number:
+binary equivalent:
+
+A
+
+0
+
+F
+
+1010
+
+0000
+
+1111
+
+The converted number is 101000001111.
+
+Hex/Binary Conversion
+
+Number Systems
+
+Example
+Convert the hexadecimal number C7D1 to its binary equivalent.
+hexadecimal
+
+number:
+
+binary equivalent:
+
+C
+
+7
+
+D
+
+1
+
+1100
+
+0111
+
+1101
+
+0001
+
+The final converted number is 11000111110100013.
+To convert a fractional hexadecimal number to its binary equivalent, convert
+
+each fractional digit to a group of 4 binary bits.
+
+Example
+
+Convert the hexadecimal fraction .FOA to its binary equivalent.
+hexadecimal number:
+
+sell
+
+0
+
+A
+
+binary equivalent:
+
+1111
+
+0000
+
+1010
+
+The final converted number is
+
+.111100001010, or .11110000101).
+
+To convert a hexadecimal number with a whole and a fractional part, convert
+each part individually and insert a binary point between the two parts.
+
+Example
+
+Convert the hexadecimal number AO0B.08Fi¢ to its binary equivalent.
+Convert the whole portion:
+hexadecimal
+
+number:
+
+binary equivalent:
+
+A
+
+0
+
+1010
+
+0000
+
+The converted whole part is 10100000101).
+
+Convert the fractional portion:
+hexadecimal number:
+
+eo
+
+8
+
+binary equivalent:
+
+.0000
+
+1000
+
+The converted fractional number is
+
+.00001000111 12.
+The final converted number is
+
+101000001011.000010001111,.
+
+Hex/Binary Conversion kj
+
+Digital Circuits Tutor Series: Volume 1
+
+Example
+Convert the hexadecimal number A1F.02BA\¢ to its binary
+equivalent.
+
+Convert the whole portion:
+A 1 F = 1010 0001
+
+1111,
+
+Convert the fractional part:
+.0 2 B A=
+
+.0000 0010
+
+1011
+
+1010
+
+The final converted number is
+
+101000011111.0000001010111010;.
+Hexadecimal
+to Octal
+Conversion
+
+To convert from hexadecimal to octal, first convert the given hexadecimal
+number to its binary equivalent. Then convert the binary number to its octal
+equivalent.
+
+Example
+
+Convert the hexadecimal number 3F.2A to its octal equivalent.
+Convert the hexadecimal number 3F.2A\¢ to its binary equivalent:
+
+3F
+.2A
+
+00171 1111
+.0010 1010
+
+(Convert the whole portion)
+(Convert the fractional portion)
+
+The converted number is 111111.0010101).
+
+Convert the binary number 111111.0010101 to its octal equivalent:
+101M
+
+.001
+
+= 7 7
+
+(Convert the whole portion)
+
+010 100 = .1 2 4
+
+(Convert the fractional portion)
+
+- The converted number is 77.124,.
+
+The final answer is 3F.2Ai¢
+
+Octal/Hex Conversion
+
+= 77.124g.
+
+Number Systems
+
+Octal to
+
+Hexadecimal
+
+Conversion
+
+To convert from octal to hexadecimal, convert the given octal number to its
+
+binary equivalent. Then convert the binary number to its, hexadecimal
+
+equivalent.
+
+Example
+
+Convert the octal number 77.124, to its hexadecimal equivalent.
+First, convert the octal number 77.124, to its binary equivalent:
+be Ors VeOG
+.124 = .001
+
+(Convert the whole portion)
+010
+
+100
+
+(Convert the fractional portion)
+
+The converted number is 111111.0010101..
+Convert the binary equivalent to hexadecimal:
+0011
+
+1111
+
+.0010
+
+1010
+
+(Convert the whole portion)
+= .2A
+
+(Convert the fractional portion)
+
+The converted number is 3F.2Aj¢.
+
+Octal/Hex Conversion
+
+Digital Circuits Tutor Series: Volume 1
+
+Practice
+Problems
+
+Problem 1.16
+Convert the following numbers from base 2 to base 8:
+a)
+
+11012
+
+b)
+
+.110112
+
+c)
+
+1010.100112
+
+Solution
+
+a)
+
+11012 = 001
+= |
+
+101
+5
+
+The final answer is 15g.
+
+b) .110112 = .110
+=. 6
+
+110
+6
+
+The final answer is 0.66g.
+
+c)
+
+1010.10011l2 = 001 010 . 100 110
+AI
+92.1, (SO
+The final answer is 12.46g.
+
+Problem 1.17
+Convert the following numbers from base 8 to base 2:
+a)
+
+9156
+
+b)
+
+.6ls
+
+c)
+
+34.71e
+
+Solution
+
+a) 753= 7
+= 111
+
+5
+101
+
+The converted number is 111101o.
+
+b)4 .6ls°=.
+2628
+<1
+=.110 001
+The converted number is .110001>.
+
+C), 34,716.= 3
+= 011
+
+saad?
+1
+100.111 001
+
+The converted number is 11100.111001>.
+
+Practice Problems
+
+Number Systems
+
+Problem 1.18
+Convert the following numbers from base 2 to base 16:
+a)
+
+110112
+
+b)
+
+010112
+
+c)
+
+11010.011011.
+
+Solution:
+
+a)
+
+110112 = 0001
+= |
+
+1011
+B
+
+The converted number is 1 B46.
+
+b) .010112 = .0101
+eae
+
+1000
+8
+
+The converted number is .58146.
+
+c)
+
+11010.0110112 = 0001
+=
+|
+
+1010 . 0110 1100
+ae
+©
+C
+
+The converted number is 1A.6C46.
+
+Problem 1.19
+Convert the following numbers from base 16 to base 2:
+a)
+
+A916
+
+b)
+
+.D5416
+
+c)
+
+F5.5Fi6
+
+Solution
+a)
+
+A916
+
+A
+
+9
+
+1010
+
+1001
+
+The converted number is 10101001.
+
+bj. D dan sd
+=. 1101
+
+5
+4
+0101 0100
+
+The converted number is .1101010101o.
+
+c) F5.5Et6
+
+F
+1111
+
+Peo’
+0101.0101
+
+E
+1110
+
+The converted number is 11110101.0101
+111.
+
+Practice Problems &)
+
+Digital Circuits Tutor Series: Volume 1
+
+Problem 1.20
+Convert the following numbers from base 16 to base 8:
+a)
+
+90Bi6
+
+b)
+
+.9Ci6
+
+C)
+
+4D.59Ai16
+
+Solution
+a) 90Bis =
+9
+0
+B
+= 1001 0000 1011
+= 1001000010112
+1001000010112
+
+(From hexadecimal
+to binary)
+
+= 100 100 001 O11
+= 4
+4"
+1"
+3
+= 4413,
+
+(From binary to octal)
+
+90Big = 44138
+b)
+
+.9Ci6
+
+amrag
+
+(Final answer)
+(C
+
+= .1001 1100
+= .100111002
+
+(From hexadecimal
+to binary)
+
+.100111002 = .100 111
+ee A
+eee)
+= 47.
+
+(From binary to octal)
+
+.ICig = .478
+
+(Final answer)
+
+c) 4D.59Aig =
+4
+Drs
+9
+A
+= 0100 1101 .0101 1001 1010
+= 1001101.010110011012
+(From hexadecimal to binary)
+1001101.010110011012
+= 001 001 101.010 110 O11 010
+=p
+Wore
+Oo
+ee.
+= 115.2632
+
+4D.59Ai6
+
+= 115.26328
+
+(Final answer)
+
+Problem 1.24
+Convert the following numbers from base 8 to base 16:
+
+a)
+
+ff) Practice Problems
+
+472.
+
+b)
+
+471.
+
+c)
+
+231.054
+
+Number Systems
+
+Solution
+a) PAF2g
+
+ai
+Je
+2
+= 100 111 010
+
+=" 1001110102
+1001110102
+
+= 0001 0011
+|
+3
+= 13Ai16
+
+(From octal to binary)
+1010
+A
+(From binary to hexadecimal)
+
+4728 = 13A16
+
+DE 4 GlamekeS
+
+(Final answer)
+
+rl
+
+= . 100 111 001
+= . 1001110012
+
+.10011100l2 = .1001 1100
+a)
+c
+= .9C816
+
+(From octal to binary)
+
+1000
+8
+
+4718 = .9C816
+
+c) 231.0548
+
+(From
+binary
+to
+hexadecimal)
+(Final answer)
+
+DoF 3¢
+COS
+nwis
+010 011 001.000 101 100
+10011001.00010112
+(From octal to binary)
+
+10011001.00010112 = 1001 1001.0001 0110
+=
+9
+oe
+1
+6
+99.1616
+(binary to hexadecimal)
+231.0548
+
+= 99.1616
+
+(Final answer)
+
+Practice Problems
+
+Digital Circuits Tutor Series: Volume 1
+
+Basic Arithmetic Operations
+Binary
+Addition
+
+In this section we will be considering some fundamental addition operations
+using binary numbers. Before we start binary addition, let’s examine the logic
+behind decimal addition.
+Example
+
+Add 721410 and 266210.
+Column 4
+Column3
+
+a
+
+ee COIN 2
+
+| (re
+
+Liven
+
+aA
+
+26
+
+'6me2
+
+Column 1
+
+9°6
+7 Gio
+Column 1: 4+2=6
+
+Nocarrying.
+
+Column 2:
+Column 3:
+Column 4:
+
+Nocarrying.
+
+1+6=7
+2+6=8
+7+2=9
+
+Nocarrying.
+Nocarrying.
+
+The sum of each column is less than 10. Note that 10 is the base. If the sum of
+
+any column is equal to or larger than the base, we will carry the leftmost digit
+of the sum to the next left column.
+
+Example
+
+Add 2937 and 8205.
+(carry line)
+
+From right to left (column 1) we have 7+5=12. Note that 12 is larger than 10
+and carrying becomes necessary. The left digit of the first sum is carried to the
+next column to the left (or column 2). The right digit is placed under the
+rightmost column (or column 1).
+The next sum will consist of three terms: the amount carried, 3, and 0. The
+total sum is equal to 4. Note that since 4 is less than 10, there is no need to carry.
+
+Moving left to column 3 we have 9+2=11. Since 1] is larger than 10, carrying is
+necessary. | is then carried to the next column to the left (or column 4). Finally
+
+fH Binary Addition
+
+Number Systems
+
+the leftmost column (or column 4), will consist of three terms: the amount
+carried, 2, and 8. The sum is 11. Since 11 is larger than 10, | is then carried.
+For binary addition, the same method will be used with a base of 2. In binary
+addition, carrying becomes necessary whenever the sum ofany of the columns
+is equal to or larger than 2. Let’s look at some examples.
+Example
+
+Add the binary values 100102 and 1001.
+jhae 6h Waser DAM 8)
+100 1
+Te
+
+Since this example does not require carrying, the addition is quite
+simple.
+Column
+Column
+Column
+Column
+
+1:
+2:
+3:
+4:
+
+0+1=1
+1+0=1
+0+0=0
+1+0=1
+
+Nocarrying.
+Nocarrying.
+Nocarrying.
+Nocarrying.
+
+The final result is 1101 lo.
+
+Remark: In our example, column 1! will refer to the pee
+2 will refer to the immediate left of column 1, etc.
+
+otecolumn; column
+
+Example
+Add 101102 and 101 Io.
+
+Ta]
+Bava
+t 6
+1
+
+(carry line)
+
+From right to left we have: 0+1=1 followed by 1+1=10 (note that binary 10 is
+equal to decimal 2). Write 0 under the second column, and carry | to the next
+column. Thethird columncan be calculated as 1 + 0+ the carry from column 2.
+This is 1 +0 + 1 = 10 (binary). Again we carry the leftmost bit (1) to the next
+column (column 4). In column 4, we add 0+ | + the carry from column 3. This
+is0 + 1+1=10(binary). Incolumn 5 we add | + the carry from column 4. This is
+
+1 + 1 = 10 binary. Our sum is 1000012.
+
+Binary Addition
+
+Digital Circuits Tutor Series: Volume 1
+
+Example
+Add 110112 and I11 le.
+
+(carry line)
+
+Column | evaluates as | + 1 = 10 (binary). Record 0 as the result in column 1
+and carry the | to column 2. Column 2 evaluates as | + | + the carry from
+column 1. This is 1 + 1 +1=11 (binary). Record | as the result in column 2 and
+carry | to column 3. Column 3 evaluates as 0 + 1 + the carry from column 2.
+This is 0+ 1+1=10(binary). Record 0 as the result incolumn3 and carry | to
+column 4. Column4 evaluates as | + 1 + the carryfrom column 3. This is | + 1 +
+1 = 11. Record | as the result in column 4 and carry | to column 5. Column 5
+evaluates as 10. Record this as the result in column 5 and 6. The sum is
+1010102.
+
+Octal
+Addition
+
+Octal addition is somewhat similar to binary addition, the only difference
+being the use of base 8 instead of 2. Carrying is therefore necessary whenever a
+column’s sum is equal to or larger than 8.
+
+Example
+Add the octal numbers 251g and 423s.
+
+4
+
+2
+
+3
+
+6
+
+7
+
+4s
+
+Since this example does not require carrying, the addition is simple.
+
+YZ} Octal Addition
+
+Column 1:
+Column 2:
+
+1+3=4
+5+2=7
+
+Nocarrying
+Nocarrying
+
+Column 3:
+
+2+4=6
+
+No carrying
+
+Number Systems
+
+Example
+Add the octal numbers 375g and 223..
+(carry line)
+
+Cea.
+6
+
+2
+
+Os
+
+Column
+
+1:
+
+5g + 3g = 10g
+
+Column
+
+2:
+
+7g + 2g + 19 (carry)
+
+(carry1 to col. 2)
+
+Column
+
+3:
+
+3. + 28 + 1g (carry) = 6
+
+= 128
+
+(carry1 to col.3)
+
+(no carry)
+
+The final result is 620g.
+
+Example
+Add the octal numbers 72763 and 7675s.
+
+1-4.al
+
+(carry line)
+
+TTR?
+Sl bead 2)
+
+Hexadecimal
+Addition
+
+Column
+
+1:
+
+= 13,
+
+Column
+Column
+
+2:
+3:
+
+1g (carry) = 17.
+1g (carry) = 11.
+
+(carry | to col. 3)
+(carry | to col. 4)
+
+Column
+
+4:
+
+1g (carry) = 17.
+
+(end of addition)
+
+To add hexadecimal numbers, follow the same
+addition, except use a base of 16.
+
+(carry | to col. 2)
+
+steps outlined for octal
+
+Example
+Add the hexadecimal numbers A38Cj¢ and 4531146.
+
+A.3
+8 C
+4Poe Sa!
+E
+
+8
+
+B
+
+Die
+
+Column
+
+1:
+
+Cie + 116 = Die
+
+(no carry)
+
+Column
+Column
+Column
+
+2:
+3:
+4:
+
+816 + 316 = Bie
+316 + 516 = 816
+Aie + 416 = Ete
+
+(no carry)
+(no carry)
+(no carry)
+
+Hexadecimal Addition
+
+Digital Circuits Tutor Series: Volume 1
+
+Example
+Add the hexadecimal numbers B35A and F2B.
+
+(carry line)
+
+A
+
+race
+C
+
+2
+
+Column
+
+8
+
+Sie
+
+1:
+
+Ais + Big = 1516
+
+(carry 1)
+
+Column
+
+2:
+
+516 + 216 + 116 = 816
+
+(no carry)
+
+Column
+
+3:
+
+316 + Fie = 1216
+
+(carry 1)
+
+Column
+
+4:
+
+116 + Big = Cie
+
+(end of addition)
+
+Example
+Add the hexadecimal numbers AF3AB and 908BA.
+dott
+
+At
+
+rs
+
+(carry line)
+
+A
+
+eS
+
+90,68
+°6 A
+Brit, Cxt6andig
+
+Practice
+Problems
+
+1:
+
+Big + Aire = 1516
+
+(carry 1)
+
+Column
+
+2:
+
+Aie + Bie + 116 = 1616
+
+(carry 1)
+
+Column
+Column
+
+3:
+4:
+
+316 + 816 + 116 = Cie
+Fie + O16 = Fie
+
+Column
+
+5:
+
+Aie + 916 = 1316
+
+(carry 1)
+(no carry)
+(end of addition)
+
+Problem 1.22
+Add the following binary numbers:
+a)
+b)
+c)
+
+"I Practice Problems
+
+Column
+
+110102 and 110112
+111.1012 and 110.1112
+11011.101102 and 10101.110112
+
+Number Systems
+
+Solution
+a)
+
+11
+
+1
+(carry line)
+O1s0
+
+LL
++
+
+P< 180"1"1
+=11010le
+The final answer is 110101o.
+
+b)
+
+]
+1
+
+lee
+{.
+
+iis
+gl@d!
+
+1)
+the
+
+eS ek Bed Pe
+Pei
+tO
+
+(carry line)
+ol
+
+(carry line)
+
+ECR ED a yg Ee Ne ag Oka eae|
+=110001.1000le
+The final answer is 110001.10001o.
+
+Problem 1.23
+Add the following octal numbers:
+a)
+c)
+
+257g and 352.
+b) 12.463 and 41.37.
+4312.7531g and 2134.74368
+
+Solution
+
+a)
+
+(carry line)
+
+ae
+i
+
+ae |
+
+ae Cre
+as
+
+Bes
+
+lg
+
+The final answer is 631s.
+
+b)
+
+1
+
+11
+2.4
+
+(carry line)
+
+6
+
+4°213.7
+S55)
+
+A
+
+<56
+
+The final answer is 54.05g.
+
+Practice Problems
+
+Digital Circuits Tutor Series: Volume 1
+
+(carry line)
+
+Jol
+
+c)
+Aes
+
+|
+
+2s]
+
+5s
+
+0.
+
+© 34)
+
+a
+
+=-n6-
+
+44
+
+w4. ,7 37
+
+jel
+eo.
+POkOe
+
+aia
+
+The final answer is 6447.7167s.
+
+Problem 1.24
+Add the following hexadecimal numbers:
+a)
+
+A42i¢ and 16Bie
+
+b)
+
+3C.A716 and 2B.1816
+
+c)
+
+9F4A.B4D1]i¢ and B4CD.041
+Fie
+
+Solution
+
+a)
+
+Aa
+
+4.
+
+a2
+
++
+
+17 = 6548
+=
+
+B
+
+A~
+
+Die
+
+The final answer is BAD 46.
+
+b)
+
+I
+
+(carry line)
+
+2
+=e
+
+Brides
+
+Ouniwats
+
+Fie
+
+The final answer is 67.BF 46.
+
+Cv
+
+al bel ol
+
+1
+
+(carry line)
+
+9 F4AB4D1
+BC.
+= 15°4
+
+D074:
+
+lok
+
+1 7.B 8 F046
+
+The final answer is 15417.B8FO16.
+
+Problems
+
+Problem 1.4
+Convert the following numbers from base 2 to base 10:
+
+a)
+
+2B) Problems
+
+110112
+
+b)
+
+1100.12
+
+c)
+
+1010.00112
+
+Number Systems
+
+Problem 1.2
+Convert the following numbers from base 10 to base 2:
+
+a)
+
+1710
+
+b)
+
+421.410
+
+C)
+
+323.80110
+
+Problem 1.3
+Convert the following numbers from base 8 to base 10:
+a)
+
+2638
+
+b)
+
+127.38
+
+c)
+
+1263.75128
+
+Problem 1.4
+Convert the following numbers from base 10 to base 8:
+a)
+
+71910
+
+b)
+
+291.810
+
+Cc)
+
+935.8190
+
+Problems §¥)
+
+Digital Circuits Tutor Series: Volume 1
+
+Problem 1.5
+Convert the following numbers from base 16 to base 10:
+
+a)
+
+ACi6
+
+c)
+
+A24.Di6
+
+b)
+
+2DS5E.0F4Bie
+
+Problem 1.6
+Convert the following numbers from base 10 to base 16:
+
+a)
+
+239310
+
+b)
+
+174.8110
+
+c)
+
+5493.540210
+
+Problem 1.7
+Convert the following numbers from base 8 to base 2:
+a)
+
+Ef) Problems
+
+548
+
+b)
+
+431.78
+
+C)
+
+647.452,
+
+Number Systems
+
+Problem 1.8
+Convert the following numbers from base 2 to base 8:
+
+a)
+
+10112
+
+b)
+
+110101.1012
+
+c)
+
+1010111.001102
+
+Problem 1.9
+Convert the following numbers from base 2 to base 16:
+a)
+
+11012
+
+b)
+
+101010.012
+
+c)
+
+10101.0011012
+
+Problem 1.10
+Convert the following numbers from base 16 to base 2:
+a)
+
+3A5E16
+
+b)
+
+4D.Fie
+
+c)
+
+7F8.40B216
+
+Problems
+
+Digital Circuits Tutor Series: Volume 1
+
+Probiem 1.14
+Convert the following numbers from base 8 to base 16:
+
+a) 631s
+
+b) 31.678
+
+¢) i039 1957238
+
+Problem 1.12
+Convert the following numbers from base 16 to base 8:
+
+ae Acre
+
+b) 3B.0Fi6
+
+c) 9D5.0C3E16
+
+Problem 1.43
+Add the following binary numbers:
+a)
+
+EA Problems
+
+100112 and 10112
+
+b)
+
+1011.1102
+and 10.110102
+
+Number Systems
+
+Problem 1.14
+Add the following octal numbers:
+
+a) 734g and 77s
+
+b) 757.747g and 746.346s
+
+2
+Binary Codes
+
+Binary Coded
+Decimal Code
+(BCD)
+
+Binary coded decimals are easier to convert to their decimal equivalents than
+ordinary binary numbers. In binary coded decimal, each decimal digit is
+represented by a sequence of binary bits. Each binary bit is assigned a value
+which is determined by its position and by the code used. There are several
+BCD codes; the most common
+
+8421 Code
+
+ones are: 8421, 5421, 2421, and 84-2-1.
+
+The 8421 code uses 4 bits to represent one decimal digit. If the first (leftmost)
+binary bit is one, it represents the decimal value 8. If the second bit is 1, it
+
+represents 4. If the third bit is 1, it represents the value 2, and finally if the
+
+fourth bit (rightmost) is 1, it will represent the value 1. Note that if any of these
+bits is 0, the value represented will be 0.
+
+Example
+
+Convert the 8421 BCD value 1001 to its decimal equivalent.
+From right to left of 1001 we have the values 1, 0, 0, and I. As shown
+
+below, this BCD value evaluates to 9:
+
+1001 = 8+0+0+1 =9
+
+8421 Code
+
+Digital Circuits Tutor Series: Volume 1
+
+Example
+
+Convert the 8421 BCD value 1000 0111 to its decimal equivalent.
+
+1000 = 8+0+0+0 = 8
+0111 =0+4+2+1 =7
+The converted decimal number is 87.
+
+From the examples above we can compute the following conversion table:
+Table 2.1.
+
+BCD/ decimal conversions
+
+Decimal digit
+
+8
+
+0
+1
+2
+3
+4
+5
+6
+it
+8
+*
+
+4
+
+2
+
+1
+
+(BCD)
+
+Oc. 0 0.0
+0.0
+0 3
+ogi beg Bes)
+0
+ot
+0 1 0 0
+On
+ert
+Ae Was owt*
+Ae
+agesEA)
+1 Oe
+ee
++L
+aes! hes,
+
+To convert from a decimal number to its 8421 BCD equivalent, convert each
+decimal digit to its 8421 BCD equivalent using table 2.1 and place the
+converted set of bits in the same order as they appear in the decimal number.
+
+Example
+
+Convert 52 to its 8421 BCD equivalent.
+From table 2.1 we calculate:
+5 =0101
+and
+
+2 = 0010
+
+The converted number is 52 = 0100
+
+EH} 8421 Code
+
+0010.
+
+Binary Codes
+
+Example
+
+Convert 9024 to its 8421 BCD equivalent.
+From table 2.1 we calculate:
+
+9 = 1001
+0 = 0000
+2 = 0010
+4 =0100
+The converted number is 9024=1001000000100100.
+
+To convert any fractional decimal number to its 8421 BCD equivalent, convert
+the whole part and the fractional part using the method described earlier and
+place the binary point between the two parts.
+
+Example
+
+Convert 42.71 to its 8421 BCD equivalent.
+Convert the whole part:
+
+4 2=0100
+
+0010
+
+The converted whole part is 01000010.
+
+Convert the fractional part:
+.f 1=.0111
+
+0001
+
+The final converted number is:
+42.71
+
+=01000010.01110001
+
+To convert a fractional 8421 BCD number to its decimal equivalent, convert
+
+each 4 bits into one decimal digit and place a decimal point between the two
+parts.
+
+Example
+
+Convert the 8421 BCD
+
+100100000011.10000110 to decimal.
+
+Convert the whole part:
+1001
+
+0000
+
+0011=9
+
+0 3
+
+The converted whole part is 903.
+
+(cont. on pg. 58)
+
+8421 Code
+
+Digital Circuits Tutor Series: Volume 1
+
+|
+
+Convert the fractional part:
+1000 0110 =8 6
+The final converted number is:
+
+100100000011.10000110 = 903.86
+
+5421 Code
+
+Like 8421 BCD code, 5421 code uses 4 bits to represent one decimal digit. The
+values of the bits will be determined by their positions. The leftmost bit has a
+value of 5, the second bit a value of 4, the third bit a value of 2, and finally, the
+
+rightmost bit has a value of 1.
+Example
+
+Convert the 5421 BCD value 1010 to its decimal equivalent.
+From left to right of the 5421 BCD value 1010 we have the values: 5, 0, 2,
+and 0. If we add these values as shown below:
+1010 = 5+0+2+0 =7
+we obtain a decimal value of 7.
+
+Example
+
+Convert the 5421 BCD 1000 0111 to its decimal equivalent.
+
+1000 = 5+0+0+0 = 5
+0111 = 0+4+2+1 =7
+The converted decimal number is 57.
+
+Table 2.2 shows the 5421 BCD for the decimal values | through 9.
+Table 2.2. 5421
+
+5421 Code
+
+BCD/ decimal conversions
+
+Decimal Digit
+
+S
+
+4
+
+2
+
+0
+
+0.50
+
+70/20
+
+1
+
+OO
+
+Oe
+
+2
+
+Bd
+
+3
+
+Of, Ona
+
+ie
+
+“a
+
+0
+
+OG
+
+5
+
+130s
+
+O50
+
+6
+
+jen sa
+
+it
+
+i
+
+gp
+
+8
+
+tee Ol
+
+9
+
+te
+
+SG
+
+Od
+
+1.(BC0}
+
+fae
+
+aa
+eg
+ae
+
+OD
+
+Binary Codes
+
+Note that 5 could be represented by 1000 or 0101, 6 could be represented by
+1001 or 0110, and 7 could be represented by 1001 or 0111. Although there is
+some freedom of choice, the representation used in table 2.2 is standard. (The
+designer can use the set which best suits his design.)
+
+To convert a decimal number to its 5421 BCD equivalent, convert each
+decimal digit into its 5421 BCD equivalent using table 2.2.
+Example
+
+Convert 57 to its 5421 BCD equivalent.
+From table 2.2 we obtain:
+
+5 = 1000
+and
+7 = 1010
+The converted value is 57 = 1000
+
+1010.
+
+Example
+
+Convert 83096 to its 5421 BCD equivalent.
+From table 2.2 we obtain:
+
+8 = 1011
+3 =0011
+0 = 0000
+9 = 1100
+6 = 1001
+The converted number is:
+
+83096 = 10110011000011001001
+
+To convert a fractional decimal number to its 5421 BCD equivalent, convert
+both the whole and the fractional portions.
+
+Exam, le
+
+Convert 42.71 to its 5421 BCD equivalent.
+Convert the whole part:
+42 =0100
+
+0010
+
+The converted whole part is 01000010.
+
+eons 2
+5421 Code
+
+Digital Circuits Tutor Series: Volume 1
+
+Convert the fractional part:
+71 =1010
+
+0001
+
+The converted fractional part is 10100001.
+The final converted number is:
+
+42.71 = 01000010.10100001
+
+To convert a fractional 5421 BCD number to its decimal equivalent, convert
+each 4 bits into one decimal digit for each part; then separate the two parts with
+a decimal point.
+
+Example
+
+Convert the 5421 BCD 10001010.00000011 to its decimal equivalent.
+Convert the whole part:
+1000
+
+1010 =5
+
+7
+
+The converted whole part is 57.
+Convert the fractional part:
+0000
+
+0011 =0
+
+3
+
+The final converted number is 57.03.
+
+2421 Code
+
+2421 BCD code also uses 4 bits to represent one decimal digit. The position of
+the bit determines its value. The leftmost bit has a value of 2, the second a value
+of 4, the third a value of 2, and finally, the rightmost bit a value of 1.
+
+Example
+
+Convert the 2421 BCD value 1011 to its decimal equivalent.
+From right to left of 1011 we have the values:
+these values, the result is 5.
+
+1011 = 24+0+2+1 =5
+
+@ 2421 Code
+
+2, 0, 2, and 1. If we add
+
+Binary Codes
+
+Example
+
+Convert the 2421 BCD value 1000 0111 to its decimal equivalent.
+1000 = 2+0+0+0 = 2
+and
+
+0111 =0+4+2+1
+
+=7
+
+The converted decimal number is 27.
+
+Table 2.3 identifies the 2421 BCD codes for the decimal values 1 through 9.
+
+Table 2.3. 2421
+
+BCD/ decimal conversions.
+
+Decimal digit
+
+22442)
+
+AS
+
+BCD)
+
+BO.
+FS)
+CO
+=
+SeO
+ee
+—+oO
+Oo
+=+
+ourak
+2.
+©
+op
+Stee
+sete
+OO
+et
+OUlUOlUmO
+
+AIioBR
+on
+YO
+©
+w
+Om
+=
+
+Note that 2 could be represented by 0010 or 1000, 3 could be represented by
+0011 or 1001, 4 could be represented by 0100 or 1010, 5 could be represented by
+0101
+
+or
+
+1011, 6 could
+
+be represented
+
+by 0110
+
+or 1100, and 7 could
+
+be
+
+represented by 0111 or 1101.
+
+To convert a decimal number to its 2421 BCD equivalent, convert each
+decimal digit into its 2421 BCD equivalent using table 2.3.
+
+2421 Code §J
+
+Digital Circuits Tutor Series: Volume 1
+
+Example
+
+Convert 69 to its 2421 BCD equivalent.
+
+From table 2.3 we obtain:
+
+6 = 0110
+and
+
+9=1111
+The converted number is 01101111.
+
+Example
+
+Convert 83096 to its 2421 BCD equivalent.
+From table 2.3 we obtain:
+
+8 = 1110
+3 =0011
+0 = 0000
+Q9=1111
+6 =0110
+The converted number is:
+
+83096 = 11100011000011110110.
+To convert a fractional decimal number to its 2421 BCD equivalent, convert
+
+the whole part and the fractional part. Then separate the two parts with a
+binary point.
+Example
+
+Convert 42.71 to its 2421 BCD equivalent.
+Convert the whole part:
+
+4 2=0100
+
+0010
+
+The converted part is 01000010.
+
+Convert the fractional part:
+7 1=0171
+
+0001
+
+The converted part is 01110001.
+The final converted number is:
+
+42.71 = 01000010.01110001
+@ 2421 Code
+
+(cont. on pg. 63)
+
+Binary Codes
+
+To convert a fractional 2421 BCD number to its decimal equivalent, convert
+each 4 bits into one decimal digit, and add a decimal point between the two
+
+parts.
+
+Example
+
+Convert the 2421 BCD value 01111110.01001100 to its decimal equivalent.
+Convert the whole part:
+OT
+
+HIG S78
+
+The converted whole part is 78.
+Convert the fractional part:
+0100
+
+1100 =4
+
+6
+
+The converted fractional part is 46.
+The final converted number is 78.46.
+
+84-2-1 Code
+
+The 84-2-1 BCD code uses 4 bits to represent one decimal digit. The position of
+the bit will be the factor that determines its value. Note that the 84-2-1 includes
+negative values. The leftmost bit has. a value of 8, the second bit has a value of
+4, the third bit has a value of -2, and finally the rightmost bit has a value of-1.
+
+Example
+
+Convert the 84-2-1 BCD value 1010 to its decimal equivalent.
+From left to right of 1010 we have the values:
+values we get 6.
+
+8, 0, -2, 0. Adding these
+:
+
+1010 = 8+0-2+0 =6
+
+Example
+
+Convert the 84-2-1 BCD value 10010111 to its decimal equivalent.
+
+1001 = 8+0+0-1 =7
+0111 = 0+4-2-1 =1
+The converted number is 71.
+
+84-2-1 Code
+
+Digital Circuits Tutor Series: Volume 1
+
+Table 2.4. 84-2-1 BCD to decimal conversions.
+
+Oot
+os
+Ck =
+OS
+Sets
+Ree.=
+Sk)
+as,
+gk
+Ch
+at
+Cy
+
+Wand
+~!
+iG
+Or
+BR
+EO
+O
+To convert a decimal number
+
+(BCD)
+
+a
+
+ee
+
+Decimal digit
+
+to its 84-2-1
+
+BCD
+
+equivalent, convert
+
+each
+
+decimal digit to its 84-2-1 BCD equivalent using table 2.4.
+
+Example
+
+Convert 57 to its 84-2-1 BCD equivalent.
+From table 2.4 we obtain:
+
+5 = 1011
+7 = 1001
+The converted number is 10111001.
+
+Example
+
+Convert 94301 to its 84-2-1 BCD equivalent.
+From table 2.4 we obtain:
+
+ener
+4 = 0100
+3 = 0101
+0 = 0000
+OT
+The converted number is:
+
+11110100010100000111
+
+To convert any fractional decimal number to its 84-2-1 BCD equivalent,
+convert the whole part and the fractional part and insert a binary point
+between the two parts.
+
+GZ 84-2-1 Code
+
+Binary Codes
+
+Example
+
+Convert 36.92 to its 84-2-1 BCD equivalent.
+Convert the whole part:
+3 6=0101
+
+1010
+
+The converted whole part is 01011010.
+Convert the fractional part:
+See
+
+rr111
+
+0110
+
+The converted fractional part is 11110110.
+
+The final converted number is:
+01011010.11110110
+
+Example
+Convert the 84-2-1 BCD value 10110000.0110 to its decimal equivalent.
+
+Convert the whole part:
+1011
+
+0000 =5
+
+0
+
+The converted whole part is 50.
+Convert the fractional part:
+0110 =2
+
+The converted fractional part is 2.
+
+The final converted number is:
+
+50.2
+0110 =2
+
+The converted fractional part is 2.
+The final converted number is 50.2.
+
+84-2-1 Code &
+
+Digital Circuits Tutor Series: Volume 1
+
+Practice
+Problems
+
+Problem 2.1
+Convert the following numbers to 8421 BCD code:
+a)
+
+3158
+
+By
+
+22.41
+
+c)
+
+310.407
+
+Solution
+a) From table 2.1
+
+3 = 0011
+1 = 0001
+5 = 0101
+8 = 1000
+The converted number is 0011000101011000.
+
+b) 2 2=0010
+7 1=0111
+
+0010
+0001
+
+The converted number is 00100010.01110001.
+c)
+
+aed
+40
+
+0=0011
+(p=
+
+0001
+
+0000
+
+0100 0000
+
+O111
+
+The converted number is
+
+001100010000.010000000111.
+
+Problem 2.2
+Convert the following 8421 BCD numbers to their decimal equivalents:
+a)
+
+OO1I0I11
+
+b)
+
+10010110.00000101
+
+Solution
+
+a)
+
+0011
+
+O111
+= 37
+
+The converted number is 37.
+
+b)
+
+1001 0110
+= 96
+0000 0101 = 05
+The converted number is 96.05.
+
+Problem 2.3
+Convert the following binary numbers to their 8421 BCD equivalents.
+a)
+
+GQ Practice Problems
+
+10012
+
+b)
+
+1011.01.
+
+Binary Codes
+
+Solution
+a) From binary to decimal:
+10012 = 23+0+0+29 = 8+1 =9
+From decimal to 8421 BCD:
+
+9 = 1001 (From table 2.1)
+The final result is 10012 = 1001 (BCD).
+
+Note that for this example the binary number is identical to its 8421 BCD
+equivalent.
+b)
+
+From binary to decimal:
+
+1011.01 = 23+0+2!+20+0+2-2 = 11.25
+From decimal to 8421 BCD:
+
+11.25 = 0001
+
+0001.0010
+
+0101
+
+The final result is 1011.012 = 00010001.00100101
+
+(BCD).
+
+Problem 2.4
+Convert the following 8421 BCD numbers to their decimal equivalents:
+
+a) 1011
+b) 1000.1100
+Solution
+a) Error 1011 is not an 8421 BCD number.
+b)
+
+1000=8
+1100 = Error not an 8421 BCD
+
+number.
+
+Problem 2.5
+Convert the following numbers from decimal to 5421 BCD code:
+
+a) 2709
+
+b) 12.75
+
+c) 37.429
+
+Practice Problems
+
+Digital Circuits Tutor Series: Volume 1
+
+Solution
+
+a)
+
+2 70
+
+1010
+
+9=0010
+
+0000
+
+1100
+
+(table 2.2)
+
+The converted number is 0010101000001 100.
+
+b) ]1 2=0001 0010
+i] StS 1010
+
+1000
+
+The converted number is 00010010.10101000
+
+c)
+
+3 7=0011 1010
+4 2 9=0100 0010 1100
+The converted number is 00111010.010000101100.
+
+Problem 2.6
+Convert the following 5421 BCD numbers to their decimal equivalents:
+
+a)
+
+01010111
+
+b)
+
+01101001.10000101
+
+Solution
+a)
+
+0101
+
+0111=5
+
+7
+
+The converted number is 57.
+
+b) 0110 1001 =6 6
+1000 0101 =5 5
+The converted number is 66.55.
+
+Note that 6 and 5 have equivalent decimal values even though their 5421
+BCD representations differ.
+Problem 2.7
+
+Convert the following binary numbers to their 5421 BCD equivalents:
+
+a) 11012
+
+b) 1101.12
+
+Solution
+a) From binary to decimal:
+11015 = 23+22+0+20 = 8+4+0+1 = 13
+From decimal to 5421 BCD:
+
+13 = 0001
+
+0011
+
+The final converted number is 11012 = 00010011
+
+@ Practice Problems
+
+(BCD).
+
+Binary Codes
+
+b) From binary to decimal:
+
+1101.12 = 23+22+0+29+2-1 = 13.5
+From decimal to 5421 BCD:
+
+13.5 = 0001
+
+0011.1000
+
+The final converted number is: 1101.12 = 00010011.1000
+
+(BCD)
+
+Problem 2.8
+Convert the following 5421 BCD numbers to their decimal equivalents:
+
+a)
+
+1110
+
+b)
+
+1011.1101
+
+Solution
+a)
+
+Error
+
+1011 is not a 5421 BCD number.
+
+b)
+
+1011 =8
+1101 = Error 1101 is not
+
+a 5421 BCD
+
+number.
+
+Problem 2.9
+Convert the following decimal numbers to 2421 BCD code:
+a)
+
+350
+
+b) 52.07
+c)
+
+113.46
+
+Solution
+a) 3 5 0=0011
+
+0101
+
+0000 (From table 2.3)
+
+The converted number is 001101010000.
+
+b) 5 2=0101
+0 7=0000
+
+0010
+0111
+
+The converted number is 01010010.00000111.
+
+¢).
+
+19 13> 0001
+4 6=0100
+
+0001 0011
+0110
+
+The converted number is 000100010011.01000110.
+
+Problem 2.10
+Convert the following 2421 BCD numbers to their decimal equivalents:
+
+a)
+
+01000101
+
+b)
+
+11110111.11100011
+
+Practice Problems
+
+Digital Circuits Tutor Series: Volume 1
+
+Solution
+a) 0100
+
+0101 =4
+
+5 (From table 2.3)
+
+The converted number is 45.
+
+b)
+
+1111 O111=9
+1110 0011 =8
+
+7
+3
+
+The converted number is 93.83.
+
+.
+Problem 2.14
+Convert the following binary numbers to their 2421 BCD equivalents:
+
+a)
+
+10012
+
+1001.012
+
+b)
+
+Solution
+a) From binary to decimal:
+10012 = 23+0+0+2° = 9
+From decimal to 2421 BCD:
+
+9=1111
+The converted number is 10012 = 1111 (BCD).
+
+b) From binary to decimal:
+
+1001.012 = 23+0+0+29+0+2~ = 9.25
+From decimal to 2421 BCD:
+
+9.25 = 1111.0010
+
+0101
+
+The final converted number is 1001.0l2 = 1111.00100101.
+
+Problem 2.12
+Convert the following numbers to 84-2-1 BCD code:
+
+a)
+
+724
+
+Solution
+a) 7 2 4=1001
+
+b)
+
+15.89
+
+c)
+
+0110 0100
+
+The converted number is 100101100100.
+
+Practice Problems
+
+56.971
+
+Binary Codes
+
+b)
+
+1 5=0111
+8 9= 1000
+
+1011
+1111
+
+The converted number is 01111011.10001111.
+
+Cc)
+
+5 6=1011
+9 7 1=1111
+
+1010
+1001 O11]
+
+The converted number is 10111010.111110010111.
+
+Problem 2.13
+Convert the following 84-2-1 BCD numbers to their decimal equivalents.
+a)
+
+01101010
+
+b)
+
+01101111.01110101
+
+Solution
+
+a)
+
+0110
+
+1010=2
+
+6
+
+The converted number is 26.
+
+b) 0110
+O111
+
+1111=2
+O101=1
+
+9
+3
+
+The converted number is 29.13.
+
+Problem 2.14
+Convert the following binary numbers to their 84-2-1 BCD equivalents.
+
+a)
+
+11002
+
+b)
+
+100.012
+
+Solution
+a) From binary to decimal:
+
+11002 = 23+22+0+0 = 12
+From decimal to 84-2-1:
+
+1 2=0111
+
+0110
+
+The converted number is 11002 = 01110110
+
+(BCD).
+
+b) From binary to decimal:
+
+100.012 = 22+0+0+0+27 = 4.25
+From decimal to 84-2-1 BCD:
+
+4.2
+
+5=0100.0110
+
+1011
+
+The converted number is 100.012 = 0100.01101011
+
+(BCD).
+
+Practice Problems
+
+Digital Circuits Tutor Series: Volume 1
+
+Problem 2.15
+Convert the following 84-2-1
+equivalents.
+
+a)
+
+1100
+
+b)
+
+BCD
+
+to their single digit decimal
+
+numbers
+
+0100.1101
+
+Solution
+a) Anerror results as 1100 will not convert to a single digit decimal value.
+b) 0100 =4
+An error results when we attempt to convert the fractional portion. 1101
+will not convert to a single decimal digit.
+Problem 2.16
+Create a conversion table for the following BCD codes:
+a)
+
+4221
+
+b)
+
+74-2-1
+
+Solution
+
+a)
+Decimal digit
+
+4
+
+2
+
+2
+
+1
+
+0
+
+0
+
+0
+
+0
+
+0
+
+1
+
+0
+
+0
+
+0
+
+1
+
+2
+
+0
+
+0
+
+1
+
+0
+
+3
+
+0
+
+0
+
+1
+
+1
+
+4
+
+1
+
+0
+
+0)
+
+0
+
+3)
+
+1
+
+0
+
+0
+
+1
+
+6
+
+i
+
+0
+
+1
+
+0
+
+8
+
+1
+
+1
+
+1
+
+0
+
+9
+
+1
+
+1
+
+1
+
+1
+
+7
+
+eC
+
+(BCD)
+
+ly - 4
+
+Note this is merely one way of writing the code. You could write 22 Soe
+
+etc. using a different set of bits.
+
+b)
+Decimal digit
+
+7
+
+4
+
+-2
+
+-1
+
+0
+1
+2
+3
+4
+5
+6
+7
+8
+
+0
+0
+0
+0
+0
+1
+1
+1
+1
+1
+
+0
+1
+1
+1
+1
+0
+0
+
+0
+1
+1
+0
+0
+1
+0
+
+0
+1
+0
+1
+0
+0
+1
+
+0
+1
+1
+
+0
+1
+1
+
+0
+1
+0
+
+)
+
+Practice Problems
+
+(BCD)
+
+Binary Codes
+
+Excess-3 Code
+
+Excess-3 code is a non-weighted code. By non-weighted we mean that a
+particular bit position does not reflect a constant value. The value of each bit
+has to be computed every time.
+Excess-3 (abbreviated XS3) code uses 4 bits to represent a decimal digit, and is
+somewhat related to 8421 BCD code.
+Table 2.5. Excess-3 to decimal conversions
+
+Decimal digit
+
+Excess-3 code
+
+OnmarNoanhwonm=Ao
+
+goo
+sae &
+ofA
+ao
+o0
+=
+2
+Sri
+8S
+fete
+fey
+Fon
+£24
+TY
+th
+eS
+oe
+a
+
+From table 2.5 we see that the XS3 code is equal to the binary equivalent of the
+decimal digit plus 0011 (or 3). To compute the XS3 code value of 5, first add 3
+to 5, which is 8. Then we convert 8 to its binary equivalent 1000. 1000 is then
+the XS3 code of the decimal 5.
+
+Example
+
+Convert decimal 38 to its XS3 code equivalent.
+The decimal number to be converted to XS3 code consists of 2 digits.
+This implies the need for 8 bits. We will convert digit by digit to XS3.
+
+a) Convert the leftmost digit:
+
+4
+
+Add 3 to the digit: 3 + 3 =6.
+
+2
+
+Convert 6 to its binary equivalent:
+6/2 =3
+3/2=1
+
+remainder 0
+remainder |
+
+(LSB)
+
+1/2=0
+
+remainder |
+
+(MSB)
+
+The XS3 equivalent of 3 is 0110.
+
+tery
+
+Practice Problems
+
+27
+
+Digital Circuits Tutor Series: Volume 1
+
+b) Convert the rightmost digit:
+4
+
+Add 3 to the digit:
+
+2
+
+Convert 11 to its binary equivalent:
+11/2=5
+5/2=2
+2/2=1
+1/2=0
+
+3+ 8 = 11.
+
+remainder
+remainder
+remainder
+remainder
+
+|
+|
+0
+|
+
+(LSB)
+
+(MSB)
+
+The XS3 equivalent of 11 is 1011.
+
+The final converted number is 0110
+
+1011=3
+
+8
+
+To convert from XS3 to decimal, first convert each group of four XS3 bits to
+decimal. Then subtract three from each decimal digit.
+For example let’s convert the XS3 value 1100 to its decimal equivalent. If we
+consider 1100 asa binary number, its decimal equivalent is 12. If we subtract 3,
+the final converted number is 9.
+
+Example
+
+Convert the XS3 value 01100100 to its decimal equivalent.
+
+4
+
+The eight XS3 bits will convert to two decimal digits which will be
+computed from 0110 and 0100.
+The decimal equivalent of 0110 = 6.
+The decimal equivalent of 0100 = 4.
+Subtracting 3 from each digit we have:
+
+6-3
+as
+
+3
+1
+
+The final converted number is 31 = 01100100.
+
+To convert the 8421 BCD code to its XS3 equivalent, just add 0011. Let’s
+convert the 8421 BCD number 0100 to its XS3 equivalent. Adding 0011 and
+0100 gives 0111. The value 0111 is then the XS3 code equivalent of the 8421
+BCD value 0100.
+
+Excess-3 Code
+
+Binary Codes
+
+Example
+
+Convert the 8421 BCD 01101001 to its XS3 equivalent.
+4
+
+First convert the 4 leftmost bits 0110:
+0110 + 0011
+
+|
+) 2
+
+= 1001
+
+Then convert the 4 rightmost bits 1001:
+1001 + 0011 = 1100
+
+3
+
+The final converted number is:
+
+0110 1001 = 1001 1100
+(BCD)
+(XS3)
+
+Practice
+Problems
+
+Problem 2.47
+Convert the following decimal numbers to their XS3 equivalents.
+
+a)
+
+39
+
+b)
+
+127
+
+Solution
+a) Conversion of the leftmost digit:
+4
+
+3+3=6
+
+2
+
+Convert 6 to its binary equivalent.
+6/2=3
+3/2=1
+1/2=0
+
+(add 3 to the digit)
+
+remainder 0
+remainder |
+remainder |
+
+(LSB)
+(MSB)
+
+6 = 110 = 0110
+The XS3 code equivalent of 3 is 0110.
+
+Conversion of the rightmost digit:
+
+4
+
+3+9=12
+
+2
+
+Convert 12 to its binary equivalent:
+12/2=6
+6/2=3
+3/2=1
+1/2=0
+
+(add 3 to the digit)
+
+remainder
+remainder
+remainder
+remainder
+
+0
+0
+|
+|
+
+(LSB)
+
+(MSB)
+
+12 = 1100
+The XS3 code equivalent of 9 is 1100.
+The final converted number is 39 = 01101100 (XS3).
+
+Practice Problems
+
+Digital Circuits Tutor Series: Volume 1
+
+b) Convert the leftmost digit:
+4
+
+3+1=4
+
+(add 3 to the digit)
+
+2
+
+4=0100
+
+(Convert to binary)
+
+The XS3 code equivalent of 1 is 0100.
+Convert the middle digit:
+
+4342555
+
+(add 3 to the digit)
+
+2
+
+(Convert to binary)
+
+5=0101
+
+The XS3 code equivalent of 2 is 0101.
+Convert the rightmost digit:
+
+4°
+
+3+ 7-10
+
+(Add 3 to the digit)
+
+2
+
+10=1010
+
+(Convert to binary)
+
+The XS3 code equivalent of 7 is 1010.
+The final converted number is
+
+127 = 010001011010 (XS3).
+
+Problem 2.18
+Convert the following XS3 numbers to their decimal equivalent:
+a)
+
+10110100
+
+b)
+
+010001011010
+
+Solution
+a)
+
+Convert the leftmost 4 bits:
+
+4
+
+101 1=23+0+21!+20=11
+
+2 A i ip=03i= 8
+
+(Convert to decimal)
+
+-
+
+(Subtract 3)
+
+The decimal equivalent of 1011 is 8.
+Convert the rightmost 4 bits.
+4
+
+0100=0+22+0+0=4
+
+(Convert to decimal)
+
+2
+
+4-3=1
+
+(Subtract 3)
+
+The decimal equivalent of 0100 is 1.
+The final converted number is 10110100 (XS3) = 81.
+
+Practice Problems
+
+Binary Codes
+
+b) Convert the leftmost 4 bits 0100.
+
+4
+
+0100=0+22+0+0=4
+
+(Convert to decimal)
+
+2
+
+4-3-1
+
+(Subtract 3)
+
+The decimal equivalent of 0100 is 1.
+Convert the middle 4 bits 0101:
+
+4
+
+0101=0+22+0+29=5
+
+(Convert to decimal)
+
+2
+
+5-3=2
+
+(Subtract 3)
+
+The decimal equivalent of 0101 is 2.
+Convert the rightmost 4 bits 1010.
+
+4
+
+1010=23+0+2!+0=10
+
+(Convert to decimal)
+
+2°
+
+10-3=7
+
+(Subtract 3)
+
+The decimal equivalent of 1010 is 7.
+The final converted number is 010001011010 (XS3) = 127.
+
+Problem 2.49
+
+Convert the following 8421 BCD numbers to their XS3 equivalent code:
+a)
+
+1001
+
+b)
+
+011110000101
+
+Solution
+a) Add 0011 to 1001.
+(carry line)
+
+1
+heey
+Oe
+| dee, | Mmmema a
+
+1
+a0
+
+=
+
+eed
+
+1
+
+i
+
+1
+1
+
+8421 BCD
+
+0
+
+XS3
+
+The XS3 equivalent of the 8421 BCD 1001 is 1100.
+b) Add 0011 to 0111, 1000 and to 0101.
+(carry line)
+
+Map shied |
+0 is ene a |
+0
+Oral 1a
+
+saab
+
+1 0
+020
+
+0
+|
+
+Per
+O01 0 1
+AU 0 Vie |
+
+Or? 1c 10 pe LO
+
+1
+
+1000
+
+£48421 BCD
+= XS3
+
+The XS3 equivalent is 101010111000.
+
+Practice Problems
+
+Digital Circuits Tutor Series: Volume 1
+
+Gray Code
+
+Gray code is non-weighted and non-BCD. By non-BCD we mean that four bits
+may represent more than one decimal digit. Gray code, also called reflected
+code, is often used in analog to digital conversions. The advantage of using
+Gray code over BCD is that only one bit changes when the count increases by
+one. On the contrary with BCD codes, more than one bit will change when the
+count increases by one. (For example in 8421 BCD, when we increment 7=
+0111 to 8 = 1000, four bits will change simultaneously.)
+Table 2.6. Gray code
+
+Gray code
+
+Decimal digit
+
+0
+1
+2
+a
+
+0
+0
+0
+0
+
+0
+0
+0
+0
+
+0
+
+0
+
+0
+1
+1
+
+1
+1
+0
+
+4
+
+0
+
+1
+
+1
+
+0
+
+5
+
+0
+
+1
+
+1
+
+1
+
+6
+7
+8
+9
+10
+
+0
+0
+1
+1
+1
+
+1
+1
+1
+1
+1
+
+0
+0
+0
+0
+1
+
+1
+0
+0
+1
+1
+
+ie.
+
+1
+
+1
+
+1
+
+0
+
+12
+
+1
+
+0
+
+1
+
+0
+
+is
+
+1
+
+0
+
+1
+
+1
+
+etc
+
+etc
+
+When converting from binary to Gray code, the leftmost bit of the binary
+number is used to form the leftmost bit of the Gray code. The leftmost bit in
+both binary and Gray codes are the same.
+
+Add this binary bit (leftmost) to its immediate right bit to form the second
+Gray code bit. (Never carry when adding.) To form the third gray code bit, add
+the second binary bit to the bit to the immediate right. Repeat this process until
+all bits are computed. Note that the Gray and the binary codes have the same
+number of bits.
+
+Example
+
+Convert the binary value 1010 to its Gray code equivalent.
+
+The leftmost bit of the Gray code is 1.
+The second bit is 1 +0=
+
+1.
+(cont. on pg. 79)
+
+Gray Code
+
+Binary Codes
+
+The third bit is 0+ 1 = 1.
+The fourth bit is 1 +0 = 1.
+The final converted number is 1111.
+
+Example
+
+Convert the binary value 100110 to its Gray code equivalent.
+
+The leftmost bit of the Gray code is 1.
+The second bit is 1 +0 = 1.
+
+The third bit is0+0=0.
+The fourth bit is 0+ 1 = 1.
+
+The fifth bit is 1 + 1 =0.
+(Note that we did not carry.)
+The sixth bit is 1 +0 = 1.
+
+The final converted number is 110101.
+
+When converting from Gray code to binary, first remember that both Gray
+code and binary values contain the same number of bits, and that the leftmost
+bit is the same in both. Now count the number of 1’s to the left of the second
+Gray code bit. If this is an even number, then the corresponding binary bit is
+the same as the Gray code bit. If the number of 1’s to the left is odd, then the
+
+corresponding binary bit is the complement of the Gray code bit. Repeat this
+process for every Gray code bit.
+
+Example
+
+Convert the Gray code number 1000 to its binary equivalent.
+The leftmost binary bit is 1 in both numbers. The next immediate right
+binary bit is 1.
+If there are an odd number of 1’s to the left of the second Gray code bit,
+use the complement of the second gray code bit. In this case there isa | to
+the left of the second Gray code bit. Since this is an odd value, the
+corresponding binary value is the complement of 0 (the value of the
+
+second Gray code bit). The complement of 0, of course, is 1.
+
+The third binary bit is 1. The fourth binary bit is also 1. The final binary
+equivalent is 1111.
+
+Gray Code
+
+Digital Circuits Tutor Series: Volume 1
+
+Example
+
+Convert the Gray code value 10101 to its binary equivalent.
+
+The leftmost binary bit is 1. The leftmost bit of the Gray code and that of
+the binary are always the same.
+
+The next immediate right bit is 1. To the left of the second Gray code bit
+there is one |. 1 isan odd number. This implies that the second binary bit
+is the complement of the second Gray code bit.
+The third bit is 0. Two 1’s appear to the left of the third Gray code bit.
+This implies that the third binary bit is the complement of the third Gray
+code bit.
+
+The fourth bit is 0. Two 1’s appear to the left of the fourth Gray code bit.
+Since two is an even number, the fourth binary bit is the same as the
+fourth Gray code bit.
+The fifth bit is 1. Two 1’s appear to the left of the last Gray code bit. The
+last binary bit, therefore, is the same-as the last Gray code bit.
+The final converted number is
+
+10101
+Gray code
+
+Practice
+Problems
+
+=
+
+11001.
+Binary
+
+Problem 2.20
+Convert the following binary numbers to their Gray code equivalents.
+
+a)
+
+10110
+
+b)
+
+1101110
+
+Solution
+a) The leftmost Gray code bit is 1. The second Gray code bit is 1. We obtained ~
+the second Gray code bit by adding the leftmost binary bit to the bit to its
+immediate right.
+The third Gray code bit is 1. We obtained the third Gray code bit by adding
+the second binary bit to the third.
+
+The fourth Gray code bit is 0. To obtain the fourth Gray code bit we added
+the third binary bit to the fourth: 1 + 1 = 10. Note that we did not carry.
+
+The fifth Gray code bit is 1. The last Gray code bit was obtained by adding
+the fourth binary bit to the fifth.
+The final Gray code equivalent is 11101.
+
+b) The leftmost Gray code bit is 1. The next immediate right Gray code bit is
+0. The third Gray code bit is 1. The fourth Gray code bit is 1. The fifth Gray
+code bit is 0. The sixth Gray code bit is 0. The seventh Gray code bit is 1.
+The converted Gray code number is 1011001.
+GM) Practice Problems
+
+Binary Codes
+
+Problem 2.24
+Convert the following Gray code numbers to their binary equivalents:
+
+a)
+
+11101
+
+b)
+
+1011001
+
+Solution
+a) The leftmost binary bit is 1. The next immediate right binary bit is 0. To the
+left of the second Gray code bit there is one 1. The number of 1’s is odd.
+The second binary bit is the complement of the second Gray code bit.
+The third binary bit is 1. To the left of the third Gray code bit there are two
+l’s. The number of 1’s is an even number. The third binary bit is the same as
+the third Gray code bit.
+
+The fourth binary bit is 1. To the left of the fourth Gray code bit there are
+an odd number of 1’s. The fourth binary bit is the complement of the
+fourth Gray code bit.
+The fifth binary bit is 0. To the left of the fifth Gray code bit there are an
+odd number of |’s. The fifth binary bit is the complement of the fifth Gray
+code bit.
+.
+The final binary equivalent is 10110.
+b) The leftmost binary bit is 1. The next immediate right binary bit is 1. The
+third binary bit is 0. The fourth binary bit is 1. The fifth binary bit is 1. The
+sixth binary bit is 1. The seventh binary bit is 0.
+The final binary equivalent is 1101110.
+
+Alphanumeric
+Codes
+
+Digital computers process many different types of characters from keyboards.
+Since digital computers only process and store binary values, a code is needed
+that converts these characters to a binary form. Alphanumeric codes are used
+for this purpose.
+The most widely used alphanumeric codes are the EBCDIC (Extended BCD
+Interchange Code) and the ASCII (American Standard Code for Information
+Interchange) code.
+
+Alphanumeric Codes: J
+
+Digital Circuits Tutor Series: Volume 1
+
+Table 2.7. Alphanumeric codes
+ASCII Code
+
+A
+B
+C
+D
+E
+F
+G
+H
+|
+J
+K
+G
+M
+N
+O
+P
+Q
+R
+S
+i
+U
+V
+WwW
+X
+we
+
+100
+100
+100
+100
+100
+100
+100
+100
+100
+100
+100
+100
+100
+100
+100
+101
+101
+101
+101
+101
+101
+101
+101
+101
+101
+
+EBCDIC Code
+
+0001
+0010
+0011
+0100
+0101
+0110
+0111
+1000
+1001
+1010
+1011
+1100
+1101
+1110
+1111
+0000
+0001
+0010
+0011
+0100
+0101
+0110
+0111
+1000
+1001
+
+1100
+1100
+1100
+1100
+1100
+1100
+1100
+1100
+1100
+1101
+1101
+1101
+1101
+1101
+1101
+1101
+1101
+1101
+1110
+1110
+1110
+1110
+1110
+1110
+1110
+
+0001
+0010
+0011
+0100
+0101
+0110
+0111
+1000_
+1001
+0001
+0010
+0011
+0100
+0101
+0110
+0111
+1000
+1001
+0010
+0011
+0100
+0101
+0110
+0111
+1000
+
+fl
+
+101
+
+1010
+
+1110
+
+1001
+
+0
+1
+2
+3
+4
+a
+6
+
+011
+011
+011
+011
+011
+011
+011
+
+0000
+0001
+0010
+0011
+0100
+0101
+0110
+
+1111
+1111
+1111
+1111
+1111
+1111
+1111
+
+0000
+0001
+0010
+0011
+0100
+0101
+0110
+
+8
+9
+blank
++
+
+011 1000
+011 1001
+000 0000
+010 1011
+
+1111
+1111
+0100
+0100
+
+1000
+1001
+0000
+1110
+
+011
+
+0111
+
+1110
+
+7
+
+011 0111
+
+1101
+
+1111 0111
+
+Example
+
+What would the output of an ASCII keyboard be if the letter B was
+pressed?
+,
+
+Solution
+If the letter B was pressed, the output from an ASCII keyboard would be
+1000010. (See table 2.7.)
+
+§¥) Alphanumeric Codes
+
+Binary Codes
+
+Example
+
+Write the ASCII representation of the word DIGITAL.
+
+Solution
+Using table 2.7 we get:
+D
+I
+G
+I
+is
+A
+L
+
+1000100
+1001001
+1000111
+1001001
+1010100
+1000001
+1001100
+
+The ASCII representation of the word DIGITAL is:
+100010010010011000111100100110101001000001 1001100.
+
+Practice
+Problems
+
+Problem 2.24
+What would the output of an EBCDIC keyboard be if the letter S was pressed?
+
+Solution
+If the letter S was pressed, the output from an EBCDIC keyboard would be
+1110 0010.
+
+Poblem 2.22
+Write the EBCDIC representation of DIGITAL.
+Solution
+From table 2.7 we have:
+D = _ 11000100
+I
+11001001
+G
+11000111
+I
+11001001
+T =
+11100011
+A =. 11000001
+Levy
+14010041
+The EBCDIC representation of the word DIGITAL is:
+
+110001001 10010011100011111001001111000111100000111010011
+
+Practice Problems
+
+Digital Circuits Tutor Series: Volume 1
+
+Error Detecting
+and
+Correcting Codes
+Error Detecting
+Codes
+
+When data is transmitted between digital systems via communication
+channels, errors may occur. The probability of an error is low. Nevertheless it
+is desirable to have a way to detect and correct errors. A parity bit is used in the
+detection of errors. A parity bit is an extra bit which is added to a group of bits
+to be transmitted. The parity bit keeps track of the number of binary bits witha
+value of | that are transmitted. The parity bit is generated at the beginning of
+the transmission channel by a circuit called a parity-bit generator. Errors, if
+any, are detected at the end of the transmission channel by an error detector
+
+circuit.
+Table 2.8. Even parity-bit check
+
+Decimal number
+
+Binary
+
+Parity bit
+
+0
+1
+2
+3
+4
+5
+6
+7
+8
+3
+10
+11
+12
+
+0000
+0001
+0010
+0011
+0100
+0101
+0110
+0111
+1000
+1001
+1010
+1011
+1100
+
+13
+
+1101
+
+0
+1
+1
+0
+1
+0
+0
+1
+1
+0
+0
+1
+0
+
+14
+15
+
+1110
+1111
+
+1
+0
+
+1
+
+In the even parity check, the parity bit is such that the total number of 1’s in the
+transmitted word is even. When the number of 1’s to be transmitted is even, the
+
+parity bit is0. When the number of 1’s to be transmitted is odd, the parity bit is
+1. Note from table 2.8 that zero is considered even.
+There is also the odd parity bit check (see table 2.9), which is the opposite of the
+even parity check. If the number of 1’s to be transmitted is odd, the parity bit is
+0. If the number of 1’s to be transmitted is even, the parity bit is 1.
+
+&Z] Error Detecting Codes
+
+Binary Codes
+
+Table 2.9. Odd parity-bit check
+
+Practice
+Problems
+
+Decimal number
+
+Binary
+
+0
+1
+2
+
+0000
+0001
+0010
+
+3
+
+0011
+
+4
+5
+6
+7
+8
+9
+10
+
+0100
+0101
+0110
+0111
+1000
+1001
+1010
+
+11
+
+1011
+
+ipee
+
+1100
+
+13
+14
+15
+
+1101
+1110
+1111
+
+Parity bit
+
+are)
+SVWeye)
+We)
+eS)
+yee
+
+Problem 2.23
+
+Assume that the following are sent as 8421
+checking. Which are in error?
+
+a)
+
+10100
+
+b)
+
+11001
+
+c)
+
+BCD
+
+code with even parity
+
+10011
+
+Solution
+a)
+
+The BCD number is 1010.
+
+Even number of 1’s.
+
+The parity bit is 0.
+
+The total number of
+1’s is even.
+
+No error occurred during transmission.
+b) The BCD number is 1100.
+
+The parity bit is 1.
+
+Even number of 1’s.
+
+The total number of
+I’s is odd.
+
+An error occurred during transmission.
+
+c) The BCD number is 1001.
+The parity bit is 1.
+
+Even number of 1’s.
+The total number of
+1’s is odd.
+
+An error occurred during transmission.
+
+Practice Problems fj
+
+Digital Circuits Tutor Series: Volume 1
+
+Problem 2.24
+Generate a parity bit check table for the 84-2-1 BCD code. (Odd and even.)
+Solution
+
+‘
+
+Error Correcting
+Code
+
+Decimal digit
+
+8-4-2-1
+
+P (even)
+
+P (odd)
+
+0
+1
+2
+
+0000
+0111
+0110
+
+0
+1
+0
+
+1
+0
+1
+
+3
+
+0101
+
+0)
+
+1
+
+4
+5
+6
+7
+8
+9
+
+0100
+MOntat
+1010
+1001
+1-0°0-0
+gfe a hee
+
+1
+1
+0
+0
+1
+0
+
+0
+0
+1
+1
+0
+1
+
+To correct an error we first have to locate it. The Hamming Code is used to
+locate an error. Once the error is located, it can be easily corrected by replacing
+the error bit by its complement. (For example, if bit #3 is equal to 1 and it isan
+error, the correct bit is then 0.) Hamming code uses three parity bits. The total
+number of bits to be transmitted is seven. Let’s name the 3 parity bits P1, P2,
+
+and P4, and the four data bits D3, DS, D6, and D7.
+
+P1, P2, and P4 will be generated by 3 even-parity-bit generators. D3, DS, D6,
+and D7 will be generated by the digital system.
+Table 2.10. Binary with Hamming error correction
+
+Decimal digit
+0
+1
+2
+:
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+
+§{J Error Correcting Code
+
+Pos:
+
+1
+
+2
+
+3
+
+PL-ie2==03
+
+4
+
+(P4>
+
+5
+
+05"
+
+6
+
+De
+
+7
+
+sag
+
+Op UO
+=;'0) 0
+Criemeen
+Femi
+5°°0. 1, “20) wo0aea
+Seah
+ge Wy aurora
+ASD
+A? OS 0b teoiGae
+Hewes
+Ti teOeric Oren
+add tehy ure
+Deelah *, 00. 5-10 Gnu
+fear
+oO) (OF See
+eR
+ees eee
+mee
+Se SN
+OS
+TRI
+UUs
+Li
+oO anneal
+PRE
+i
+Be ee eed
+OS Fleer ole 0 =
+eee
+Opie tea AS Ci a oe
+ee
+PS OFO™ oT 0, taal =
+ees
+Ont OF et) 0)
+aes
+be St
+ae
+es
+
+Binary Codes
+
+The final transmitted number is: P1 P2 D3 P4 D5 D6 D7. Parity bit P1 is 1
+whenever the total number of 1’s in positions 3, 5, and 7 is odd. (Positions 3, 5,
+
+and 7 correspond to bits D3, D5 and D7 respectively.) Parity bit P2 is 1
+whenever the total number of 1’s in positions 3, 6, and 7 is odd. (Positions 3, 6,
+and 7 correspond to bits D3, D6 and D7 respectively.) Parity bit P4 is 1
+whenever the total number of 1’s in positions 5, 6, and 7 is odd. (Positions 5, 6,
+and 7 correspond to bits DS, D6, and D7 respectively.) Note that none of the
+parity bits interfere with each other.
+Example
+
+Convert decimal 4 to its binary error correction code.
+
+Solution
+The binary equivalent of 4is: 0 1 0 0=D3 D5 D6 D7. From left to right
+we have: D3=0, D5=1, D6=0, and D7=0. Let’s compute the parity bits P1,
+P2, and P4.
+P1 is affected by D3, D5, and D7, which correspond to the binary bits 0,
+
+1, and 0 respectively. The total number of 1’s is odd. Then P1=1.
+P2 is affected by D3, D6, and D7 which correspond to the binary bits 0, 0,
+and 0 respectively. The total number of 1’s is even. Then P2=0.
+P4 is affected by DS, D6, and D7 which correspond to the binary bits 1, 0,
+
+and 0 respectively. The total number of 1’s is odd. Then P4=1.
+The Hamming Code is:
+
+1
+PI
+
+0
+P2:
+
+0
+D324
+
+1
+Ps)
+
+1
+D5
+
+0
+DG
+
+0
+Di
+
+When the seven bits are received, the three error detector circuits will check
+their respective parity. If any error is detected, the corrective circuit will
+correct it.
+
+Example
+Suppose that 5 is incorrectly transmitted as 0100001. Locate and correct
+
+the error.
+Solution
+
+From 0100001 we get:
+
+P1=0, P2=1, and P4=0
+D3=0,
+
+D5=0,
+
+D6=0
+
+and
+
+D7=1
+
+(cont. on pg. 88)
+
+Error Correcting Code
+
+Digital Circuits Tutor Series: Volume 1
+
+Test 1:
+
+P1=0 and D3=0, DS5=0, D7=1
+
+Failure
+(The number of 1’s is odd. P1 should be equal to 1.)
+Test 1 indicates that D3, D5 or D7 is a failure bit.
+Test 2:
+
+P2=1 and D3=0, D6=0, D7=1
+
+Pass
+(The number of 1’s is odd. P2 is 1.)
+Test 2: D3, D6, and D7 are correct bits.
+
+Test 3:
+
+P4=0 and D5=0, D6=0, D7=1
+Failure
+(The number of 1’s is odd. P4 should be equal to 1.)
+Test 3 indicates that D5, D6, or D7 is a failure bit.
+
+Compare test 1 and test 2:. D7 and D3 are correct bits.
+Compare test 2 and test 3: D6 and D7 are correct bits.
+Knowing that D3, D6, and D7 are correct, the failure bit is then DS. Note that
+we could have used table 2.10. To correct bit D5, we take its complement. Now
+D5=1, and the correct number is 0100101. (Check the result with table 2. 10.)|
+1s
+
+Table 2.11. Position of failure for Hamming code.
+
+Test 3
+
+Test 2
+
+Test 1
+
+Failure digit
+
+NONE
+
+OU
+UO
+oot!)
+a
+
+Practice
+Problems
+
+UU"
+VV
+mH
+
+VU
+n1U7TVDUTN
+
+PD
+W
+NOOB
+
+Problem 2.24
+Suppose that D7=0, D6=1, D5=0, and D3=1. Compute P1, P2, and P4.
+Solution
+Let’s examine D3, DS, and D7. D3=1, D5=0,-and D7=0. The total number of
+1’s is odd. Then P1=1.
+
+Let’s examine D3, D6, and D7. D3=1, D6=1, and D7=0. The total number of
+l’s is even. Then P2=0.
+Let’s examine DS, D6, and D7. D5=0, D6=1, and D7=0. The total number of
+1’s is odd. Then P4=1.
+
+Practice Problems
+
+Binary Codes
+
+Problem 2.25
+
+Knowing that P1=1, P2=1, D5=1 and D7=0, compute the binary number that is
+transmitted. Assume no error has been detected.
+
+Solution
+First let’s compute D3. We have P1=1, D5=1, and D7=0. Knowing that no
+error has occurred, D3 must be 0 so that the total number of 1’s is odd which
+
+causes Pl=1.
+Now
+
+Then D3=0.
+
+let’s compute
+
+D6.
+
+We have
+
+P2=1, D3=0, and D7=0.
+
+No error has
+
+occurred. D6 must be equal to | so that the total number of 1’s is odd. This
+makes P2=1 and therefore D6=1.
+The transmitted number is D3D5D6D7
+
+= 0110 = 6.
+
+Problem 2.26
+Obtain the Hamming error correction code for the 2421 BCD code.
+Solution
+Decimal digit
+
+P1
+
+P2
+
+D3
+
+P4
+
+D5
+
+D6
+
+D7
+
+0
+1
+A
+o
+4
+
+0
+1
+0
+1
+1
+
+0
+1
+1
+0
+0
+
+0
+0
+0
+0
+0
+
+0
+1
+1
+0
+1
+
+0
+0
+0
+0
+1
+
+0
+0
+1
+1
+0
+
+0
+1
+0
+1
+0
+
+5
+
+0
+
+1
+
+1
+
+0
+
+(0)
+
+1
+
+1
+
+6
+
+0
+
+1
+
+1
+
+1
+
+1
+
+0
+
+0
+
+7
+
+1
+
+(0)
+
+1
+
+0
+
+1
+
+Oss
+
+|
+
+8
+
+0
+
+0
+
+1
+
+0
+
+1
+
+1
+
+0
+
+9
+
+1
+
+1
+
+1
+
+1
+
+1
+
+1
+
+1
+
+Problem 2.27
+
+Identify the data sent and correct any errors if necessary for the following 8421
+BCD:
+
+a)
+
+1101001
+
+b)
+
+0001001
+
+Solution
+a) First determine if there is any error.
+Test 1: D3=0, D5=0, D7=1.
+
+Odd number of 1’s, then P1I=1.
+
+Pass
+
+Test 2: D3=0, D6=0, D7=1.
+Pass
+
+Odd number of 1’s, then P2=1.
+
+Test 3 D5=0, D6=0, D7=1.
+Pass
+
+Odd number of 1’s, then P4=1.
+
+There are no errors; the data sent is D3
+
+D5
+
+D6
+
+D7=0
+
+0 0 1=1.
+Practice Problems [J
+
+Digital Circuits Tutor Series: Volume 1
+
+b) Test 1: D3=0, D5=0, D7=1. Odd number of 1’s, then P1I=1. We have P1=0.
+Fail
+Test 2: D3=0, D6=0, D7=1. Odd number of 1’s, then P2=1. We have P2=0.
+Fail
+
+Odd number of 1’s, then P4=1.
+
+Test 3: D5=0, D6=0, D7=1.
+Pass
+
+From table 2.11 we conclude that D3 is the failure bit. (Test 1 and test 2 fail
+and test 3 passes). Taking the complement of D3, we obtain D3=1. The
+transmitted data is D3 DS D6 D7=1 0 0 1=9.
+
+Problems
+
+?
+
+Problem 2.28
+Convert the following decimal numbers to their 8421 BCD code equivalents:
+
+a)
+
+210
+
+b)297.78109
+
+Problem 2.29
+Convert the following 8421 BCD numbers to their decimal equivalents:
+
+a)
+
+01110011
+
+b)10000011.10010101
+
+Problem 2.30
+Convert the following decimal numbers to their 5421 BCD code equivalents:
+
+a)
+
+4356
+
+b)
+
+712.0921
+
+Problem 2.34
+Convert the following 5421 BCD numbers to their decimal equivalents:
+a)
+
+01001100
+
+b)00111000.10010001
+
+Problem 2.32
+Convert the following decimal numbers to their 2421 BCD code equivalents:
+a)
+
+Gi) Problems
+
+324
+
+b)3687.9802
+
+Binary Codes
+
+Problem 2.33
+Convert the following decimal numbers to their 84-2-1 BCD code equivalents:
+
+a)
+
+01010011
+
+b)01101110.0001111
+
+Problem 2.34
+Convert the following decimal numbers to their 84-2-1 BCD code equivalents:
+
+a)
+
+b)
+
+735
+
+8714.126
+
+Problem 2.35
+Convert the following 84-2-1 BCD numbers to their decimal equivalents:
+
+a)
+
+01001011
+
+b) 01111010.10011000
+
+Problem 2.36
+Convert the following decimal numbers to XS3 code:
+
+a)
+
+68
+
+b)
+
+3287
+
+Problem 2.37
+Convert the following XS3 numbers to their decimal equivalents:
+
+a)
+
+10000111
+
+b)
+
+0110001111000011
+
+Problem 2.38
+Convert the following binary numbers
+
+a)
+
+10101
+
+b)
+
+to their Gray code equivalents:
+
+11010101
+
+Problem 2.39
+Convert
+
+a)
+
+1011
+
+the following Gray code numbers
+
+b)
+
+to their binary equivalents:
+
+111101001110
+
+Problems J
+
+Digital Circuits Tutor Series: Volume 1
+
+Problem 2.40
+Write the EBCDIC representation of the word ELECTRONICS.
+
+Problem 2.41
+Compute P1, P2, and P4 if D7=1, D6=0 and D3=1.
+
+Problem 2.42
+Obtain the Hamming error correction code for the 5421 BCD code.
+
+EH) Problems
+
+3
+Logic Gates
+
+The AND, OR and
+NOT Gates
+
+A logic circuit is a switching circuit that can perform several logic operations.
+A gate is a logic circuit that has one and only one output with at least one input.
+Ina logic gate the output is determined by the state of the inputs and the logical
+rules which apply. The two possible states are 0 (or low) and | (or high). The
+three basic logic gates are: AND, OR and NOT.
+
+The AND Gate
+
+The operation of an AND gate is somewhat similar to ordinary multiplication.
+A dot is used to symbolize an AND operation. The dot is placed between the
+two inputs as in the following example: Ae B. This is read as A and B. Very
+often the dot between the inputs is omitted and A e B is written as AB. The
+output of the AND gate is usually represented by the letter Y. Thus for one
+AND gate with two inputs we have:
+Y= AB. Y = AB is called the boolean
+expression of the AND gate.
+An AND logic operation will yield an output of | only if all the inputs are 1’s;
+otherwise the output will be 0.
+
+A
+
+BS
+
+Battery
+
+=(_) lamp
+
+Figure 3.1. Equivalent circuit of an AND gate.
+The AND Gate
+
+Digital Circuits Tutor Series: Volume 1
+
+The circuit depicted in figure 3.1 contains two input switches (wired in series)
+A and B, and an output lamp indicator connected in series to a battery.
+
+When A and Bare open (or 0), the output lamp indicator is off (or 0). The lamp
+remains off (or 0) when one switch is open (or 0) and the other is closed (or 1).
+The lamp is on (or 1) only when both switches are closed (or 1). This circuit
+reflects the behavior of an AND gate.
+A truth table shows every possible combination of input
+arguments (1 or 0) and their respective outputs. The truth table for an AND
+operation follows:
+Table 3.1. Truth table for AND gate
+
+(Inputs)
+
+(Output)
+
+¥:
+
+00
+->
+
+—~
+o
+Ooo
+WO
+—=O-0o0
+
+The symbol for an AND gate is shown in figure 3.2.
+
+4
+
+K
+
+Ww
+PS
+
+>
+AMO
+QU
+
+Y=AB
+a)
+
+Two inputs
+
+Y = ABCDEF
+b)
+
+Six inputs
+
+Figure 3.2. Symbols for AND gates
+
+Example
+
+Write the boolean expression and the truth table for a 3-input AND.
+Solution
+
+a) The boolean expression for a 3-input AND is:
+Y=AeBeC
+(cont. on pg. 95)
+
+EZ] The AND Gate
+
+Logic Gates
+
+b) The truth table for a 3-input AND gate is:
+Inputs
+
+Output
+
+B
+
+Y
+
+Q
+|=0O0--0-0--0 -O000000
+
+>)
+ee
+a
+I
+>a >m
+
+The OR Gate
+
+OR gate operation resembles ordinary addition. Suppose that we have three
+inputs: A, B, and C. The output Y of an OR gate can be represented by: Y= A+
+B+C. The output Y will be 1 if at least one input is 1. Only if all inputs are 0 the
+output be 0.
+
+A
+
+Figure 3.3. Equivalent circuit of an OR gate.
+
+Figure 3.3 represents two switches (wired in parallel): A and B. When both A
+and Bare open (or 0), the lamp is off (or 0). If either A or B are closed (or 1), the
+lamp is on (or 1).
+Table 3.2. Truth table for an OR gate
+
+Inputs
+
+Output
+
+A
+
+B
+
+Y
+
+0
+0
+1
+1
+
+0
+1
+0
+1
+
+0
+1
+1
+1
+
+The symbol of an OR gate is shown in figure 3.4.
+
+The OR Gate fj
+
+Digital Circuits Tutor Series: Volume 1
+
+vs
+
+r<
+PS
+wo
+SEO
+QP
+
+a)
+
+Two inputs
+
+b)
+
+Six inputs
+
+Figure 3.4. OR gate symbols
+
+Example
+Write the boolean expression and the truth table for a 3-input OR gate.
+Draw a 3-input OR gate symbol.
+
+Solution
+a) The boolean expression for a 3-input OR gate is:
+Y=A+B+C
+b) The truth table for a 3-input OR gate is:
+(Inputs)
+
+(Output)
+
+A
+
+B
+
+y,
+
+0)
+0
+0
+0
+1
+1
+1
+1
+
+SSoe
+ps)
+tate
+for
+(e)
+Ay
+NS
+
+Q=o+-o0o--oa0o-+-40
+ee
+[|
+ee
+a
+
+c) The symbol for 3-input OR gate is:
+
+EJ The OR Gate
+
+Logic Gates
+
+Example
+
+Draw the output pulse train Y of an OR gate if inputs A and B are as
+follows:
+A=0
+
+B= Of7L0 OfTLoft TT1o
+Solution
+
+Definition: Pulses are often used in digital circuitry. A pulse is a signal (0 or
+1 also called low or high) that appears at the input gate. A pulse must be long
+enough so that a network (a gate for example) can react to it. At the end of
+the pulse the network state remains unchanged until a new pulse is detected.
+
+A pulse train is a set of pulses. Pulse trains in different inputs of agate must
+have the same pulse duration. Thus the gate can logically compare the
+
+pulses and output a train pulse that is the result of the logical operation of
+these incoming pulses.
+In this example one input (A) is low (or 0) at all times. Thus whenever the
+other input (B) is high (or 1), the output from the OR gate will be also high.
+And whenever the input B is low the output of the OR gate will be also 0 (see
+the truth table of the OR gate). The OR gate is outputting the same pulse
+train as B. (This circuit may be used by a design engineer to correct a delay
+problem).
+The output pulse train is:
+
+Ve
+
+The NOT Gate
+
+OF TOOT (TO) mist LO
+
+The NOT gate (also called the inverter gate) has only one input and one
+output. The NOT gate performs the mathematical operation of complementing (or inverting) the input. If the input is 1, the output is 0. If the input is 0, the
+output is 1.
+
+We place a bar over A to represent its complement. Thus the complement of A
+is A. (Note that the complement of A is sometimes called not A.)
+Table 3.3. Truth table for the NOT gate.
+
+Input
+
+Output
+
+A
+
+Y (= A =not A)
+
+0
+
+1
+
+1
+
+0
+
+The NOT Gate
+
+Digital Circuits Tutor Series: Volume 1
+
+Figure 3.5. Symbol for a NOT gate.
+
+Remark: The small circle at the output of a NOT gate is called an invert
+bubble. It is used to represent the complement of the output operation. It can
+be placed as well at the input(s) to complement an input signal before the
+logical operation takes place.
+
+Example
+
+What is the output of gate 4 in the following digital circuit if A = 1?
+
+Output of gate 1 =0
+Output of gate 2 = 1
+Output of gate 3 =0
+
+Output of gate 4 = 1
+
+Example
+
+Write the boolean expression for the following gates:
+
+EH) The NOT Gate
+
+Logic Gates
+
+Example
+
+What is the output of the following combination of logic gates?
+
+a)
+
+b)
+
+Solution
+
+a) The output of gate 2is Ae B.
+
+The output of gate 3 is
+
+Ae B (or not (Ae B)).
+
+b) The output of gate 2 is Ae B (or A not B)
+The output of gate 3 is(A e B)+C
+Practice
+Problems
+
+Problem 3.4
+What is the output of the following AND gate:
+
+ofilo
+
+Puse:
+
+f
+
+o{ilo
+
+edeba
+
+of1
+
+y
+
+1]0 of1
+
+Solution
+
+pulse a: O AND 1 = 0
+pulse b: 1 ANDO =0
+pulse c: 0 ANDO
+=0
+pulse d: O AND 1 =0
+pulse e: 1 AND 1 =1
+pulsef; O ANDO =0
+
+The output pulse is
+
+Y= O[1|10
+
+0 0 0.
+
+Practice Problems §)
+
+Digital Circuits Tutor Series: Volume 1
+
+Problem 3.2
+What is the output of the following OR gate?
+1]0 0 0 0
+
+Pulse:
+
+e dc
+
+b a
+
+Y
+
+Og |Daten
+
+Solution
+
+:
+
+pulsea: 0OR 1 =1
+pulseb: 0 OR 1 = 1
+pulsec: OOR1=1
+
+pulsed: 0ORO=0
+pulsee: 1ORO=1
+
+The output pulse is Y=
+
+T|O/1
+
+7 1
+
+Problem 3.3
+Write the truth table for the following gate circuit with
+
+Y =(b+d)ecea
+
+abcd
+
+Practice Problems
+
+Logic Gates
+
+Solution
+
+To draw the truth table for the above digital circuit we first must determine all
+
+possible combinations of states (0 or 1) for the four inputs A, B, C, and D.
+For
+each gate (in this example only gates 1 and 2) find an output for all different
+combinations of states. Finally combine all the output combinations of states
+as an input to the last gate (here gate 3). Note how we used separate columns in
+the truth table to calculate the various combinations of states and the
+final
+output.
+
+Wied
+
+On ballvial gaye
+
+0
+
+0
+
+0
+
+0
+
+(b+d)
+
+nota
+
+0
+
+1
+
+Y =(btd) ecea
+0
+
+aaa 8 Saat
+
+1
+
+1
+
+0
+
+ae
+hat
+Te
+Ea
+Ps
+pet
+cect)
+Deeg)
+aT
+TROT
+1ataG
+Otero ios
+Duived ade
+design
+tra’ 20> chigO spa)
+adhasiul
+TinmelCl
+teed Oorsntiin
+ol
+tart One
+tne) I
+ae
+eG 4° 0
+1
+iep ya 4
+poe
+-1
+‘tie
+0
+re
+eet
+ete
+
+0
+1
+1
+1
+1
+1
+0
+1
+0
+1
+1
+1
+1
+1
+
+1
+1
+1
+1
+1
+1
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+1
+0
+0
+1
+1
+0
+0
+0
+0
+0
+0
+0
+0
+
+eel’
+
+Problem 3.4
+
+Draw an equivalent circuit using logic gates for the following circuit:
+
+Battery
+
+Practice Problems
+
+Digital Circuits Tutor Series: Volume 1
+
+Solution
+
+Let’s refer to switches A and Bas network 1, switch C as network 2, and finally
+switches D, E, and F as network 3.
+
+Network 4
+Switches A and B are in parallel. Therefore a 2-input OR gate (whose inputs
+are A and B) can be used to represent network | (refer to figure 3.3). Network I
+is represented by gate 2 in the equivalent logic circuit.
+
+Network 3
+Network 3 is represented by three switches D, E, and F.
+Switches D and E are in series, and a 2-input AND gate (whose inputs are D
+and E) can be used to represent the serial combination of switch D and switch
+E (refer to figure 3.1). The serial combination of switches D and E is
+represented by gate | in the equivalent logic circuit.
+Switch F is in parallel with the serial combination of switches D and E.
+Therefore a 2-input OR gate (whose inputs are switch F on one hand and the
+serial combination of switches D and E in the other hand) can be used to
+represent the parallel combination between switch F and the serial combination of switches D and E (see gate 3 in the equivalent logic circuit).
+
+Network 3 is represented by gates 3 and | in the equivalent logic circuit.
+Networks 1, 2, and 3 are in series. Therefore a 3-input AND gate (whose inputs
+are networks 1, 2, and 3) can be used to represent the serial aspect of networks
+
+1, 2, and 3. The serial combination of the three networks is represented by gate
+
+4 in the following equivalent logic circuit:
+
+ABCDEF
+
+Practice Problems
+
+Logic Gates
+
+Problem 3.5
+What is the truth table for the following logic circuit?
+
+Solution
+
+At the output
+At the output
+At the output
+At the output
+At the output
+
+of gate | we
+of gate 2 we
+of gate 3 we
+of gate 4 we
+of gate 5 we
+
+have:
+have:
+have:
+have:
+have:
+
+(a+b).
+bc.
+not (atb) (or (atb) ).
+bc + (atb).
+not (bc + not (atb) ).
+
+Y =(bc) +(at+b ).
+The truth table is:
+
+PA
+
+cement
+
+(atb)
+
+(be)
+
+(atb)
+
+(bce)+ (a+b)
+
+Y
+
+.b0
+Oo an Oa)
+ted
+200Gi
+6.41
+0
+Fie
+Os
+1
+1
+o
+denon
+Liacapegd
+tome
+iS galtg
+ine
+1
+
+0
+0
+1
+1
+1
+1
+1
+
+0
+0
+0
+1
+0
+0
+0
+
+1
+1
+0
+0
+0
+0
+0
+
+1
+1
+0
+1
+0
+0
+0
+
+0
+0
+1
+0
+1
+1
+1
+
+1
+
+0
+
+1
+
+C
+
+es
+
+WNID
+
+each
+
+1
+
+Problem 3.6
+Draw the logic gate circuit and the truth table for the following boolean
+expression:
+Y=BC+AB+ABC+ABC
+
+Practice Problems
+
+Digital Circuits Tutor Series: Volume 1
+
+Solution
+
+a) The truth table is:
+A
+
+Bec
+Ue
+On:
+[nt
+
+eh
+1
+G
+1
+SO
+
+oo
+Ua
+Lenco
+1
+——=—_ 1
+==
+OO
+&
+©
+
+|
+
+BC
+
+AB
+
+ABC
+
+ABC
+
+¥
+
+0
+0
+1
+0
+0
+0
+1
+0
+
+0
+0
+0
+0
+1
+1
+0
+0
+
+0
+0
+0
+0
+0
+|
+0
+0
+
+0
+0
+0
+0
+1
+l
+l
+0
+
+0
+0
+I
+0
+1
+]
+1
+0
+
+b) Create the logic gate circuit:
+
+To draw a logic gate circuit from a boolean expression observe the
+following steps:
+
+1
+
+Count the number of different variables. Here we have 3: A, B, and C.
+
+2
+
+Look back at the boolean expression to see how the final terms are
+combined. Here they are added; thus the final output will eminate
+from an OR gate (primary gate).
+Count the number of terms in the boolean expression. Here we have
+
+four terms (BC, AB, ABC, and AB C)); thus the final gate will be a
+4-input OR gate.
+Look at the individual term of the boolean expression and determine
+the type of operation used. Use an equivalent gate (secondary gate).
+Remember that multiplication isan AND gate and addition is an OR
+gate.
+Go back to each term of the boolean expression and count the number
+of variables used. This number will determine the number of inputs to
+the gate for each term. The type of secondary gates has been
+determined earlier in step 4.
+
+If a variable in a particular term of the boolean expression is negated,
+use an inverter (NOT gate) between the variable and the secondary
+gate.
+
+Practice Problems
+
+°
+
+Logic Gates
+
+Once all these steps have been completed, connect each variable to
+its
+corresponding gate. Then connect secondary gate output to each correspo
+nding primary gate input and so on until the entire circuit has been
+drawn. The
+
+logic gate circuit is:
+
+ABC
+
+The NAND
+Gate
+
+'
+operation is the complement
+
+NAND
+of AND operation. The boolean
+expression for an AND operation is AB. Thus the boolean expression for a
+NAND operation is A B (or not AB). Note that NAND is an abbreviation for
+NotAND.
+
+Figure 3.6. Negated AND operation
+
+Figure 3.6 represents a negated AND operation. Two inputs A and B are
+ANDed (output for gate 1) and then negated (output of gate 2). Note that
+figure 3.6 uses two gates (AND and NOT) to represent a NAND operation.
+
+Figure 3.7 represents an equivalent gate for the circuit of figure 3.6. Note that
+the NAND gate is an AND gate with a small circle at the output.
+The small circle (also called the invert bubble) negates the output of the AND
+gate. In some cases, the small circle is used to negate input(s).
+
+The NAND Gate
+
+Digital Circuits Tutor Series: Volume 1
+
+Figure 3.7. The NAND gate.
+
+Table 3.4 shows the operation of an AND and a NAND gate. Note that the
+NAND
+
+outputs are the complements of the AND gate outputs.
+Table 3.4. Truth table for AND and NAND
+
+A
+
+B
+
+AND
+
+NAND
+
+0
+0
+
+0
+1
+0
+1
+
+0
+0
+0
+1
+
+l
+|
+
+gates.
+
+0
+
+Example
+Write the boolean expression and the truth table for a 3-input NAND.
+
+Solution
+a) The boolean expression for 3-input NAND
+
+is
+
+Y=AeBeC
+b) The truth table for a 3-input NAND
+
+gate follows:
+
+A
+
+ee)
+
+0
+0
+0
+0
+1
+1
+1
+1
+
+ere
+OO
+F
+OOF
+SS
+Sea
+2=
+ee
+(ee
+
+‘o)
+
+NAND
+
+Example
+
+Draw the output pulse Y of a NAND gate if the inputs A and bare
+as follows:
+
+(cont. on pg. 107)
+
+The NAND Gate
+
+Logic Gates
+
+Solution
+a:
+
+ONAND
+1 =1
+
+b:
+
+ONAND
+1 =1
+
+c:
+
+ONANDO=1
+
+d:
+
+ONANDO#=1
+
+e:
+f;
+
+1NAND1=0
+ONANDO=1
+
+g:
+
+ONAND1=1
+
+h:
+
+ONANDO=1
+
+i:
+
+ONANDO=1
+
+j;)
+
+ONAND
+1 =1
+
+k:
+
+ONAND
+1 =1
+
+I:
+
+1NAND
+
+m:
+
+1NAND1=0
+
+1=0
+
+n:
+
+ONAND
+0 =1
+
+The output pulse is:
+
+Y=TLo oft TT 1
+The NOR Gate
+
+0
+
+NOR operation is the complement of OR operation (NOR is an abbreviation
+for Not OR). The boolean expression for NOR is A + B or not (A+B), which is
+the negation of the boolean expression of an OR operation.
+
+i
+B
+
+:
+
+Y
+
+Figure 3.8. Equivalent circuit fora NOR gate
+
+Figure 3.8 represents the operation of a NOR gate. A and B are the inputs to
+the OR gate. Gate 1 ORed A and B to obtain A + B. The output of gate | is then
+complemented through gate 2. The final output from gate 2 is
+A+B
+or not
+(A+B).
+
+Figure 3.9 depicts a NOR gate. This symbol is a condensed version of the
+circuit depicted in figure 3.8. Note that the NOR gate is an OR gate with an
+invert bubble at the output. This small circle (or invert bubble) negates the
+output of the OR gate.
+
+>
+A
+
+Figure 3.9. The NOR gate
+
+The NOR Gate
+
+Digital Circuits Tutor Series: Volume 1
+
+Table 3.5 represents the truth table for the OR and NOR gates. Note that the
+OR’s outputs are negated to generate the NOR value.
+Table 3.5. Truth table for OR and NOR gates
+
+A
+
+B
+
+OR
+
+NOR
+
+0
+0
+1
+1
+
+0
+1
+0
+1
+
+0
+1
+1
+1
+
+1
+0
+0
+0
+
+Example
+Write the boolean expression and the truth table for a 3-input NOR.
+
+Solution
+a)
+
+The boolean expression for a 3-input NOR is:
+
+Y=A+B+C
+b) The truth table for a 3-input NOR gate follows:
+Ao
+0
+0
+0
+0
+“
+4
+:
+:
+
+Bo
+
+KC
+
+NOR
+
+iat
+OF
+=o
+-OoO-oO-020
+OOo
+=
+6
+Oooo
+
+Example
+
+Draw the output pulse Y of a NOR gate if the inputs A and B are as
+follows:
+
+A=
+
+0 } teed BO or0 eOmeie0
+i
+
+h
+
+20 ]<1 1.0
+
+0 70.0
+
+g
+
+2 et it
+(cont. on pg. 109)
+
+The NOR Gate
+
+Logic Gates
+
+a:
+
+0 NOR 1=0
+0 NOR 1 =0
+Cc: 0 NOR O=1
+d:
+0 NORO=1
+e:
+1NOR 1=0
+ie 0 NORO=1
+g: 0 NOR
+1 =0
+h: 0 NOR 0O=1
+i: 0 NORO=1
+I: 0 NOR
+1 =0
+k: 0 NOR
+1 =0
+I: 1NOR1=0
+m:
+1NOR1=0
+n:
+0 NORO=1
+b:
+
+The output pulse is:
+Foo ere
+
+Practice
+Problems
+
+OF 0 OPT
+
+10
+
+Od
+
+00
+
+Problem 3.7
+
+Draw a 6-input symbol for a NAND gate and give its boolean expression.
+
+Solution
+
+a) 6-input NAND gate
+
+“moOQwWS>
+
+b) The boolean expression of a 6-input NAND gate is:
+Y=AeBeCeDeEoFk
+
+Practice Problems
+
+Digital Circuits Tutor Series: Volume 1
+
+Problem 3.8
+Draw the output pulse Y of a
+
+A=
+
+NAND gate if the input pulses A and B are:
+
+-/ A,Bx WOR oes Seiaaioe Oe O
+
+Pulse:
+B=
+
+sahgetoe
+
+imee.( o.- foam
+
+bo
+
+a
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+1
+
+0
+
+0
+
+Solution:
+a:
+b:
+
+ONANDO=1
+
+c:
+
+1NANDO=1
+
+d:
+
+1NANDO=1
+
+ONANDO=1
+
+e:
+
+1NAND1=0
+
+f:
+
+ONANDO#=1
+
+g:
+
+ONANDO=1
+
+h:
+
+ONANDO=1
+
+i:
+
+1NANDO=1
+
+The output pulse is:
+
+vie iin
+
+0
+
+Problem 3.9
+Draw the output pulse of the following 3-input NAND gate with:
+
+Pulse:
+
+f edcba
+
+A=
+
+of1ilo ofilo
+
+B=
+
+1 1|0filo0
+
+C=
+
+ofiloo
+
+ofi
+
+Solution
+
+0 NAND
+0 NAND 1 = 1
+1 NAND 0 NAND 0 = 1
+0 NAND 1 NAND
+0 =1
+0 NAND 0 NAND 0 =1
+1 NAND 1 NAND 1 =0
+ots0 NAND 1 NAND
+O90
+&
+0 =1
+
+The output pulse is:
+
+AO
+ARCO FSPe ps
+Practice Problems
+
+Y
+
+Logic Gates
+
+Problem 3.10
+Draw the output pulse Y of the following NAND gate with:
+
+A =/1]0 of1 1|0
+
+B=.of1jof1
+11
+
+{pe
+
+Solution
+
+At the gate’s A input we have an invert bubble which complements the entering
+pulse. Thus the new pulse to be NANDed with B is not A or A.
+
+notA=-_0/1
+
+110 Ot
+
+and finally NANDing not A with B we get:
+
+Y= Toft
+Tt710
+Probiem 3.44
+
+Draw a 6-input symbol for a NOR gate and give its boolean expression.
+
+Solution:
+
+a) 6-input NOR gate
+
+x
+mASI
+Ct
+
+b) The boolean expression for a 6-input NOR gate follows:
+
+Y=A+B+C+
+D+ Ear
+Problem 3.12
+Draw the output pulse Y of a NOR gate if the input pulses of A and B are as
+follows:
+
+Practice Problems
+
+Digital Circuits Tutor Series: Volume 1
+
+Solution
+
+0 NOR O=1
+0 NORO=1
+1NORO=0
+1 NORO=0
+1 NOR 1=0
+0 NORO=1
+0 NOR O=1
+0 NORO=1
+1 NORO=0
+-~7?@-nreang®
+The output pulse is:
+
+Y=
+
+OFT
+
+gi.0e0)
+tas
+
+Problem 3.13
+Draw the output pulse for the following NOR gate:
+Pike: tedeba
+
+A = ofi|0 of1]o.
+B= 1 1]0f1|0 0
+C = ofi]o
+0 f1]
+
+He
+
+Solution
+
+0
+1
+0
+0
+1
++-+O2 0
+O20
+5®
+
+NOR
+NOR
+NOR
+NOR
+NOR
+NOR
+
+O NOR 1 =0
+0 NOR 0 =0
+1 NORO=0
+0 NOR O=1
+1 NOR 1=0
+1 NORO=0
+
+The output pulse is:
+Y=
+
+OO0O/T1000
+
+Problem 3.14
+Draw the output pulse Y of the following NOR gate with:
+
+Practice Problems
+
+A=
+
+1/0
+
+0/1
+
+1/0
+
+B=
+
+ofilof1
+
+pt as
+
+=
+
+een
+
+Logic Gates
+
+Solution
+
+At the inputs A and B of the NOR gate we have two invert bubbles which will
+complement the two entering pulses before NORing them. The new pulses to
+be NORed are: not A and not B.
+notA=
+
+O|1
+
+1/0
+
+not B =
+
+11.0
+
+711000
+
+0/1
+
+and finally NORing not A and not B we get:
+
+Y=0
+
+0 OJT
+
+TLO
+
+The Exclusive OR/NOR
+The Exclusive
+OR
+
+The logic operation of an exclusive OR is somewhat similar to an OR gate. The
+output of an exclusive OR (also called XOR) gate is 0 if both inputs are 0 or if
+both inputs are 1. However, the output is | if either input is 1 or 0.
+
+Figure 3.10. Exclusive OR operation
+
+Figure 3.10 represents the exclusive OR operation. Two inputs A and not Bare
+ANDed through gate 1. Inputs not A and Bare ANDed through gate 2. Finally
+these two outputs (from gate | and gate 2) are ORed through gate 3. The
+
+boolean expression of the logical circuit of figure 3.10 is
+
+Y= AB+AB=A®B.
+
+The equivalent logical gate of circuit 3.10 is shown in figure 3.11.
+
+Y=A@B
+
+Figure 3.11. The XOR gate
+
+Figure 3.11 represents the symbol for an XOR logic operation. Note that the
+operator for the XOR is ®.
+
+The Exclusive OR
+
+Digital Circuits Tutor Series: Volume 1
+
+Table 3.6 represents the truth table of an XOR gate. Note that when XORing
+
+two bits, the output is | if the bits are complementary, and the output is 0 if the
+bits are the same.
+Table 3.6. Truth table for an XOR gate
+
+A
+
+B
+
+Y=A+B
+
+0
+0
+1
+1
+
+0
+1
+0
+1
+
+0
+1
+1
+0
+
+When there are more than two inputs to an XOR gate, we can determine the
+
+output as follows:
+
+If the number of 1’s appearing at the input is odd, then the output is 1; if the
+number of |’s appearing at the input is even, then the output of the XOR gate is
+0. (See table 3.7.)
+Table 3.7. Truth table for a 3-input XOR gate
+
+A
+
+B
+
+C
+
+Y=A®B@C
+
+0
+0
+0
+0
+1
+1
+1
+1
+
+0
+0
+1
+1
+0
+0
+1
+1
+
+0
+1
+0
+1
+0
+1
+0
+1
+
+0
+1
+1
+0
+1
+0
+0
+1
+
+Remark 1:
+
+Note that 0 is considered an even number.
+
+Remark 2:
+
+We can use the following boolean expressions to arrive to the
+same output: A®(B®C) = (A®B)@C. Thus we now can use table
+3.6 and still get the same logic output.
+
+Remark 3:
+
+When an odd number of 1’s is detected at the input of an XOR
+gate the output is 1. When an even number of 1’s is detected, the
+output is 0. The XOR gate is then operating as an odd number of
+
+1’s detector and can be implemented in a correcting code circuit.
+(See chapter 2.)
+
+The Exclusive OR
+
+Logic Gates
+
+Example
+
+What is the output of the following circuit?
+
+A =)0
+
+Oli-tlolzlo
+
+Pulse
+
+gfedcba
+
+B =
+
+1 1i]0 ofilol1
+
+Solution
+
+We see that A = not B; that is A and B are complementary. In other words
+the inputs to the XOR gate are 0 and 1. Consequently using table 3.6 the
+output is high for the seven pulses.
+
+eT
+The Exclusive
+
+A negated output of an XOR gate gives an exclusive NOR gate (also called
+
+NOR Gate
+
+XNOR). Thus the boolean expression of an XNOR logic operation is Y = not
+(A @B).
+
+Figure 3.12. Negated XOR or XNOR.
+
+Figure 3.12 represents the operation of anegated XOR or XNOR. Two inputs
+A and B are XORed (output of gate 1), then negated (output of gate 2).
+
+Figure 3.13 represents the equivalent gate for the circuit of figure 3.12. Note
+the addition of an invert bubble at the output.
+
+Figure 3.13. The XNOR
+
+gate
+
+The Exclusive NOR Gate
+
+Digital Circuits Tutor Series: Volume 1
+
+Table 3.8. Truth table for XOR and XNOR
+
+gates
+
+A
+
+)
+
+XOR
+
+XNOR
+
+0
+0
+1
+1
+
+0
+1
+0
+1
+
+0
+1
+1
+0
+
+1
+0
+0
+1
+
+Note from table 3.8 that the XNOR gate is the complement of the XOR gate.
+When using more than two inputs the XNOR output is 0 if the number of I’s
+appearing at the inputs is odd. The output of the XNOR gate is 1 when the
+number of 1’s appearing at the inputs is even. Thus we can use the XNOR gate
+as an even number of 1’s detector. (See chapter 2.)
+Example
+
+Write the boolean expression and draw the truth table for the following
+XNOR gate:
+
+9aQAWOP
+
+Solution
+
+a) The boolean expression is:
+Y=A®B®CO6D
+
+b) The truth table is:
+A
+
+B.,
+
+G
+
+0
+
+<
+
+SS
+Ke)
+(=)
+fe)
+ee)
+ey
+=)
+SSS
+08000
+-s-=]-0
+000
++--+
+—-—=—0
+=
+4
+O-=-00+(00
+—=~o
+-o020020+0+0
+o
+Od0dj
+=—
+=]
+°O
+OO
+Oj
+Of
+=
+
+The Exclusive NOR Gate
+
+Logic Gates
+
+Practice
+
+Problem 3.15
+
+Problems
+
+Draw a 6-input symbol for an XOR gate and give its boolean expression.
+Solution
+
+a) 6-input XOR gate
+
+<
+WP
+MOO
+
+b) The boolean expression of a 6-input XOR gate is:
+Y=A®BOC@DGE
+OF
+
+Problem 3.16
+Draw the output pulse Y of an XOR gate if the input pulses are:
+A=
+
+1°}
+
+GF
+
+S07
+
+3407
+
+5]
+
+1
+
+ieee
+
+Pulse:
+
+i
+
+h
+
+g
+
+f
+
+e
+
+d
+
+Cc
+
+Be
+
+O52)
+
+0 he O
+
+0
+
+Jats
+
+ee
+
+Ome
+
+G
+b
+
+a
+
+O
+
+Solution
+
+Pulse a:
+
+OXORO=0
+
+Pulse b:
+
+OXORO=0
+
+Pulsec:
+
+1XORO=1
+
+Pulsed:
+
+1XORO=1
+
+Pulsee:
+
+1XOR1=0
+
+Pulse f:
+
+OXORO=0
+
+Pulse g:
+Pulse h:
+Pulsei:
+
+OXORO=0
+OXORO=0
+1XORO=1
+
+The output pulse is:
+
+Y= 7 )-00050
+O44. 1[-0.0
+
+Problem 3.17
+Draw the output pulse of the following XOR gate with:
+
+A
+
+B
+
+Y
+
+Cc
+
+Practice Problems
+
+Digital Circuits Tutor Series: Volume 1
+
+Pulse:
+
+f
+
+e
+
+d
+
+Cc
+
+b
+
+a
+
+B=
+
+1
+
+1
+
+0
+
+1
+
+0
+
+0
+
+C=
+
+0
+
+1
+
+0
+
+0
+
+0
+
+1
+
+Solution
+
+.
+
+Pulse a:
+
+0 XOR O XOR 1 = 1
+
+Pulse b:
+
+1XORO
+
+XORO
+
+=1
+
+Pulse c:
+
+0 XOR
+
+1 XORO
+
+= 1
+
+Pulse d:
+
+0 XOR
+0 XORO=0
+
+Pulse e:
+
+1XOR
+
+1 XOR
+
+1 =1
+
+Pulse f:
+
+0 XOR
+
+1 XORO
+
+= 1
+
+The output pulse is:
+
+¥=tlio|aeit
+Problem 3.18
+Draw the output pulse Y of the following XOR gate with:
+
+A=
+
+0
+
+1
+
+0
+
+0
+
+1
+
+Bra
+
+ial
+
+Carl
+
+oh ee 9 | eens
+
+0
+
+Solution
+
+At the input A we have an invert bubble which complements the entering
+pulse. Thus the new pulse to be XORed with B is the complement of A (or B).
+We also can see that A is the complement of B.
+We conclude that the inputs to the XOR gate are identical because: B = not not
+A =A. The output is then six low pulses.
+=U
+TOO 0? G
+
+Problem 3.19
+Draw a 6-input symbol for a XNOR gate and give its boolean expression.
+
+fi) Practice Problems
+
+Logic Gates
+
+Solution
+
+a) 6-input XNOR gate
+
+<
+AWOQwP
+
+b) The boolean expression of a six-input XNOR
+
+gate is:
+
+Y=AS®B®C@D@EGF
+Problem 3.20
+
+Draw the output pulse Y ofanXNOR gate if the input pulses of A and B areas
+follows:
+
+Pulses:
+
+i
+
+h
+
+g
+
+f
+
+e
+
+d
+
+Cc
+
+b
+
+a
+
+Solution
+Pulse a:
+Pulse b:
+Pulse c:
+Pulse d:
+Pulse e:
+
+0 XNOR O = 1
+
+Pulse f:
+Pulse g:
+
+0 XNORO=1
+0 XNOR O = 1
+
+Pulse h:
+Pulse i:
+
+0 XNORO=1
+1 XNOR 0 =0
+
+0 XNOR 0 = 1
+1 XNORO=0
+1 XNORO=0
+1 XNOR 1 = 1
+
+The output pulse is:
+
+Y,=0[4.1.1.110.0f7
+Problem 3.21
+Draw the output pulse for the following XNOR gate with:
+
+B
+
+a6
+
+Practice Problems
+
+Digital Circuits Tutor Series: Volume 1
+
+Solution
+
+Pulse a:
+
+1 NXOR 0 NXOR 0 =0
+
+Pulse b:
+
+0 NXOR 1 NXOR 1 =1
+
+Pulse c:
+
+1 NXOR 1 NXOR 1 =0
+
+Pulse d:
+
+0 NXOR 0 NXOR 0 = 1
+
+The output pulse is:
+Y=1|0/7Lo
+
+Problem 3.22
+Draw the output pulse Y of the following XNOR gate with:
+A
+
+ae
+
+B
+A=0
+B=0
+
+00
+
+Solution
+
+At the input A we have an invert bubble; thus we XNORed A = | with B:
+
+A=1
+Y=0/7
+
+XNOR
+
+B=0/1
+
+110.0
+
+7]10 0
+
+Remark: The output of this XNOR is identical to the input B.
+
+Combinational
+
+Logic Circuits
+
+Many logic operations can be expressed in terms of different logic gates. As
+seen before, different gates can be used to represent the operation of one
+particular gate.
+In the section on NOR/NAND gates, we demonstrated that a NAND gate
+operation can be obtained by combining an OR gate and an AND gate (see
+figure 3.6). We also demonstrated that a combination of an OR gate and NOT
+gate produce a NOR operation (see figure 3.8).
+
+In the previous section, the logic circuit of figure 3.10 uses three’gates to
+operate as an XOR gate. The logic circuit of figure 3.12 represents the
+
+operation of an XNOR gate.
+
+From the previous two sections, we conclude that any combinational logic
+circuit can be built by combining AND, OR, and NOT gates. Furthermore we
+
+can show that we can obtain a NOT logic operation by using one NAND
+one NOR gate.
+Combinational Logic Circuits
+
+or
+
+Logic Gates
+
+A
+a)
+
+ve
+
+A NOT equivalent circuit using a NOR gate
+
+a
+b)
+
+A NOT equivalent circuit using a NAND
+
+gate
+
+Figure 3.14. Representation of an equivalent NOT gate.
+
+Figure 3.14 represents two equivalent circuits for a NOT gate. Note that the
+two inputs to both gates (NOR and NAND) have been connected as one.
+Table 3.9. Truth tables for circuits of figure 3.14.
+
+a)
+
+b)
+
+A
+
+x
+
+0
+1
+
+1
+0
+
+A truth table for the circuit of figure 3.14a.
+A
+
+Ni
+
+0
+1
+
+1
+0
+
+A truth table for the circuit of figure 3.14b.
+
+Tables 3.9a and 3.9b represent the truth tables of the logic circuits of figure
+3.14a and 3.14b. Note that the truth tables are identical to table 3.3. Thus the
+circuits of figure 3.14 are logically behaving as a NOT gate.
+
+In our final example we will use three NOR gates to achieve the operation of an
+AND gate.
+
+Figure 3.15. Representation of an AND operation using NOR gates.
+
+Figure 3.15 represents the equivalent circuit of an AND gate. Note that gates |
+and 2 have only one input each and operate as inverters (or NOT gates). This
+was shown in figure 3.9a.
+Combinational Logic Circuits
+
+Digital Circuits Tutor Series: Volume 1
+
+Table 3.10. A truth table for the circuit of figure 3.15 (columns
+1 through 6) and for an AND operation (column 7).
+
+ARES
+
+A
+
+B
+
+A+B
+
+Y=A+B
+
+AeB
+
+Oe
+0
+aad
+ao
+1
+1
+
+1
+1
+be
+ee)
+On)
+0
+One
+
+1
+1
+1
+0
+
+0
+0
+0)
+1
+
+0
+0
+0
+1
+
+Note that the columns containing Y and A e B are identical. Thus the logic
+circuit of figure 3.15 is operating as an AND gate.
+
+Practice
+
+Problem 3.23
+
+Problems
+
+What is the equivalent logic gate of the following logic circuit. (Draw the truth
+table and give the boolean expression.)
+
+A clceseel
+ib
+B
+
+|3 }-Y
+
+BD:
+
+Solution
+a) The boolean expression is: Y = (A +B) (A eB)
+b) The truth table of the above circuit is:
+
+A
+
+B
+
+A+B
+
+AeB
+
+Y = (A+B) (Ae B)
+
+OF
+0
+1
+1
+
+0
+1
+0
+1
+
+0
+1
+1
+1
+
+1
+1
+1
+0
+
+0
+1
+1
+0
+
+The truth table of the above logic circuit is identical to the truth table for
+an XOR gate (see figure 3.10). Thus the above logic circuit is equivalent to
+an XOR gate.
+Problem 3.24
+
+Write the Boolean expression and the truth table for a 5-input AND and a
+5-input OR gate.
+
+[2 Practice Problems
+
+Logic Gates
+
+Problem 3.25
+What is the output pulse of the following NAND gate?
+Pulse:
+f
+edcba
+
+A=
+
+ofilo ofilo
+
+B= 1|o0fi|00
+
+Problem
+
+WE
+
+3.26
+
+Implement a logic gate circuit given the following Boolean expression:
+
+Y=AB+C+ ABC
+Problem 3.27
+Draw a 5-input symbol for a NAND gate and give its Boolean expression.
+
+Problem 3.28
+What is the output pulse of the following NAND gate?
+Puse:
+f
+edcba
+
+A=
+
+of1 1[0/1]0
+
+B=
+
+1|0 of111
+
+Problem 3.29
+Draw the output pulse of the following NOR gate.
+Pulse : fedcba
+
+A = ofilo ofilo
+B=
+
+1 ilofiloo
+
+Practice Problems
+
+Digital Circuits Tutor Series: Volume 1
+
+Problem 3.30
+Draw a 5-input symbol for an XOR and XNOR
+expressions.
+
+gate and give their Boolean
+
+Problem 3.34
+Draw the output pulse Y of a2-input XOR and 2-input XNOR gate if the input
+pulses are:
+
+hit
+
+.
+
+i beg
+
+A=[1]0
+
+B=
+
+000
+
+tye
+
+d cob 6
+
+0 of1 1 1/0 o
+
+o0f/1j0o 00
+
+0
+
+Problem 3.32
+What is the output pulse of the following circuits?
+A=
+
+{GT Os0s0/4ai6
+
+tt
+
+Practice Problems
+
+1 1|0 of1
+
+‘
+
+Logic Gates
+
+Problem 3.33
+What is the equivalent logic gate of the following logic
+circuit?
+
+Battery
+
+Introduction to
+Integrated
+Circuits
+
+Digital integrated circuits (abbreviated IC’s) contain many different elements
+interconnected in such a way that the circuit as a whole operates as a logic gate.
+These elements could be transistors, diodes, capacitors, resistors ... etc.
+
+Integrated circuits are constructed by assembling thousands of these elements
+ona single chip. This method of construction is called Large Scale Integration
+(abbreviated LSI). Other methods used are: Very Large Scale Integration (or
+VLSI) used mainly in microprocessors and Medium Scale Integration (or
+MSI).
+A logic operation (for example a NAND operation) could be obtained using
+different elements. The most commonly used element is the transistor (see
+figure 3.16). This method of designing logic operations by primarily using
+transistors is called Transistor to Transistor Logic (abbreviated TTL).
+
+Other types of logic families used in the design of IC’s are Diode-Transistor
+Logic (or DTL), Resistor-Transistor Logic (or RTL), Integrated Injection
+Logic (or IIL), ... etc.
+
+Integrated circuits are preferable to other circuits because of their very small
+size,
+
+low
+
+voltage
+
+requirements,
+
+and
+
+low
+
+power
+
+consumption.
+
+Introduction to Integrated Circuits
+
+Digital Circuits Tutor Series: Volume 1
+
+Qt,(2,and Q Transistors
+Rt, R2, R3,and Ré: Resistors
+Figure 3.16.
+
+A TTL NAND
+
+circuit.
+
+Notch
+
+Dot
+
+Figure 3.17.
+
+14-pin IC
+
+Remark: The pin to the immediate left of the notch (when viewed with the
+notch at the IC’s top edge) is always pin 1. The pin to the immediate right of the
+notch is pin 14 in the above illustration. Pins are numbered counterclockwise
+beginning with pin |. The dot (see figure 3.17) indicates pin #1. In some IC’s the
+dot is omitted and the notch should be used to determine pin #1.
+|
+
+We'll examine several integrated circuits in the following sections.
+The 7404 Ic
+
+Figure 3.18. 7404 IC
+
+The 7404 IC
+
+Logic Gates
+
+The 7404 IC includes 14 pins. It consists of 6 NOT gates (each
+of
+which requires two pins for a total of 12), one pin for ground
+(Gnd-pin 7) and one pin (Vcc-pin 14) to the supply voltage (5 volts).
+A represents the input toa NOT gate, and Y represents the output. If
+He input is to 1A, the output eminates from 1Y. Input 2A’s output
+eminates on pin 2Y, ... etc.
+Table 3.11.
+
+Remark:
+
+Function table for the 7404 IC
+
+INPUT
+
+OUTPUT
+
+A
+
+Y
+
+L
+H
+
+H
+L
+
+L means low (or 0), and H means high (or 1).
+
+The 7408 IC
+
+Figure 3.19. 7408 IC
+
+The 7408 IC, which consists of 4 AND gates is called a quadruple 2-input AND
+
+Pins A and B are inputs to the AND gate; pin Y is the output.
+Table 3.12.
+
+Function table for the 7408 IC.
+
+INPUTS
+
+OUTPUT
+
+A
+
+B
+
+Y
+
+4
+H
+L
+L
+
+H
+L
+H
+L
+
+H
+L
+L
+L
+The 7408 IC
+
+Digital Circuits Tutor Series: Volume 1
+
+The 7432 IC
+
+‘
+
+Figure 3.20. The 7432 IC
+
+The 7432 IC is a quadruple 2-input OR gate. The chip contains four
+independent 2-input OR gates. The logical boolean function performed by an
+OR gate is: Y= A+B.
+Table 3.13.
+
+Function table for the 7432 IC.
+
+INPUTS
+
+OUTPUT
+
+A
+
+B
+
+¥
+
+L
+
+L
+
+L
+
+as
+
+H
+
+H
+
+H
+H
+
+L
+H
+
+H
+H
+
+The 7400 Ic
+
+Figure 3.21. The 7400 IC
+
+The 7400 IC contains four independent 2-input NAND
+expression performed by the NAND gate is:
+Y= AB.
+The 7400 IC
+
+gates. The boolean
+
+Logic Gates
+
+Table 3.14.
+
+ne
+
+Function table for the 7400 IC
+
+INPUTS
+
+OUTPUT
+
+A
+
+B
+
+Y
+
+L
+Ls
+H
+H
+
+L
+H
+L
+H
+
+H
+H
+H
+L
+
+The 7402 Ic
+
+Figure 3.22. The 7402 IC.
+
+The 7402 IC consists of four independent 2-input NOR gates. The boolean
+operation of a NOR gate is:
+Y= A+B.
+Table 3.15. Function table for the 7402 IC.
+
+INPUTS
+
+OUTPUT
+
+A
+
+B
+
+vf
+
+ie
+é
+H
+H
+
+ls
+H
+b
+H
+
+H
+L
+Lb
+L
+
+The 7486 IC
+
+Figure 3.23. The 7486 IC
+
+The 7486 IC
+
+Digital Circuits Tutor Series: Volume 1
+
+The 7486 IC supports four independent 2-input XOR
+function performed is: Y = A@®B.
+Table 3.16.
+
+gates. The boolean
+
+Function table for the 7486 IC.
+
+INPUTS
+
+OUTPUT
+
+A
+
+B
+
+y
+
+if
+L
+H
+4
+
+L
+“i
+L
+4
+
+L
+H |
+H
+L
+
+Experiment 4
+Purpose
+
+To demonstrate the operation of a NOT, AND, and NAND
+
+gate.
+
+The parts necessary for experiment | as well as the other experiments in this
+book can be ordered by writing or telephoning:
+Order Desk
+Weber Systems, Inc.
+
+8437 Mayfield Road
+Chesterland, Ohio 44026
+216-729-2858
+
+The cost of the Projects Kit for this book is $49.95 plus shipping. American
+Express, Visa, and Master Card credit cards are accepted.
+
+Quantity
+
+NOK
+SES
+Se
+=|
+—
+
+Parts
+Description
+
+Parts Description
+
+Temporary board
+Power supply or-battery (5 volts)
+Led (light emitting diode)
+Resistor (200 ohms)
+Switches
+7404 IC (6 NOT gates)
+7408 IC (4 AND gates) _
+7400 IC (4 NAND gates)
+
+Temporary Board
+
+Figure 3.24 depicts one type of temporary board. Note the position of the holes
+on the board. The board is divided into four different parts: A, B, Cand D.
+
+Each part contains a number of rows and columns (see figure 3.24).
+Experiment 1
+
+Logic Gates
+
+a
+
+CA-—p
+CB
+
+en
+
+ee
+
+eee
+
+Hecccvccccccccccccccccccenceee
+
+oe
+
+Part C
+
+cc >
+
+CEP
+
+Fececcceccccccccecccscccoccccs
+
+DA-~>
+
+SCCOS
+
+COCCO
+
+COCCS
+
+COSCO
+
+Seeee
+
+Figure 3.24. Temporary board.
+Part A contains two rows (AA and AB) and 25 columns (1 to 25). Row AA
+contains 25 holes (AAI .. AA25) which are connected. For example if a 5 volt
+wire is plugged in AAI, then any hole on row AA will exhibit the same
+potential.
+
+Rows AA and AB are not connected. Thus a signal in one row of part A will
+not be found in the other row unless a wire from row AA is plugged into row
+AB (see figure 3.25).
+
+SPOHHOSHOHSHSSHSHSHSHSOSSHHSHHHSHHHHSEO
+
+SOHOHSOHHSHHOHSHSONHHHSHSHHHHSHHHHHSOO
+ED
+
+if
+
+SOHSSHHSHSHSSHSHSSHSSOSSHHHCECHSHECESES
+
+Figure 3.25. Rows AA and AB now hold the same signal.
+
+Part B contains five rows (BA, BB, BC, BD, BE) and 29 columns (1 to 29).
+Each row contains 29 holes. Unlike part A the holes in the same row are not
+connected together, however columns are. Column | contains 5 holes (BAI,
+2 also
+BBI, BCI, BD1, and BE!) which are connected together. Column
+etc,
+<..
+contains 5 connected holes (BA2, BB2, BC2, BD2, and BE2);
+
+a wire
+You can cause the same signal to reside in both columns by plugging
+between them (see figure 3.26).
+
+Experiment 1
+
+Digital Circuits Tutor Series: Volume 1
+
+ay
+COCO
+
+COSCO
+
+8208008
+
+COSOS
+
+0008
+
+SCOHOSHHOHSHHSHHHOSHHHHHOHHOHHSOHE
+SPOCOHSHHHHHHHHHHSHHHHHHHHOSESES
+SPOSHSHHSHSHSHHHSHHSHSSHHHHHHHSHHEOS
+SOHHOHHSHSHSSSSHSHSHHSHHHHHHSEEOS
+SOHCHOHHOHSHSHHHSHHSHHHHSHBOOSESE
+(aR
+
+GS
+
+RY
+
+TS
+
+ATTY
+
+EE
+
+EE
+
+Figure 3.26. Columns | and 6 in part B now hold the same signal.
+
+Parts C and D are identical to B and A respectively.
+Additional space is allowed between B and C so a screwdriver can be inserted
+in this area to facilitate chip removal.
+
+Figure 3.27. Removing an IC.
+Light Emitting Diode (or LED)
+
+No particular LED is required; any 5 volt lamp can be used. Note whether each
+lead to the LED is signed (+ for anode, - for cathode). If so each LED must be
+connected to the corresponding battery terminal. (See figure 3.28).
+
+Short lead (-)
+long lead (+)
+Figure 3.28.
+Experiment 1
+
+LED.
+
+Logic Gates
+
+Power Supply
+
+A 5 volt power supply is shown in figure 3.29.
+
+i
+HACKENSACK, M, J.
+MINIATURE
+
+ENCAPSULATED
+
+WER SUPPLY
+
+a
+
+Figure 3.29.
+
+WM-SCL
+
+5 volt power supply.
+
+Resistors
+Any resistor from 150 ohms to 250 may be used. (See figure 3.30).
+
+Figure 3.30.
+
+Resistor.
+
+Switches
+When the switch is in position A, pins | and 2 are connected and pin 3 is
+isolated. When the switch is in position B, pins 2 and 3 are connected and pin |
+is isolated. In this experiment pins | and 3 are the inputs (from the battery) to
+the switch and pin 2 is the output from the switch (to the gate). The position of
+the switch will determine which input is to be output to the gate. (See figure
+
+3:31):
+
+Experiment 1
+
+Digital Circuits Tutor Series: Volume 1
+
+Figure 3.31. Switch.
+Wiring Procedure
+
+From figure 3.32 we see that the A logic switch is the input to the NOT gate
+(pin #1). The output of the NOT gate (pin #2) is displayed on the led indicator.
+If the led is off then the output of the NOT gate is low (or 0). If the led is on then
+the output of the NOT gate is high (or 1).
+
+Now wire the circuit of figure 3.32. Take your time to avoid any wiring
+mistake. Double check your connections before connecting the battery.
+(Always connect the battery last).
+
+=
+
+Gnd
+
+Figure 3.32. Circuit for the 7404 IC
+
+Now apply the logic switch to both the low and high wires and record your
+result in table 3.17. (The result is visible on the led.)
+
+[EZ] Experiment 1
+
+Logic Gates
+
+Table 3.17. Logic operation for the 7404 IC
+
+INPUT
+
+OUTPUT
+
+A
+
+NY.
+
+if
+H
+
+Compare table 3.17 with table 3.11. These two tables should be identical.
+
+Repeat the same process (wiring and testing) for figures 3.33 and 3.34, and
+record your results in tables 3.18 and 3.19 respectively. Finally compare table
+3.18 with table 3.12, and compare table 3.19 with table 3.14. (These tables
+should be the same; if not check the circuit connections).
+
+High
+
+‘8
+
+Low
+
+_ “f7
+
+High
+rm °
+40)
+
+(13)
+
+f3 |
+
+O
+
+(12)
+
+(4 |
+
+nee
+
+alae
+
+Ree
+
+“5
+
+==
+
+ie
+
+fe |
+
+ii]
+
+Nae
+&
+——dv
++
+
+——
+
+Gnd
+
+Figure 3.33. Circuit for the 7408 IC
+Table 3.18. Logic operation for the 7408 IC
+
+INPUTS
+
+OUTPUT
+
+A
+
+B
+
+L
+ie
+H
+H
+
+I
+H
+L
+H
+
+¥
+
+Experiment 1
+
+Digital Circuits Tutor Series: Volume 1
+
+Z|
+
+Resistor
+7
+
+Led
+
+eg)
+
+=
+
+: ¢ :
+-
+
+7g)
+
+2)
+
+|
+
+Sow,
+
+17]
+
+C1
+
+=
+
+er
+
+2
+
+|
+
+Se
+
+Gnd
+
+Figure 3.34. Circuit for the 7400 IC
+
+Table 3.19. Logic operation for the 7400
+
+INPUTS
+
+OUTPUT
+
+A
+
+B
+
+L
+L
+H
+H
+
+L
+H
+L
+H
+
+¥
+
+Experiment 2
+
+Purpose
+Parts List
+
+To demonstrate the operation of an OR, NOR,
+
+Quantity
+
+and
+
+XOR
+
+gate.
+
+Parts Description
+Switches
+Temporary board
+Power supply or battery (5 volts)
+Led
+
+Resistor (200 ohms)
+7432 IC (4 OR gates)
+
+7402 IC (4 NOR gates)
+7486 IC (4 XOR gates)
+
+De)
+ee
+a
+
+Procedure
+
+Wire the circuits depicted in figures 3.35a, b, and c. Follow the same procedure
+as in experiment |. Record your results in tables 3.20a, b, and c.
+
+Experiment 2
+
+Logic Gates
+
+;
+
+B
+
+High
+
+low.
+
+9H
+
+High
+
+QB
+Resistor
+
+Pole
+
+Estate
+
+an
+
+fA
+
+Pua
+
+=
+
+Figure 3.35a.
+
+tl
+
+Gnd
+
+Bl
+
+I 5
+
++
+
+Circuit for the 7432 IC
+
+Table 3.20a.
+
+Logic operation for the 7432 IC.
+
+INPUTS
+
+High
+
+Resistor
+
+OUTPUT
+
+A
+
+B
+
+L
+L
+H
+H
+
+L
+H
+L
+H
+
+A
+
+low
+
+Y
+
+B
+
+High
+
+Led
+
+-
+
+i
+Ee
+
+ee
+
+==
+Figure 3.35b.
+
+[-
+
+7]
+
+Gnd
+
+gears
+
+Circuit for the 7402 IC
+
+Experiment 2
+
+Digital Circuits Tutor Series: Volume 1
+
+Table 3.20b.
+
+Logic operation for the 7402
+
+INPUTS
+
+OUTPUT
+
+A
+
+High
+
+B
+
+L
+
+L
+
+E
+
+H
+
+H
+
+L
+
+H
+
+H
+
+Noto
+
+ay
+
+> Bie
+mm
+
+zi
+
+6
+Q
+
+ts |
+
+Resistor
+
+Led
+
+ca
+
+Fe
+
+~
+
+=
+
+~
+
+nN
+
+3
+
+=
+
+Gnd
+
+ow
+Thee
+
+I
+
+| +
+
+5v
+
+Figure 3.35c. Circuit for the 7486 IC
+
+Table 3.20c. Logic operation for the 7486 IC
+
+INPUTS
+
+OUTPUT
+
+A
+
+)
+
+L
+L
+H
+H
+
+L
+H
+L
+H
+
+Experiment 3
+
+Purpose
+
+Experiment 3
+
+To demonstrate the operation of a half adder.
+
+Y
+
+Logic Gates
+
+Parts List
+
+Quantity
+
+1
+]
+2
+2
+2
+l
+|
+]
+Procedure
+
+Parts Description
+
+Temporary board
+Power supply or battery (5 volts)
+Resistors (200 ohms each)
+Leds
+Switches
+7402 IC (4 NOR gates)
+7404 IC (6 NOT gates)
+7400 IC (4 NAND gates)
+
+The following circuit (see figure 3.36) is to be implemented. Note that we need
+one OR, two AND, and one NOT gate. From the parts list we see that we have
+no OR IC’s, and no AND IC’s.
+In the section entitled Combinational Logic Circuits we introduced alternate
+ways of expressing different logic operations. For example an AND logic
+operation could be represented by a NAND
+plusa NOT gate, and an OR logic
+Operation could be represented by a NOR plus a NOT gate.
+We will use the methods demonstrated in this section to design a half adder, a
+circuit that adds two binary bits. The circuit is called a half adder because it
+does not include a carry bit.
+
+Figure 3.36.
+
+Half adder
+
+Figure 3.36 represents a half adder circuit. The truth table for the half adder
+follows:
+Table 3.21. Logic output for the half adder.
+INPUTS
+
+OUTPUTS
+
+SW
+
+Sw2
+
+iG
+
+L2
+
+L
+
+fe
+
+off
+
+off
+
+fe
+
+H
+
+off
+
+on
+
+H
+
+iL,
+
+off
+
+on
+
+H
+
+H
+
+on
+
+off
+
+Experiment 3
+
+Digital Circuits Tutor Series: Volume 1
+
+Note: L1 and L2 are two led’s (outputs). SW1 and SW2 are two switches
+(inputs). Low is 0, and high is 1. L] represents the MSB (most significant bit),
+and L2 the LSB (the least significant bit).
+From table 3.21, we see that the circuit does in fact add two binary bits. When
+SWI and SW2are low, we are adding the binary bits 0
+
++0 = 0. When SW1
+
+is
+
+low and SW2is high, we are adding the binary bits 0 + | = 1. Finally when both
+switches (SW1 and SW2) are high, we are adding the binary bits 1 + 1 = 10. (For
+more information about binary addition refer to chapter 1).
+To implement the circuit, wire the parts as shown in figure 3.37. Test the circuit
+
+and record the results in table 3.21. Check every connection before connecting
+the battery.
+Table 3.22.
+
+Test results of half-adder circuit.
+
+INPUTS
+
+OUTPUTS
+
+Sw
+
+SW2
+
+&
+L
+H
+H
+
+L
+H
+ks
+H
+
+L1
+
+L2
+
+yaty
+MOT
+
+AQ]
+
+Figure 3.37 Half adder wiring diagram.
+Experiment 3
+
+4
+Boolean Algebra
+
+Introduction
+
+One of the most critical elements in digital design is the minimization and
+reduction of logical expressions. A reduced logical expression has many
+advantages over an expression which has not been reduced. For example, the
+final reduced logic expression has fewer terms. Thus the digital circuit will
+consist of fewer gates and will be easier to implement, interface to other digital
+circuits, and troubleshoot.
+
+Boolean algebra can be used to express the logic functions in a digital circuit
+design. Boolean algebra offers a simple, efficient means of reducing the logic of
+a digital circuit design to its most elementary level.
+Postulates
+
+One way of proving that a postulate (or theorem) is true is to show its validity
+for each possible combination of all variables. This is called a proof by perfect
+induction. In other words we will be testing each individual combination to be
+certain all cases hold true for the theorem.
+
+If all combinations of variables yield a valid result when the theorem is
+applied, we can conclude that the theorem (or postulate) is true. The easiest
+way to test all different combinations is to write a truth table.
+Law of
+Identity
+
+Ael=A
+
+(4.a)
+
+AtO=A
+
+(4.b)
+
+Law of Identity
+
+Digital Circuits Tutor Series: Volume 1
+
+A
+
+Ae
+
+A+0
+
+0
+
+0
+
+0
+
+1
+
+1
+
+1
+
+Figure 4.1. Truth table for the law of identity
+
+Note that the second and third columns (respectively A « 1 and A + OQ) are
+identical to the first column (column A). Thus the law of identity has been
+‘proven.
+AeB=BeA
+
+(4.c)
+
+A+B=Bt+A
+
+(4.d)
+
+A
+
+B
+
+AeB
+
+BeA
+
+A+B
+
+Bt+A
+
+0.0
+Vigne
+t
+
+0
+0
+
+0
+0
+
+0
+1
+
+0
+1
+
+1
+
+0
+
+0
+
+0
+
+1
+
+,
+
+1
+
+1
+
+1
+
+1
+
+1
+
+1
+
+Figure 4.2. Truth table for the commutative law
+
+Note that columns 3 and 4 (respectively A e Band Be A) are identical, and that
+columns 5 and 6 (respectively A + B and B + A) are also identical. Thus the
+commutative law has been proven.
+Law of
+Associativity
+
+(AeB)*C=Ae(BeC)
+
+(4)
+
+(A+B)+C=A+(B+C)
+
+(4)
+
+A
+
+B C_
+
+0 02-0
+On°0.54
+O~41,,0
+Oy
+aoe
+Trys040
+te GOP 1
+1e
+P20
+dll
+ical
+
+(AeB)eC
+
+Ac(BeC)
+
+(A+B)+C
+
+A+(B+C)
+
+0
+0
+0
+0
+0
+0
+0
+1
+
+0
+0
+0
+0
+0
+0
+0
+1
+
+0
+1
+1
+1
+1
+1
+1
+1
+
+0
+1
+1
+1
+1
+1
+1
+1
+
+Figure 4.3. Truth table for the associative law
+
+Note that columns 4 and 5 (respectively (AeB)eC and Ae (BeC)) are identical.
+Also columns 6 and 7 (respectively (A+B)+C and A+(B+C)) are identical. Thus
+the law of associtivity has been proven.
+
+Law of Associativity
+
+Boolean Algebra
+
+Law of
+Distributivity
+
+Ae (B+C) = (Ae B) + (AeC)
+
+(4.9)
+
+A+(BeC)=(A+B)*(A+C)
+
+(4.h)
+
+A
+
+BC
+
+“(B+C)
+
+Ae (B+C)
+
+(AeB)
+
+(AeC)
+
+(AeB)+(AeC)
+
+00
+0
+O20-21
+
+0
+1
+1
+1
+0
+
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+
+0
+0
+0
+0
+
+0
+
+1
+
+1
+
+0
+
+1
+
+0
+
+4
+
+1, sl, 0
+‘ie
+
+1
+1
+
+1
+1
+
+1
+1
+
+0
+1
+
+1
+1
+
+01-0
+u9.e
+10.0
+fe
+
+Oo
+
+1
+
+Figure 4.4. Truth table for 4.g
+
+Note that columns 5 and 8 (respectively A e (B+C) and (Ae B)+(AeC)) are
+identical. Thus postulate 4.g is proven.
+
+ABC
+
+BeC
+
+A+(BeC)
+
+A+B
+
+At+C
+
+(A+B)e(A+C)
+
+0 0°0
+0.0%
+0 40
+0 A 4S
+11200
+ee
+i eon
+i
+4
+
+0
+0
+0
+1
+0
+0
+0
+1
+
+0
+0
+0
+1
+1
+1
+1
+1
+
+0
+0
+1
+1
+1
+1
+1
+1
+
+0
+1
+0
+1
+1
+1
+1
+1
+
+0
+0
+0
+1
+1
+1
+1
+1
+
+Figure 4.5. Truth table for 4.h
+
+Note that columns 5 and 8 (respectively A+(BeC)
+identical; thus postulate 4.h is proven.
+Law of
+Complementarity
+
+AeA=0
+
+(4.i)
+
+Ae Aci
+
+(4.j)
+
+A
+
+A
+
+AcA
+
+A+A
+
+1
+
+1
+0)
+
+0
+)
+
+1
+1
+
+and (A+B)e(A+C)
+
+are
+
+Figure 4.6. Truth table for the law of complementarity
+
+From figure 4.6 we see that column 3 (respectively A e A) is equal to 0, and
+A+ A) is equal to 1. Thus the law of complementarity is
+column 4 (respectively
+proved.
+
+Law of Complementarity
+
+Digital Circuits Tutor Series: Volume 1
+
+Law of
+indempotence
+
+A+A=A
+
+(4.k)
+
+AeA=A
+
+(4.1)
+
+A
+
+A+A
+
+AeA
+
+0
+
+0
+
+0
+
+1
+
+1
+
+1
+
+Figure 4.7. Truth table for the indempotence laws
+
+Note that columns 2 and | (respectively A + A and A) aré identical; thus
+equation 4.k is true. Note also that columns 3 and | (respectively
+A* A and A)
+are identical; thus the law of identity is also true.
+Example
+
+Let’s prove relation 4.k by utilizing the proven postulates (4.a through
+4.}).
+Solution:
+
+Other Useful
+Relations
+
+A+A = (At+A) #1
+
+(4.a)
+
+A+A = (A+A) ¢ (A+A)
+A+A = A+ (Ae A)
+
+(4.j)
+(4.h)
+
+A+A=A+0
+
+(4.i)
+
+A+A=A
+
+(4.b)
+
+A+1=1
+
+(4.m)
+
+Ac0 =0
+
+(4.n)
+
+a
+
+A+1
+
+Ael
+
+0
+1
+
+1
+1
+
+0
+0)
+
+Figure 4.8. Truth table for equations 4.m and 4.n
+
+Note that column 2 (Atl) is always equal to 1; thus relation 4.m is true.
+Column 3 (A « |) is always equal to 0; thus relation 4.n is also true.
+Example
+
+Prove relation 4.m using postulates.
+Solution:
+A+1 = 1
+
+Other Useful Relations
+
+(A+1)
+
+(postulate 4.a)
+
+A+1 = (A+A) « (At+1)
+A+1=A+(A «1)
+At1=A+A
+
+(postulate 4.j)
+(postulate 4.h)
+(postulate 4.a)
+
+Ati =1
+
+(postulate 4.j)
+
+Boolean Algebra
+
+Laws of
+Absorbtion
+
+A+(AeB)=A
+
+(4.0)
+
+Ae(A+B)=A
+
+(4.p)
+
+A
+
+B’
+
+(AB)
+
+(A+B)
+
+A+ (AeB)
+
+A (A+B)
+
+0
+0
+0
+1
+
+0
+1
+1
+1
+
+0
+0
+1
+1
+
+0
+0
+1
+1
+
+Geet)
+Ouest
+eae
+oe4
+
+Figure 4.9. Truth table for the laws of absorbtion.
+
+Columns 1 and 5 (respectively A and A+ (Ae B)) are identical; thus relation 4.0
+is true. Columns | and 6 (respectively A and A e (A+B)) are identical; thus
+equation 4.p is also true.
+Example
+
+Prove equation 4.0 using proved relations.
+Solution:
+
+A+(AeB)=Ae1+AeB
+A+(AeB)=Ae(1+B)
+A+(AeB)=Ae1
+A+(AeB)=A
+Other Relations
+of Absorbtion
+
+A+(A°eB)=A+B
+
+(4.q)
+
+Ae(A+B)=AeB
+
+(4.1)
+
+ABA.
+
+(AeB)
+
+(A+B)
+
+A+(AeB)
+
+Ae(A+B)
+
+(A+B)
+
+(AeB)
+
+G..0.%
+1y't
+Oe
+LOO
+a
+:Sk
+
+0
+1
+0
+0
+
+1
+1
+0
+1
+
+0
+1
+1
+1
+
+0
+0
+0
+1
+
+0
+1
+1
+1
+
+0
+0
+0
+1
+
+Figure 4.10. Truth table for equations 4.q and 4.r.
+
+From the truth table we see that columns 6 and 8 (respectively A+( A eB) and
+(A+B)) are identical; thus equation 4.q is proved. Equation 4.r is also true
+because columns 7 and 9 (respectively A e( A+B) and (AeB) are identical.
+Example
+
+Prove equation 4.q by using postulates and other proved equations.
+
+A+(A¢B)=(A+A)e(A+B)
+A+(Ae¢B)=1¢(A+B)
+A+(AeB)=A+B
+
+= (4-h)
+(4.j)
+(4.a)
+Other Relations of Absorbtion
+
+Digital Circuits Tutor Series: Volume 1
+
+Practice
+
+Problem 4.1
+
+Problems
+
+Use the postulates presented in this chapter to prove that Ae (A+ B)= A.
+
+Solution
+
+Ae (A+B)
+Ae (A+B)
+Ae (A+B)
+Ae (A+B)
+
+= (At+0) ¢ (A+B)
+=A+ (0° B)
+=A+0
+=A
+
+(4.b)
+(4.h)
+(4.n)
+(4.b)
+
+Problem 4.2
+Use the postulates presented in this chapter to prove relation 4.r.
+Solution
+
+Ae(A+B) =AeB
+Ae (A+B) =(Ae A) + (AeB)
+Ae (A+B) =0+(AeB)
+Ae(A+B)=AeB
+
+(4.1)
+(4.9)
+(4.i)
+(4.b)
+
+Problem 4.3
+
+Reduce the following logic expressions:
+
+Y=AeC+BeC+CeBt+CedA
+Solution
+
+Y=AeC+BeC+Ce
+
+BiCedA
+
+=BeC+CeBt+AeC+CeA
+=CeB+CeBt+AeCt+AeCc
+=[(C * B) +(C* B)] + [(A*C) + (Ae C)]
+=[Ce(B+ B)]+[A*(C+C)]
+=(C om) + (Ae 1) >
+
+(4.d)
+(4.c)
+(4.d)
+(4.g)
+(4.))
+
+=C+A
+
+(4.a)
+
+Remark: Before reduction’ we need seven gates and three variables to
+implement the circuit. After reduction we can implement the same logic circuit
+by using only one gate and two variables.
+
+DeMorgan’s
+
+A+B=AeB
+
+Theorem
+
+Remark:
+
+The two relations show how an AND
+
+(or « ) operation can be
+
+transformed to an OR (or +) operation or vice versa.
+
+DeMorgan’s Theorem
+
+Boolean Algebra
+
+assess
+
+A
+
+14
+
+A
+
+B
+
+AeB
+
+AtB
+
+AeB
+
+A+B
+
+0
+
+1
+
+1
+
+0
+
+0
+
+0
+
+1
+
+'
+
+1
+
+1
+
+0
+
+0
+
+)
+
+0
+
+0
+
+0
+
+Figure 4.11. Truth table for DeMorgan theorem.
+
+Columns 5 and 6(respectively
+(respectively
+is proved.
+
+A * B and A+B) are identical; columns 7 and 8
+
+A+ B and A+B) are alsoidentical. Thus DeMorgan’s theorem
+
+To change from an AND
+these steps:
+
+(or ¢) operation to an OR (or +) or vice versa follow
+
+4
+
+Change all boolean expressions. + becomes « , and « becomes + (or AND
+becomes OR and OR becomes AND).
+
+2
+
+Complement each term. (Both ORed and ANDed ones).
+
+3
+
+Complement the entire logic expression.
+
+Example
+
+Change the operator of the following logic expression:
+
+Convert the following boolean expression:
+
+Y = (A+B) * C
+Solution
+
+4
+
+Y=(AseB)+C
+
+|
+
+Y = (AeB)+C = (A*B)+C
+3
+
+Y=(AeB)+C =(AeB)+C
+
+Y = (A+B) «© © = (A*B)+C
+DeMorgan’s Theorem
+
+Digital Circuits Tutor Series: Volume 1
+
+Practice
+
+Probiem 4.4
+
+Problems
+
+Reduce the following expression:
+
+Y = A e(B+B) « (A+A)
+Solution
+
+Y= A e(B+B) e(AtA)=AeteA
+=AeA
+=0
+Problem 4.5
+Give the equivalent expression by using DeMorgan’s theorem.
+
+Y = (A+B) ¢ (C+A) + (Be C)
+Solution
+
+4 (AeB)+(CeA) °(B+C)
+2 (A*B) +(CeA)*(BtC)
+3 (AeB) +(CeA) (B+C)
+
+Y=
+(AeB)
++
+(AeC) «(B+C)
+Problem 4.6.
+Minimize the following expression using DeMorgan’s theorem.
+
+Y = (AeBeC) © (Ae BoC)
+Solution
+
+Y = (AeBeC) + (Ae BeC)
+
+4
+
+(A+B+C) + (A+B+C)
+
+2
+
+(A+B+C) + (A+Bt+C)
+
+3
+
+(A+B+C) + (A+B+C) = A+B+C+A+Bt+C
+
+vee
+Problem 4.7
+State the law of identity.
+
+Practice Problems
+
+Boolean Algebra
+
+ES
+
+Problem 4.8
+Prove the laws of commutativity and associativity.
+
+Problem 4.9
+Obtain a truth table for the law of distributivity.
+
+Problem 4.10
+State the law of absorbtion and give its truth table.
+
+Problem 4.14
+Reduce the following logic expressions:
+
+b)
+AeBeC+Ce
+Be
+A+Ct+AeDtAeC
+c) (A+B+C) © (C+B+A)
+
+(C+0) ¢ (A+D+0) ¢ (A+C) © (A+B+C+1)
+
+Practice Problems
+
+Digital Circuits Tutor Series: Volume 1
+
+Problem 4.12
+State DeMorgan’s theorem.
+
+Problem 4.13
+Prove DeMorgan’s theorem.
+
+Problem 4.14
+Change the operator of the following logic expressions using DeMorgan’s
+theorem:
+a)
+
+Y=A+B+C+D
+
+b)
+
+Y=AeBeCeD
+
+c) Y=A+B+C+D
+
+Practice Problems
+
+Boolean Algebra
+
+ees
+
+Problem 4.415
+
+Apply DeMorgan’s theorem to convert the following logic
+expressions:
+
+a) Y=(A*BeC)+(AeC)
+b) Y=(A+B+C) ¢(A eC)
+
+Problem 4.16
+Minimize the following expressions using DeMorgan’s theorem:
+
+a)
+
+Y=(A*BeCeD)+(Ae
+
+BeCeD)
+
+b) Y=(A+B+C+D+E) e (A+B+C+D+E) e (A+B+C+D+E) @
+(A+B+C+D+E)
+
+Practice Problems
+
+Index
+
+Absorption (Law of), 145
+Adder (half), 138-140
+
+Addition binary, 42-44
+hexadecimal, 45, 46
+octal addition, 44, 45
+Algebra, Boolean, 141-151
+
+Alphanumeric codes, 81-83
+AND circuit, 93-94
+gate, 93-94
+ASCII code, 81-83
+
+Associativity (Law of), 142
+Base 1
+
+BCD 8421, 55-58
+5421, 58-60
+2421, 60-63
+84-2-1, 63-65
+Binary addition, 42-44
+Binary Coded Decimal, 55-72
+Binary count, 2-4
+Binary number system, 1-12
+Binary point, 7-8
+Bit, |
+Boolean algebra, 141-151
+Codes, alphanumeric, 81-83
+ASCII, 81-83
+BCD, 55-72
+
+EBCDIC, 81-83
+error correcting, 86-88
+error detecting, 84-86
+excess-3, 73-77
+Gray, 78-80
+
+Hamming, 86-88
+Combinational logic, 120-125
+Commutative law, 142
+
+Complementarity (Law of), 143
+Count, binary, 2-4
+decimal, 3
+hexadecimal, 20
+octal, 13
+Conversion, BCD 8421 to excess-3, 74, 75
+binary to octal, 28-30
+
+binary to decimal, 4-6
+binary to Gray code, 78, 79
+binary to hexadecimal, 32-34
+decimal to 8421 BCD, 56, 57
+
+decimal
+decimal
+decimal
+decimal
+
+to 5421 BCD, 59, 60
+to 2421 BCD, 61, 63
+to 84-2-1 BCD, 64, 65
+to binary, 6-8
+
+decimal to excess-3 code, 73, 74
+decimal to octal, 15-17
+excess-3 code to decimal, 74
+Gray code to binary, 79, 80
+
+Index
+
+Digital Circuits Tutor Series: Volume 1
+
+hexadecimal to binary, 34-36
+hexadecimal to octal, 36
+
+Most Significant Digit (MSD),
+
+octal to binary, 31, 32
+
+NAND gate, 105-107
+
+octal to decimal, 13, 15
+octal to hexadecimal, 37
+
+NOR gate, 107-109
+NOT gate, 97-99
+
+8421 BCD to decimal, 57, 58
+
+Number systems, 1-48
+
+15
+
+8421 BCD to excess-3 code, 74-75
+
+5421 BCD to decimal, 58, 59
+2421 BCD to decimal, 60, 61
+84-2-1 BCD
+
+to decimal, 63, 64
+
+Octal addition, 44, 45
+Octal count, 13
+Octal number system,
+
+13-17
+
+Octal point, 14
+Decimal count, 3
+
+OR gate, 95-97
+
+Decimal point, 5
+
+DeMorgan theorems, 146, 147
+Diode-Transistor Logic (DTL), 125
+Distributivity (Law of), 143
+EBCDIC code, 81, 82
+Error correcting code, 86-88
+Error detecting code, 84-86
+Excess-3 code, 73-75
+
+Gate, AND, 93-95
+NAND, 105-107
+NOR, 107-109
+NOT, 97-99
+OR, 95-97
+XOR,
+
+Radix, |
+Reduced logical expressions, 141-147
+Resistors, 133 —
+Resistor-Transistor Logic (RTL), 125
+Switches, 133
+
+Temporary board, 130
+
+113-115
+
+Theorems
+
+XNOR, 115, 116
+Gray code, 78-80
+
+Half adder, 138-140
+Hamming code, 86-88
+Hexadecimal addition, 45, 46
+Hexadecimal number system, 20-24
+Hexadecimal count, 20
+
+DeMorgan,
+
+5
+146, 147
+
+Truth table definition, 94
+Transistor to Transistor Logic (TTL), 125, 126
+TTL chips, 7404 IC (NOT), 126, 134, 135
+7408 IC (AND), 127, 135
+7432 IC (OR), 128, 136, 137
+7400 IC (NAND), 128, 136
+7402 IC (NOR), 129, 136-138
+7486 IC (XOR),
+
+129, 138
+
+Identity (Law of), 141, 142
+
+Very Large Scale Integration (VLSI), 125
+
+Indempotence (Law of), 144
+Integrated Circuits (IC), 125-130
+Integrated Injection Logic (IIL), 125
+
+XNOR gate, 115, 116
+XOR gate, 113-115
+
+Large Scale Integration (LS1), 125
+
+Weighted numbers,
+
+1-27
+
+Laws, absorbtion,
+
+Wiring procedure,
+
+134
+
+145
+
+associativity, 142
+commutativity, 142
+
+8421 BCD code, 55-58
+
+complementarity
+distributivity, 143
+
+5421 BCD code, 58-60
+2421 BCD’ code, 60-63
+
+identity, 141, 142
+Least Significant Bit (LSB), 6
+Least Significant Digit (LSD), 15
+Light Emitting Diode (LED), 132
+
+84-2-1 BCD code, 63-65
+7404 TTL IC, 126, 134, 135
+7408 TTL IC, 127, 135
+7432 TTL IC, 128, 136, 137
+7400 TTL IC, 128, 136
+
+Medium Scale Integration (MSI), 125
+Minimization of logical expressions, 141-147
+
+7402 TTL IC, 129, 136-138
+7486 TTL IC, 129, 138
+
+Most Significant Bit (MSB), 6
+
+Index
+
+Parity bit, 84-85
+Parity bit generator, 84
+Postulates, 141-145
+Power supply, 133
+Proof by perfect induction, 141
+
+Digital Circuits
+Volume 1: Numbering Systems, Binary Codes,
+Logic Gates, Boolean Algebra
+by: Amalou Abdelilah
+About This Book
+The Engineer’s Tutor Series is designed for the engineering student
+who is experiencing difficulty with
+his coursework or the engineer or
+technician who wishes to master a
+subject on his own.
+
+Digital Circuits Volume 1: Numbering Systems, Binary Codes, Logic
+Gates, Boolean Algebra consists of an
+expanded discussion of the initial
+subjects covered in a digital circuits
+course. The depth of the discussion of
+these topics is much greater than
+that found in typical digital circuits
+textbooks. This expanded discussion
+will assist the student who is experi-
+
+encing difficulty in mastering these
+topics.
+
+This book’s subject matter is presented in an easily understood format. Topics are first discussed in a
+general sense followed by one or
+more examples which illustrate that
+topic in practical terms. For example,
+in the section on 8421 BCD, after that
+topic is discussed in general, six
+examples are included which illus-
+
+trate conversion between BCD and
+decimal. A step-by-step explanation
+is provided with each example so the
+reader fully understands the 8421/
+BCD conversion process.
+
+With its detailed explanations
+and numerous examples and solved
+problems, this book is ideal for the
+student who is having difficulty with
+his digital circuits course work or
+the engineer or technician who
+wishes to understand digital circuits
+through independent study.
+
+Contents
+This book is divided into four separate chapters. Each chapter includes
+numerous examples and solved problems. A short description of each
+chapter follows.
+
+1. Number Systems
+This chapter includes a comprehensive description of the different
+number systems used in digital design such.as binary, hexadecimal,
+and octal. Conversion between these
+number systems is discussed in
+detail. A useful conversion table is
+also included. Numerous examples
+and practice problems guide the
+reader through the conversion process. Binary, octal, and hexadecimal
+
+arithmetic are also described.
+
+2. Binary Codes
+Different binary coding systems such
+as 8421, 5421, 2421, and 84-2-1
+binary coded decimal, excess-3, gray
+code, ASCII, EBCDIC and error detecting/correcting codes are explained
+in this chapter.
+
+Numerous
+
+examples
+
+illustrate
+
+the
+
+BCD to decimal and decimal to BCD
+conversion process. Excess-3, gray
+code, ASCII and EBCDIC to decimal
+conversion are also discussed and
+illustrated using examples.
+
+3. Logic Gates
+AND, OR, NOT, NAND, NOR, XOR, and
+XNOR gate operation is described in
+chapter 3. Illustrations, truth tables
+and solved problems are included to
+clarify gate operation. The process of
+combining gates to express logic operations is also discussed. Integrated
+
+circuits including the 7404, 7408,
+7432, 7400, 7402, and 7486 are introduced. An experiment is included in
+chapter 3 which demonstrates NOT,
+AND,and NAND gate operation using
+7404, 7408, and 7400 ICs.
+
+4. Boolean Algebra
+Chapter 4 consists of a detailed discussion of Boolean algebra. The laws
+of identity, commutativity, associativity, distributivity, complementarity, indempotence and absorbtion are
+explained with proofs included.
+DeMorgan’s theorem is explained
+and proved. Several examples illustrate how AND operations can be
+converted to OR operations and vice
+versa.
+
+@inUS.$12.95
+
+W in Canada $15.95
+0-938862-67-7
+
+Weber Systems, Inc.
+
+AAU.
+UIQ
+
+
